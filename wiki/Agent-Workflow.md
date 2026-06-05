@@ -2,7 +2,7 @@
 
 > 대상 프로젝트: **RTSGame_ReokyoungKim** — Beyond All Reason(BAR) 미니게임 생성기의 단순화판
 > 한 줄 요약: 자연어 프롬프트 → DB에서 비슷한 게임 시나리오 매칭 → 게임 config(JSON) 생성 → 브라우저 2D 플레이백 시각화
-> 저장소: `rlafurud/RTSGame_ReokyoungKim` · 브랜치 전략: `main → dev → feature/*`
+> 저장소: `boostcampwm-snu-2026-1/RTSGame_ReokyoungKim` · 브랜치 전략: `main → dev → feature/*`
 
 이 문서는 Claude Code 같은 AI 에이전트(**Agent Skill + MD 파일**)를 사용해 개발을 굴리는 방식을 정리한 초안이다. 사람이 "무엇을/어떤 맥락으로" 지시하고 "무엇을 반드시 검증"하는지에 초점을 둔다.
 

@@ -151,7 +151,7 @@ npm run dev                   # http://localhost:5173
 
 **한 줄 소개:** 자연어 프롬프트로 RTS 게임(Beyond All Reason) 미니게임 시나리오를 생성하는 도구입니다. 프롬프트를 입력하면 DB에서 가장 비슷한 게임 시나리오를 매칭하고, 게임 config(JSON)를 생성한 뒤, 브라우저에서 2D 플레이백으로 시각화합니다.
 
-**저장소:** [rlafurud/RTSGame_ReokyoungKim](https://github.com/rlafurud/RTSGame_ReokyoungKim)
+**저장소:** [boostcampwm-snu-2026-1/RTSGame_ReokyoungKim](https://github.com/boostcampwm-snu-2026-1/RTSGame_ReokyoungKim)
 
 **주요 기술 스택:**
 
