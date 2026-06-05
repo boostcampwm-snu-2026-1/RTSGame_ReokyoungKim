@@ -1,7 +1,6 @@
 # rtsgame — BAR Minigame Generator (Simplified)
 
-`minigame_generator_v4`의 multi-agent 파이프라인을 **단일 LLM 에이전트**로 축소하고,
-**React + Vite** 프론트엔드(프롬프트 입력 + 결과 보기)를 붙인 독립 프로젝트.
+
 
 텍스트 프롬프트 → Beyond All Reason(BAR) 미니게임 config(JSON) 생성.
 
@@ -10,12 +9,13 @@
 ## 아키텍처
 
 ```
-┌─────────────────┐    POST /generate     ┌──────────────────────┐
-│  React + Vite   │ ───────────────────►  │   FastAPI backend    │
-│   (frontend)    │ ◄─────────────────── │  단일 LLM 에이전트    │
-│ 프롬프트 입력    │     config JSON       │  generator.py        │
-│ 결과/시각화 보기 │    GET /catalog       │  + data 카탈로그      │
-└─────────────────┘                       └──────────────────────┘
+┌────────────────────────┐                          ┌────────────────────────┐
+│ Frontend               │  POST /generate  ─────►  │ Backend                │
+│ React + Vite           │  GET  /catalog   ─────►  │ FastAPI                │
+│                        │   ◄─────  config JSON    │                        │
+│ PromptInput / MiniMap  │                          │ pipeline.py            │
+│ SimPlayback / JsonView │                          │ (DB match -> script)   │
+└────────────────────────┘                          └────────────────────────┘
 ```
 
 > 프론트는 React+Vite이지만 생성 로직이 Python이라, 둘을 잇는 얇은 FastAPI 백엔드를 둔다.
@@ -86,7 +86,7 @@ rtsgame/
 
 ---
 
-## 구현 방식 (✅ 구현 완료)
+## 구현 방식 
 
 핵심: **GDD를 새로 생성하지 않고**, 기존 DB에서 비슷한 시나리오를 찾아 script만 만든다.
 **rule(gadget)도 새로 만들지 않고 DB의 검증된 것만 사용**한다.
@@ -96,11 +96,6 @@ rtsgame/
 2. **`load_existing_mode(name)`** — 시나리오의 `specification` + 참조 rule로 gdd 구성. rule은 모두 `action: existing`, `validated: True` (기존 검증본).
 3. **`ScriptDeveloperAgent.run()`** (`script_builder.py`) — 맵선택 → 유닛배치 → rule config → end_condition → 조립. **analyst/verify 루프 제거**로 `game_simulation`(BAR 엔진)·`psutil` 의존성을 런타임에서 완전히 들어냄.
 
-### 제거된 것 (v4 대비 단순화)
-- Designer의 **새 GDD 생성**·대화·intent 분석 전체
-- **RuleDeveloper** 전체 (rule은 DB에서만)
-- **Analyst** 검증/refine 루프 + 그것이 끌고오던 게임엔진 시뮬레이터 의존성
-- agent_manager 오케스트레이션, visualize_logs
 
 ### API 서버 (`backend/app.py`)
 - `POST /generate {query}` → `{ scenario, config, raw }` (config = 생성된 시나리오 JSON).
@@ -115,7 +110,7 @@ rtsgame/
 
 ---
 
-## 실행 방법 (예정)
+## 실행 방법 
 
 ```bash
 # 백엔드
@@ -132,18 +127,9 @@ npm run dev                   # http://localhost:5173
 
 ---
 
-## 결정 사항
 
-- **LLM 모델**: `gpt-5.2` 유지 (`common.get_client`).
-- **난이도**: `normal` 단일 config 생성.
-- **MiniMap 시각화**: 포함.
-- **rule**: DB의 기존 검증된 rule만 사용 (새 rule 생성 안 함).
 
-## 검증 상태
 
-- ✅ 백엔드 import·그래프 빌드 검증 (analyst/game_simulation 의존성 런타임 제거 확인).
-- ✅ 프론트엔드 `npm run build` 통과.
-- ⚠️ **실제 LLM 생성은 아직 미실행** — `backend/.env`에 `OPENAI_API_KEY` 입력 후 한 번 돌려서 end-to-end 확인 필요.
 
 ---
 
@@ -216,11 +202,4 @@ feature/mini-map      ─┘  (통합/검증)   (릴리스)
 - **기획서:** 프로젝트 목표, 단순화 배경(원본 multi-agent 구조 → 단일 흐름), config(JSON) 구조 및 좌표계(1타일 = 512px) 등 설계 정보를 정리합니다.
 - **Agent 개발 workflow:** `ScriptDeveloperAgent`의 LangGraph 그래프 흐름(`select_map → place_units → generate_rule_config → get_condition → assemble_draft`)과 DB(scenario·rule·map·unit) 활용 방식을 문서화합니다.
 
-### PR 흐름
 
-1. **feature → dev PR:** 기능 개발이 완료되면 `feature/*`에서 `dev`로 PR을 생성합니다.
-   - PR 제목/본문에 작업 내용과 관련 이슈 번호를 명시합니다.
-   - 최소 1인 이상의 **코드 리뷰 승인** 후에만 병합합니다.
-   - 병합 방식은 커밋 이력을 정리하기 위해 **Squash and merge**를 기본으로 합니다.
-2. **리뷰/머지 규칙:** 리뷰어는 동작 검증과 코드 컨벤션을 확인하고, 변경 요청(Request changes) 사항이 해결되면 승인합니다. 병합 후 `feature/*` 브랜치는 삭제합니다.
-3. **dev → main 릴리스:** `dev`에 누적된 기능이 검증되면 `dev → main`으로 PR을 생성하여 릴리스합니다. 릴리스 시점에는 버전 태그를 부여하여 배포 단위를 관리합니다.
