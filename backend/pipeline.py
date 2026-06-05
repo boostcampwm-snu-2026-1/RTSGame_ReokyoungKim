@@ -30,15 +30,57 @@ DB_DIR = CURRENT_DIR / "db"
 # --------------------------------------------------------------------------- #
 # (1) Find the most similar existing scenario in the DB
 # --------------------------------------------------------------------------- #
+def _scenario_details() -> dict:
+    try:
+        with open(DB_DIR / "scenario" / "meta.json", "r", encoding="utf-8") as f:
+            return json.load(f).get("details", {})
+    except Exception:
+        return {}
+
+
+def _keyword_fallback(query: str, details: dict) -> str:
+    """Pick the scenario whose name+description shares the most words with the
+    query. No LLM — used when the DBCall match is empty or errors out."""
+    q = set(re.findall(r"[a-z0-9가-힣]+", query.lower()))
+    best, best_score = None, -1
+    for name, info in details.items():
+        text = f"{name} {info.get('description', '')}".lower()
+        score = len(q & set(re.findall(r"[a-z0-9가-힣]+", text)))
+        if score > best_score:
+            best, best_score = name, score
+    return best if best_score > 0 else None
+
+
 def find_scenario(query: str, seed: int = None) -> str:
-    """Return the best-matching scenario name from db/scenario, or None."""
-    db = DBCall(seed=seed)
-    _, names = db.call_with_names(query, folder="scenario")
-    if not names:
-        print("   ⚠️ No matching scenario found in DB.")
-        return None
-    print(f"   🔎 Matched scenario(s): {names} -> using '{names[0]}'")
-    return names[0]
+    """Return the best-matching scenario name from db/scenario.
+
+    Resilient: LLM match → keyword fallback → default to the first scenario.
+    Returns None only when the scenario DB is empty/unreadable.
+    """
+    details = _scenario_details()
+    names = []
+    try:
+        db = DBCall(seed=seed)
+        _, names = db.call_with_names(query, folder="scenario")
+    except Exception as e:
+        print(f"   ⚠️ DBCall match failed ({e}); falling back.")
+
+    if names:
+        print(f"   🔎 Matched scenario(s): {names} -> using '{names[0]}'")
+        return names[0]
+
+    fb = _keyword_fallback(query, details)
+    if fb:
+        print(f"   ↩️ Keyword fallback -> '{fb}'")
+        return fb
+
+    if details:
+        first = next(iter(details))
+        print(f"   ↩️ No overlap; defaulting to first scenario -> '{first}'")
+        return first
+
+    print("   ⚠️ Scenario DB is empty.")
+    return None
 
 
 # --------------------------------------------------------------------------- #
