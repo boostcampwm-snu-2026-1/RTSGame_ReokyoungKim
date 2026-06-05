@@ -1,0 +1,9 @@
+{
+  "description": "Decision types that define available actions for AI agents in different scenarios",
+  "details": {
+    "ConstructionProductionAttack": {
+      "file": "decision/files/ConstructionProductionAttack.json",
+      "description": "Periodically decides building placement, unit production, and squad organization/movement"
+    }
+  }
+}

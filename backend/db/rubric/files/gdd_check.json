@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "project": "BAR_Minigame_Generator",
+    "version": "1.4",
+    "description": "Integration of Coverage, Redundancy, and Intent alignment logic using Rule-based terminology",
+    "categories": [
+      "Functional Alignment",
+      "Strategic Logic",
+      "Intent & Goal",
+      "Continuous Improvement"
+    ]
+  },
+  "rubrics": [
+    {
+      "category": "Functional Alignment",
+      "criterion": "Rule Coverage Check",
+      "description": "Can the game_plan be FULLY realized using ONLY the selected rules? FAIL if the plan describes mechanics (e.g., wave spawning) but no corresponding rule is selected, or if a rule's description does not support its assigned mechanics."
+    },
+    {
+      "category": "Functional Alignment",
+      "criterion": "Rule Redundancy Check",
+      "description": "Are there any rules NOT required by the implementation_plan? FAIL if a rule is selected but the plan never utilizes its functionality (e.g., 'despawn_unit' selected but no despawning logic is described)."
+    },
+    {
+      "category": "Functional Alignment",
+      "criterion": "Instructional Consistency",
+      "description": "Logic in 'Reasoning' must match the 'Logic Description' in rules without contradictions."
+    },
+    {
+      "category": "Functional Alignment",
+      "criterion": "Rule Compliance",
+      "description": "Strictly verify the 'No victory/defeat conditions in rules' constraint and adherence to rule count limits."
+    },
+    {
+      "category": "Strategic Logic",
+      "criterion": "Mechanic Synergy",
+      "description": "Evaluate if combined mechanics conflict (e.g., Fast Build vs. Resource Stall, or Low Damage vs. Immortality)."
+    },
+    {
+      "category": "Functional Alignment",
+      "criterion": "Decision Appropriateness",
+      "description": "Are the selected decisions appropriate for the user intent and scenario? FAIL if: (1) a movement-only scenario includes construction or production decisions, (2) a combat micro scenario lacks movement decisions, (3) mutually exclusive pairs are both selected (SimpleConstruction/ConstructionWithPos, SimpleProduction/ProductionWithFactory, SimpleMovement/GroupMovement), or (4) decisions do not match what the user asked the agent to be evaluated on."
+    },
+    {
+      "category": "Intent & Goal",
+      "criterion": "Intent-Description Alignment",
+      "description": "Does the game_description accurately fulfill the original user_intent? FAIL if key elements are missing or if the focus shifts (e.g., defensive intent vs offensive gameplay)."
+    },
+    {
+      "category": "Intent & Goal",
+      "criterion": "Concept Focus",
+      "description": "Stay focused on the Core Mechanic; avoid unrequested 'Feature Creep'."
+    },
+    {
+      "category": "Continuous Improvement",
+      "criterion": "Clarity for Players",
+      "description": "The description must be understandable for players without needing to read code."
+    }
+  ]
+}

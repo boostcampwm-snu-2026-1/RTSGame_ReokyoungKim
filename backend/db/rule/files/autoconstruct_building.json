@@ -1,0 +1,24 @@
+{
+  "code": {
+    "name": "autoconstructbuilding",
+    "path": "rule/codes/autoconstruct_building.lua",
+    "description": "Automatically completes construction of specified building types instantly when placed. Useful for quick base setup or simplified economy scenarios.",
+    "config_format": {
+      "<team_id>": ["<building_name>", "<building_name>"]
+    },
+    "config_example": {
+      "0": ["armsolar", "armwin", "armmex"],
+      "1": ["armsolar", "armwin"]
+    }
+  },
+  "verify_code": {
+    "path": "rule/verify_codes/autoconstruct_building.lua",
+    "description": "Verifies that specified buildings are automatically completed when placed.",
+    "config_format": {
+      "<team_id>": ["<building_name>", "<building_name>"]
+    },
+    "config_example": {
+      "0": ["armsolar"]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "code": {
+    "name": "prioritize_target",
+    "path": "rule/codes/prioritize_target.lua",
+    "description": "Forces a team's units to ignore standard targeting and prioritize attacking specific target units within configurable range. Units will automatically attack the nearest priority target when in range.",
+    "config_format": {
+      "<team_id>": {
+        "targets": ["<target_unit_name>", "<target_unit_name>"],
+        "range": "<detection_range> (optional, default: 500)"
+      }
+    },
+    "config_example": {
+      "0": {
+        "targets": ["armcom", "armlab"],
+        "range": 600
+      },
+      "1": {
+        "targets": ["armsolar", "armwin"],
+        "range": 400
+      }
+    }
+  },
+  "verify_code": {
+    "path": "rule/verify_codes/prioritize_target.lua",
+    "description": "Verifies that attacker units are correctly targeting priority targets instead of non-priority targets.",
+    "config_format": {
+      "<team_id>": {
+        "targets": ["<target_unit_name>", "<target_unit_name>"]
+      }
+    },
+    "config_example": {
+      "0": {
+        "targets": ["armcom", "armlab"]
+      }
+    }
+  }
+}

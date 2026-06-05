@@ -1,0 +1,964 @@
+{
+    "Bot": {
+        "Lazarus": {
+            "code": "armrectr",
+            "Tech": "T1",
+            "Explanation": "The Lazarus is a T1 Resurrection Bot designed to breathe life back into the battlefield by reanimating wrecks into fully functioning units. Its primary strength lies in its ability to economically bolster your forces without the need for additional resources, making it invaluable in lengthy skirmishes. While its utility is unmatched in post-battlefield recovery, the Lazarus is not designed for frontline combat due to its lack of offensive capabilities and relatively low durability. Though it moves at a moderate speed, its strategic significance is amplified when paired with combat units to reclaim lost ground swiftly."
+        },
+        "Crossbow": {
+            "code": "armjeth",
+            "Tech": "T1",
+            "Explanation": "The Crossbow is a T1 Amphibious Anti-Air Bot, designed to provide cost-effective aerial defense in both land and water environments. Its affordability and ability to target light air units make it an essential component for early-game strategies, particularly in maps with diverse terrain. While its firepower is sufficient for deterring or eliminating enemy scouts and light bombers, its effectiveness diminishes against heavily armored or numerous air threats. Therefore, it is best employed in numbers and supported by more versatile units to counter stronger aerial assaults."
+        },
+        "Construction Bot": {
+            "code": "armck",
+            "Tech": "T1",
+            "Explanation": "The Construction Bot is a versatile T1 unit designed for establishing foundational infrastructure quickly and efficiently. As the cheapest construction unit available, its primary role is to expand early territory by constructing basic structures, making it an essential component for any early-game strategy. Despite its low cost and utility, the Construction Bot is lightly armored and lacks weaponry, making it vulnerable to enemy attacks. Therefore, it should always be accompanied by combat units or positioned away from the front lines to maximize its utility in base development."
+        },
+        "Tick": {
+            "code": "armflea",
+            "Tech": "T1",
+            "Explanation": "The Tick is a T1 fast scout bot designed for rapid reconnaissance missions, offering exceptional speed to quickly traverse the battlefield. Its primary strength lies in its low cost, allowing commanders to deploy multiple units for widespread intelligence gathering. While its offensive capabilities are minimal, the Tick's agility makes it highly effective at evading enemy fire, though it remains vulnerable due to its low HP. Utilize the Tick to keep constant tabs on enemy movements and positions, but be cautious as its fragility means it cannot withstand direct combat."
+        },
+        "Centurion": {
+            "code": "armwar",
+            "Tech": "T1",
+            "Explanation": "The Centurion is classified as a Heavy Infantry Bot, excelling in front-line engagements with its dual rapid-fire lasers, making it particularly effective against swarms of light units. Its durability allows it to withstand considerable damage, serving as a reliable anchor in your forces. While the Centurion's robust design comes at a higher cost compared to lighter units, its slower speed can make it susceptible to faster, more agile enemies. Utilize the Centurion in conjunction with faster units to cover its weaknesses and maximize its battlefield impact."
+        },
+        "Rocketeer": {
+            "code": "armrock",
+            "Tech": "T1",
+            "Explanation": "The Rocketeer is a T1 Light Rocket Bot designed primarily for offensive operations against fortified enemy positions. With its long-range rocket weaponry, it excels at dismantling static defenses and providing crucial fire support to allied units from a distance. Its relatively low hit points make it vulnerable to concentrated enemy fire, so it's best deployed in groups and supported by other units to maximize its effectiveness. Although cost-effective, its moderate speed requires careful maneuvering to avoid becoming an easy target for faster enemy units."
+        },
+        "Pawn": {
+            "code": "armpw",
+            "Tech": "T1",
+            "Explanation": "The Pawn, a T1 basic infantry bot, excels as a cost-effective raider perfect for early-game territorial expansion and disruption. With its affordable build cost and swift movement speed, it can effectively target and overrun poorly defended expansions, isolated artillery units, and even lone commanders. However, its relatively low HP makes it vulnerable to concentrated fire or more advanced units, necessitating strategic use in numbers or with support from other units. Utilize the Pawn's speed and numbers to exploit enemy weaknesses and gain an early tactical advantage."
+        },
+        "Mace": {
+            "code": "armham",
+            "Tech": "T1",
+            "Explanation": "The Mace is a Light Assault Bot designed for early-stage skirmishes, excelling in delivering substantial damage at a low production cost. Its primary strength lies in its powerful plasma weapon, which can effectively dispatch lightly armored units and structures from a moderate range. However, its relatively low HP makes it vulnerable to concentrated enemy fire, necessitating strategic positioning and support from other units. Due to its balanced speed and firepower, the Mace is ideal for hit-and-run tactics and supporting more durable units in combined arms operations."
+        },
+        "Armada Commander": {
+            "code": "armcom",
+            "Tech": "T1",
+            "Explanation": "The Armada Commander serves as a cornerstone unit, pivotal for both developing your base and spearheading early-game assaults. It boasts substantial HP, allowing it to withstand significant damage, making it a resilient frontline leader. Equipped with a powerful energy weapon and a considerable range, it excels at both defense and supporting offensive maneuvers. However, its relatively high cost means losing the Commander can be a significant strategic setback, necessitating cautious deployment and protection."
+        },
+        "Archangel": {
+            "code": "armaak",
+            "Tech": "T2",
+            "Explanation": "The Archangel serves as a Tier 2 Advanced Anti-Air Bot, designed to provide robust air defense with its dual missile systems. Its long-range missiles can target and engage distant aerial threats effectively, while the mid-range rapid-fire missiles are ideal for quickly dispatching closer, fast-moving aircraft. Although the Archangel excels at clearing the skies, its specialization in anti-air combat means it lacks ground attack capabilities, making it vulnerable to terrestrial threats and requiring support from ground units. Its advanced technology might entail a higher cost, but its capability to safeguard your forces from air assaults justifies the investment."
+        },
+        "Tumbleweed": {
+            "code": "armvader",
+            "Tech": "T2",
+            "Explanation": "The Tumbleweed is a T2 crawling bomb that excels in delivering explosive damage directly to enemy units and structures. Its primary strength lies in its ability to stealthily approach targets before detonating, making it an effective tool for disrupting enemy defenses or taking out high-value targets. However, its utility comes at the cost of low survivability and the need for precise control, as it can be easily destroyed before reaching its target. Due to its specialized role, the Tumbleweed is best used in surprise attacks or as a sacrificial unit to dismantle tightly packed enemy formations."
+        },
+        "Fatboy": {
+            "code": "armfboy",
+            "Tech": "T2",
+            "Explanation": "The Fatboy is a formidable Heavy Assault Bot, excelling in mid-range engagements with its powerful plasma weaponry, capable of dealing massive Area of Effect (AoE) damage. Its robust HP allows it to withstand significant enemy fire, making it an excellent choice for breaking through fortified positions or leading a charge against a cluster of enemy units. However, its considerable cost and moderate speed make it less suitable for rapid deployment or skirmishes where agility is crucial. Deploy the Fatboy strategically to maximize its devastating impact on battlefield clusters, while ensuring it is supported by faster units to cover its flanks."
+        },
+        "Sprinter": {
+            "code": "armfast",
+            "Tech": "T2",
+            "Explanation": "The Sprinter is a Tech 2 fast raider bot designed for rapid hit-and-run tactics, excelling in skirmishes due to its impressive speed and agility. Armed with a short-range rapid-fire machine gun, it is effective at quickly overwhelming lightly armored targets and disrupting enemy lines. However, its reliance on speed means it has relatively low HP, making it vulnerable to sustained fire and ineffective against heavily fortified positions. The Sprinter's low cost and rapid deployment make it ideal for reconnaissance, harassment, and exploiting openings in enemy defenses."
+        },
+        "Commander": {
+            "code": "armdecom",
+            "Tech": "T2",
+            "Explanation": "The Decoy Commander, mimicking the appearance of the Armada Commander, serves as a strategic deception unit to mislead opponents. While it can construct basic Tech 1 structures and place mines, its primary role is to act as a diversion, drawing enemy fire and attention away from your real Commander. Its main strength lies in its ability to sow confusion, making it an essential tool for psychological warfare and tactical misdirection. However, it lacks the combat and strategic versatility of the actual Commander, and its effectiveness is diminished if the enemy identifies it as a decoy."
+        },
+        "Umbrella": {
+            "code": "armscab",
+            "Tech": "T2",
+            "Explanation": "The Umbrella is a T2 mobile nuclear missile defense system designed to intercept and neutralize incoming intercontinental ballistic missiles, ensuring strategic protection for high-value areas. Its primary strength lies in its ability to provide a mobile layer of defense against nuclear threats, making it an essential unit for safeguarding key infrastructure and forces. However, its role is highly specialized, and it must be strategically positioned to intercept missiles effectively, as it does not contribute to direct combat engagements. While the cost can be high, its value in preventing catastrophic damage makes it indispensable in late-game scenarios where nuclear threats are prevalent."
+        },
+        "Platypus": {
+            "code": "armamph",
+            "Tech": "T2",
+            "Explanation": "The Platypus is a T2 Amphibious Raider known for its exceptional speed, allowing it to traverse both land and water seamlessly. Equipped with a light laser and a basic anti-air missile launcher, it excels in hit-and-run tactics, providing versatile engagement options against both ground and aerial targets. Its primary strength lies in its ability to quickly reposition and harass enemy lines, making it a valuable asset for disrupting enemy formations and supply lines. However, its light armament and armor make it vulnerable to concentrated fire, requiring careful management and support in larger confrontations."
+        },
+        "Compass": {
+            "code": "armmark",
+            "Tech": "T2",
+            "Explanation": "The Compass serves as a T2 Mobile Radar Bot, essential for gathering intelligence on enemy unit positions within its operational range. Its strength lies in providing real-time reconnaissance data, which can be crucial for planning strategic maneuvers and avoiding ambushes. However, the Compass lacks offensive capabilities and possesses limited armor, making it vulnerable and requiring protection from more robust units. Due to its moderate cost, deploying multiple Compasses can significantly enhance battlefield awareness without substantial resource investment."
+        },
+        "Advanced Construction Bot": {
+            "code": "armack",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Bot is a versatile T2 unit essential for expanding your technological capabilities and infrastructure. Its ability to construct Tech 2 structures makes it invaluable for players seeking to develop advanced defenses, resource production, and high-tech units. While it is not designed for combat and lacks defensive capabilities, its true strength lies in its ability to rapidly establish a superior economy and tech advantage. However, its higher cost means it should be protected and used strategically to maximize its impact on the battlefield."
+        },
+        "Recluse": {
+            "code": "armsptk",
+            "Tech": "T2",
+            "Explanation": "The Recluse, a T2 all-terrain spider bot, excels as a versatile skirmisher with its long-range multiple rocket launchers. Its ability to traverse diverse landscapes makes it ideal for harassing enemy positions and exploiting terrain advantages. While its firepower is formidable against lightly armored units, its relatively low HP and moderate speed require cautious positioning to avoid direct confrontations with stronger foes. The Recluse's cost is justified by its adaptability, making it a valuable asset for strategic map control and hit-and-run tactics."
+        },
+        "Sharpshooter": {
+            "code": "armsnipe",
+            "Tech": "T2",
+            "Explanation": "The Sharpshooter is a T2 long-range sniper bot designed for precision strikes against high-value targets. Its powerful weapon delivers an impressive 2500 damage per shot, making it ideal for eliminating enemy commanders and heavy units from a distance. However, the Sharpshooter's high cost and slower rate of fire require careful positioning and protection from faster, lighter units that can close the gap. Employ it strategically to dismantle enemy fortifications and disrupt key positions, but ensure it is adequately defended to maximize its battlefield impact."
+        },
+        "Ghost": {
+            "code": "armspy",
+            "Tech": "T2",
+            "Explanation": "The Ghost is a T2 stealthy and cloakable spy bot, designed for reconnaissance and intelligence gathering without being detected. Its ability to remain invisible to enemy units makes it ideal for infiltrating enemy bases, gathering vital information, and planning strategic assaults. While its low HP makes it vulnerable if detected, its stealth capabilities allow it to maneuver through enemy lines undetected, providing critical insights that can turn the tide of battle. However, players should be cautious of energy costs associated with maintaining its cloaked state, which can be a drain on resources if not managed carefully."
+        },
+        "Butler": {
+            "code": "armfark",
+            "Tech": "T2",
+            "Explanation": "The Butler is a T2 fast assistance bot, primarily designed to excel in repair and maintenance roles on the battlefield. Its speed allows it to quickly reach and repair damaged units, keeping your forces operational during prolonged engagements. While it can construct a limited selection of Tech 1 structures, its primary strength lies in its ability to enhance the longevity and effectiveness of your army through rapid repairs. However, the Butler is not equipped for direct combat and should be kept away from front-line skirmishes where its minimal defensive capabilities would be a liability."
+        },
+        "Smuggler": {
+            "code": "armaser",
+            "Tech": "T2",
+            "Explanation": "The Smuggler is a Tier 2 mobile radar jamming bot designed to excel in stealth and concealment operations. Its primary strength lies in its ability to cloak allied units within its range, preventing them from being detected on enemy minimaps. This capability is crucial during covert maneuvers or surprise attacks, making it an invaluable support unit in sophisticated strategies. However, its utility is balanced by its specialized role, limiting its effectiveness to scenarios where radar jamming is pivotal, and it typically lacks offensive capabilities and robust defenses."
+        },
+        "Welder": {
+            "code": "armzeus",
+            "Tech": "T2",
+            "Explanation": "The Welder serves as a versatile T2 assault bot, excelling in frontline engagements with its potent lightning cannon. Its balanced attributes make it highly effective in both offensive pushes and defensive holds, providing reliable damage output and moderate resilience on the battlefield. While not the fastest unit, its speed is sufficient for keeping pace with most formations, though care should be taken to avoid over-extension due to its susceptibility to concentrated enemy fire. The Welder's relatively moderate cost allows for deployment in sizable numbers, enhancing its impact when used in coordinated group tactics."
+        },
+        "Gunslinger": {
+            "code": "armmav",
+            "Tech": "T2",
+            "Explanation": "The Gunslinger is a T2 fast skirmish bot, adept at swiftly dismantling most T1 units and some lighter T2 adversaries. Its high speed and mobility make it an excellent choice for hit-and-run tactics, allowing it to exploit enemy weaknesses and avoid heavier firepower. While its offensive capabilities are formidable against less armored foes, it can struggle against high-cost, heavily armored units due to its relatively moderate damage output. Despite this, its efficiency and cost-effectiveness make it a valuable addition to any mid-game strategy, particularly in disrupting enemy lines and supporting larger assaults."
+        },
+        "Hound": {
+            "code": "armfido",
+            "Tech": "T2",
+            "Explanation": "The Hound serves as a versatile skirmisher with its mid-range, low-velocity plasma mortar, capable of providing consistent fire support against lightly armored units. Its speed allows it to maneuver quickly around the battlefield, making it effective for hit-and-run tactics and flanking maneuvers. While the Hound boasts decent durability, it may struggle against concentrated fire from heavier units or anti-vehicle defenses due to its moderate armor. Its cost is justified by its ability to disrupt enemy formations and provide agile mid-range attacks, though careful positioning is required to maximize its effectiveness."
+        },
+        "Webber": {
+            "code": "armspid",
+            "Tech": "T2",
+            "Explanation": "The Webber is a T2 all-terrain spiderbot designed for disabling enemy units with its short-range EMP beam. Its unique ability to traverse difficult terrains makes it ideal for ambushes and flanking maneuvers, where it can immobilize key targets, allowing allies to engage without retaliation. Despite its strategic utility, the Webber's reliance on close proximity to its targets can be a vulnerability, particularly against faster or heavily armored foes. Furthermore, its specialized role and relatively high cost necessitate careful deployment to maximize its battlefield impact."
+        },
+        "Titan": {
+            "code": "armbanth",
+            "Tech": "T3",
+            "Explanation": "The Titan is a formidable Heavy Assault Bot, excelling in direct confrontations with its immense HP and devastating firepower. Its long-range armaments allow it to engage enemies from a distance, making it ideal for breaking through fortified positions and anchoring frontline assaults. While its high cost demands careful resource management, and its slower speed requires strategic deployment to avoid being outmaneuvered, the Titan's sheer power and durability can turn the tide of battle when used effectively. Deploy it as the spearhead of your offensive operations to maximize its impact on the battlefield."
+        },
+        "Vanguard": {
+            "code": "armvang",
+            "Tech": "T3",
+            "Explanation": "The Vanguard is a T3 Experimental All-Terrain Mech designed for heavy assault roles, equipped with a formidable heavy plasma cannon. Its ability to traverse varied terrains makes it a versatile choice for pushing through enemy lines and dominating the battlefield with its long-range bombardment capabilities. While its high cost and slower speed may limit its deployment in fast-paced skirmishes, the Vanguard excels in situations where its firepower can be maximized for strategic territorial control. Its robust construction ensures it can withstand significant damage, making it a durable asset in prolonged engagements."
+        },
+        "Razorback": {
+            "code": "armraz",
+            "Tech": "T3",
+            "Explanation": "The Razorback is a T3 fast experimental battle mech designed for high-impact assault roles on the battlefield. With its twin rapid-fire laser guns, it excels in delivering sustained firepower against enemy units, making it ideal for breaking through fortified positions. Its speed allows it to outmaneuver slower adversaries, creating opportunities for flanking or swift retreats when necessary. However, its relatively high cost necessitates strategic deployment to ensure its effectiveness and to mitigate the risk of resource drain."
+        },
+        "Marauder": {
+            "code": "armmar",
+            "Tech": "T3",
+            "Explanation": "The Marauder is a T3 fast amphibious assault mech, designed for swift and versatile operations across diverse terrains. Armed with dual powerful gauss guns, it excels in delivering heavy damage to enemy units, while its twin light anti-air missile turrets provide a solid defense against aerial threats. Its amphibious capabilities allow it to traverse both land and water, making it invaluable for surprise attacks and flanking maneuvers. However, its high tech level and cost may limit deployment to strategic missions where speed and multi-environment adaptability are crucial."
+        }
+    },
+    "Vehicle": {
+        "Janus": {
+            "code": "armjanus",
+            "Tech": "T1",
+            "Explanation": "The Janus is a T1 Tactical Missile Vehicle, designed for medium-range assaults with its dual Missile Launcher setup. Its formidable firepower, delivering 660 damage per shot over a wide area, makes it highly effective against clustered enemy units and light structures. Despite its relatively low speed and moderate health, which make it vulnerable to fast-moving or high-damage opponents, the Janus excels in hit-and-run tactics and providing support from a safe distance. Use it to soften enemy defenses or to break through tightly packed formations, while keeping it protected from direct frontline engagements."
+        },
+        "Shellshocker": {
+            "code": "armart",
+            "Tech": "T1",
+            "Explanation": "The Shellshocker is a light artillery vehicle designed primarily for dismantling Tech 1 defense towers from a safe distance. With its impressive weapon range of 710, it can bombard targets while staying out of reach from most defensive structures, making it a valuable asset in early-stage engagements to soften enemy fortifications. Its moderate speed allows it to reposition efficiently on the battlefield, but with only 620 health, it is vulnerable to fast-moving units and concentrated enemy fire. While not suited for frontline combat due to its fragility, the Shellshocker excels in supporting roles, providing crucial artillery support during sieges."
+        },
+        "Beaver": {
+            "code": "armbeaver",
+            "Tech": "T1",
+            "Explanation": "The Beaver serves as a versatile T1 amphibious construction vehicle, ideal for establishing forward bases across diverse terrains. With its ability to traverse both land and underwater, it excels in expanding your reach to strategic coastal and aquatic locations. Despite its robust health of 1030, it lacks offensive capabilities, making it vulnerable to enemy attacks if not adequately protected. Use its speed of 42 to swiftly maneuver through challenging environments, but ensure it's accompanied by combat units to safeguard its construction endeavors."
+        },
+        "Whistler": {
+            "code": "armsam",
+            "Tech": "T1",
+            "Explanation": "The Whistler serves as a versatile medium-range missile truck, capable of outranging most Tier 1 defensive units with its dual missile launchers boasting a 700 range. Its dual role as a light mobile anti-air unit makes it invaluable for providing cover against aerial threats while supporting ground assaults. With a speed of 55 and a health pool of 820, it balances mobility and durability, although it may not withstand prolonged direct confrontations with heavier units. Strategically, it is best deployed in groups to maximize its DPS of 74 and to protect it from being overwhelmed by faster or more heavily armored opponents."
+        },
+        "Pincer": {
+            "code": "armpincer",
+            "Tech": "T1",
+            "Explanation": "The Pincer serves as a versatile light amphibious tank, capable of maneuvering both on land and underwater, making it ideal for surprise attacks across mixed terrains. With a decent DPS of 77 and a respectable weapon range of 305, it can effectively harass enemy units while remaining relatively safe from return fire. Its health pool of 1340 allows it to absorb moderate damage, but its speed of 63 means it may struggle to retreat quickly from faster adversaries. The Pincer is most effective when used for hit-and-run tactics in coastal or aquatic environments, though its moderate speed could be a liability in open confrontations."
+        },
+        "Rover": {
+            "code": "armfav",
+            "Tech": "T1",
+            "Explanation": "The Rover is a T1 fast scout vehicle designed to swiftly gather intelligence on enemy movements with its impressive speed of 168 and extensive sight range of 635. Equipped with a BeamLaser, it delivers a moderate DPS of 38.0, making it capable of engaging lightly armored targets while performing reconnaissance. Its low cost allows for rapid deployment in numbers, enhancing its effectiveness in scouting and early skirmishes. However, with only 105 health, it is vulnerable to concentrated enemy fire, requiring careful maneuvering to avoid destruction."
+        },
+        "Construction Vehicle": {
+            "code": "armcv",
+            "Tech": "T1",
+            "Explanation": "The Construction Vehicle is a T1 unit specialized for building essential structures and expanding your base on flat terrain. With a decent speed of 54 and a health pool of 1380, it is resilient enough to withstand some early-game harassment while efficiently setting up infrastructure. However, it lacks offensive capabilities, making it vulnerable if caught without escort or protection. Use it strategically to claim territory and establish a strong economic foundation, but ensure it is protected by combat units to prevent easy targeting by enemy forces."
+        },
+        "Groundhog": {
+            "code": "armmlv",
+            "Tech": "T1",
+            "Explanation": "The Groundhog is a T1 Minelayer Vehicle adept at stealth operations and strategic area denial. With a speed of 75, it can swiftly navigate the battlefield to deploy mines, creating hazardous zones for enemy units to traverse. Its mini-radar jammer enhances its stealth capabilities by masking its presence and the mines it lays, making it invaluable for ambush tactics and defensive preparations. However, it lacks any direct offensive capabilities and has moderate health at 335, necessitating careful maneuvering to avoid direct combat engagement."
+        },
+        "Stout": {
+            "code": "armstump",
+            "Tech": "T1",
+            "Explanation": "The Stout, or \"armstump,\" serves as a Medium Assault Tank, forming the backbone of any Tier 1 armored offensive. With its considerable health pool of 1780, it can withstand significant enemy fire while delivering a respectable DPS of 83. Its cannon has a decent range of 350, allowing it to engage targets effectively before closing in. However, its speed of 76 can be a limiting factor, making it less suitable for rapid maneuvers or quick retreats, thus requiring tactical positioning and support from faster units."
+        },
+        "Blitz": {
+            "code": "armflash",
+            "Tech": "T1",
+            "Explanation": "The Blitz is a Tier 1 fast assault tank designed for rapid strikes and close combat engagements. With its impressive speed of 101, it can quickly traverse the battlefield, allowing it to flank enemies or retreat when necessary. Its dual rapid-fire cannons deliver a substantial DPS of 90, making it effective in skirmishes against lightly armored units. However, its relatively short weapon range of 180 requires the Blitz to get in close, exposing its moderate health of 750 to potential threats, so strategic positioning and timing are crucial to maximize its impact."
+        },
+        "Starlight": {
+            "code": "armmanni",
+            "Tech": "T2",
+            "Explanation": "The Starlight is a formidable T2 mobile tachyon accelerator vehicle, ideal for heavy assault roles with its impressive 2,500 burst damage from its BeamLaser. Its long weapon range of 950 allows it to engage targets from a safe distance, making it particularly effective against clustered enemy units due to its beam's piercing ability. Despite its high damage output and 2800 health, the Starlight's speed of 42 limits its mobility, necessitating strategic positioning to maximize its impact. Its high cost and slower speed mean it should be used carefully, ideally in combination with faster units to protect it from being overwhelmed by more agile enemies."
+        },
+        "Mauser": {
+            "code": "armmart",
+            "Tech": "T2",
+            "Explanation": "The Mauser serves as a T2 artillery unit, designed to outrange most defenses and mobile units with its impressive 820 weapon range. Its cannon delivers a solid DPS of 86, making it effective at softening enemy positions from a safe distance. With a relatively low cost for a T2 unit, it can be mass-produced to dominate the battlefield with long-range bombardment. However, its moderate speed and limited sight range make it vulnerable to flanking maneuvers and reliant on scouting support to reach its full potential."
+        },
+        "Turtle": {
+            "code": "armcroc",
+            "Tech": "T2",
+            "Explanation": "The Turtle is a formidable amphibious assault tank excelling in both land and water combat, making it an ideal choice for versatile operations. With its impressive health of 5000 and dual arsenal of a cannon and missile launcher, it can withstand and deliver significant damage, boasting a DPS of 176 and a weapon range of 765. Its speed of 54 is moderate, allowing it to keep pace with most allied units, though it may be outmaneuvered by faster enemies. The Turtle's high cost is justified by its robust durability and firepower, making it a strategic asset for breaking through enemy lines and controlling crucial water crossings."
+        },
+        "Shredder": {
+            "code": "armyork",
+            "Tech": "T2",
+            "Explanation": "Shredder is a Tier 2 mobile anti-air tank designed to dominate aerial threats with its rapid-fire flak cannon. Its impressive 775 range and 273 DPS make it an essential part of any defensive line against aircraft, capable of shredding through enemy air units before they can reach your forces. While it boasts a decent speed of 71 and a solid health pool of 2600, making it relatively durable and mobile, it should still be protected from concentrated ground attacks due to its specialized anti-air role. Deploy Shredder strategically behind frontline units to maximize its anti-air effectiveness without exposing it to unnecessary ground fire."
+        },
+        "Advanced Construction Vehicle": {
+            "code": "armacv",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Vehicle is a vital T2 unit tasked with expanding your base's infrastructure capabilities. With its ability to construct advanced Tech 2 structures, it plays a crucial role in developing a more robust and economically efficient base. While boasting significant health at 2050 HP, its lack of offensive capabilities and moderate speed of 53 make it vulnerable to enemy attacks if not adequately protected. To maximize its potential, pair it with defensive units to ensure it can safely contribute to your technological and economic advancements."
+        },
+        "Prophet": {
+            "code": "armseer",
+            "Tech": "T2",
+            "Explanation": "The Prophet is a Tier 2 mobile radar vehicle designed to provide essential intelligence on enemy movements with its extensive sight range of 900. While it lacks offensive capabilities, this unit excels in gathering information, making it invaluable for strategic planning and pre-emptive strikes. With a moderate speed of 57, it can reposition quickly to adapt to evolving battlefield conditions, but its lack of weaponry and modest health of 980 make it vulnerable to direct combat. Deploy the Prophet behind frontlines or with an escort to maximize its intelligence-gathering potential while minimizing risks."
+        },
+        "Umbra": {
+            "code": "armjam",
+            "Tech": "T2",
+            "Explanation": "The Umbra is a T2 mobile radar jamming vehicle, designed to cloak allied units within its jamming range from enemy minimaps. Its primary role is to provide stealth support, ideal for covert operations and surprise attacks, making it invaluable in maintaining the element of surprise in tactical maneuvers. While it boasts a decent speed of 33, allowing it to keep pace with most ground units, its lack of offensive capabilities and moderate health of 510 make it vulnerable if left unprotected. To maximize its effectiveness, pair the Umbra with a well-rounded force and avoid direct confrontations."
+        },
+        "Ambassador": {
+            "code": "armmerl",
+            "Tech": "T2",
+            "Explanation": "The Ambassador is a T2 long-range artillery unit equipped with a StarburstLauncher, making it ideal for indirect fire support over vast distances with its impressive 1300 weapon range. Its stealthy nature allows it to operate behind the front lines, targeting enemy installations and units from a safe distance. With a moderate speed of 33 and a decent health pool of 1220, it can reposition when necessary but should avoid direct combat due to its limited sight range of 247. However, its high cost and reliance on support units for protection make it vulnerable if isolated or if its location is detected by the enemy."
+        },
+        "Jaguar": {
+            "code": "armlatnk",
+            "Tech": "T2",
+            "Explanation": "The Jaguar is a versatile T2 fast raider tank, adept at both ground assaults and providing light anti-air support. With a respectable DPS of 185 and a weapon range of 600, it can effectively engage enemy units from a distance while its lightning cannon offers a shorter-range but powerful punch. Its speed of 90 allows it to swiftly maneuver on the battlefield, making it ideal for hit-and-run tactics and flanking maneuvers. However, with only 1060 health, it should avoid prolonged engagements with heavily armored opponents to mitigate its relatively lower durability."
+        },
+        "Bull": {
+            "code": "armbull",
+            "Tech": "T2",
+            "Explanation": "The Bull is a formidable T2 Heavy Assault Tank, boasting a robust 4650 health and armed with a powerful cannon delivering 245 DPS. Its considerable weapon range of 460 and sight range of 494 allow it to engage enemies effectively from a distance while enduring substantial damage due to its strong armor. Despite its impressive firepower and durability, the Bull's speed of 60 can be a drawback, making it less effective in rapid response scenarios or against highly mobile units. Ideal for breaking through fortified positions and holding ground, the Bull excels in situations where sustained firepower and resilience are crucial."
+        },
+        "Gremlin": {
+            "code": "armgremlin",
+            "Tech": "T2",
+            "Explanation": "The Gremlin is a T2 Stealth Tank designed for covert operations, armed with a light plasma cannon. Its strengths lie in its ability to remain undetected and execute surprise attacks, supported by a respectable DPS of 88 and a decent weapon range of 220. With a speed of 71, it can maneuver swiftly across the battlefield, making it ideal for flanking and hit-and-run tactics. However, its relatively moderate health of 1060 necessitates cautious engagement, as it may struggle against heavily fortified defenses or in prolonged direct firefights."
+        },
+        "Consul": {
+            "code": "armconsul",
+            "Tech": "T2",
+            "Explanation": "The Consul is a versatile T2 construction unit, adept at quickly providing buildpower across the battlefield. With a speed of 78, it is relatively fast for a construction unit, allowing it to maneuver efficiently to areas in need of development or repair. Its substantial health of 1080 ensures it can withstand some enemy fire while completing essential tasks. However, lacking offensive capabilities and weaponry, it must be protected by combat units to maximize its effectiveness in supporting your strategy."
+        },
+        "Thor": {
+            "code": "armthor",
+            "Tech": "T3",
+            "Explanation": "The Thor serves as an elite Heavy Assault Tank, boasting formidable firepower and resilience with its 56,000 health points and a diverse arsenal, including a Lightning Cannon and EMP capabilities. Its impressive DPS of 968 makes it a superior choice for breaking through enemy fortifications, while its EMP weapons effectively disable adversaries, providing strategic advantages in large-scale engagements. Although its speed is limited to 54, its substantial range of 1050 allows it to engage targets from a distance, minimizing its vulnerability. However, its high-tech status and likely substantial cost mean it should be deployed judiciously, typically in support of a well-coordinated assault force."
+        }
+    },
+    "Air": {
+        "Tsunami": {
+            "code": "armsb",
+            "Tech": "T1",
+            "Explanation": "The Tsunami is a T1 seaplane bomber, adept at delivering heavy payloads with its five-bomb arsenal. With a DPS of 143 and an impressive weapon range of 1280, it excels in striking enemy positions from a distance while remaining relatively safe from anti-aircraft defenses. Its high speed of 267 allows it to quickly approach and retreat from targets, making it a versatile asset for hit-and-run tactics. However, with only 1170 health, it is vulnerable to concentrated anti-air fire, necessitating careful management to maximize its impact."
+        },
+        "Falcon": {
+            "code": "armfig",
+            "Tech": "T1",
+            "Explanation": "The Falcon serves as a T1 light air superiority fighter, excelling in engaging and eliminating enemy aircraft with its MissileLauncher. With a speed of 289, it can quickly intercept and pursue airborne targets, leveraging its 680 range missiles to strike from a safe distance. Its high DPS of 139 makes it formidable against weaker air units, but its relatively low health of 167 necessitates cautious maneuvering to avoid anti-air threats. While cost-effective and agile, it should be used primarily in air-to-air combat rather than direct ground engagements due to its limited durability."
+        },
+        "Puffin": {
+            "code": "armseap",
+            "Tech": "T1",
+            "Explanation": "The Puffin is a T1 seaplane gunship designed for aquatic engagements, equipped with a TorpedoLauncher that delivers a formidable 114 DPS with a range of 600. Its ability to drop homing torpedoes makes it particularly effective against naval units, providing a strategic advantage in controlling water-based territories. With a speed of 271, it can quickly reposition to exploit enemy weaknesses or retreat from overwhelming threats, although its moderate health of 1380 means it should avoid prolonged exposure to concentrated anti-air defenses. The Puffin's cost-efficiency and versatility in water assault scenarios make it an essential component in any balanced naval strategy."
+        },
+        "Osprey": {
+            "code": "armhvytrans",
+            "Tech": "T1",
+            "Explanation": "The Osprey is a T1 Heavy Air Transport unit, crucial for strategic mobility on the battlefield. With its ability to carry larger units, including Commanders, it excels at relocating key assets across the map rapidly, thanks to its impressive speed of 110. However, its lack of armament and direct combat capabilities makes it vulnerable to anti-air defenses and enemy fire, despite its decent health pool of 630. Utilize the Osprey primarily for behind-the-line operations and tactical repositioning, ensuring it travels with escort protection when necessary."
+        },
+        "Sabre": {
+            "code": "armsaber",
+            "Tech": "T1",
+            "Explanation": "The Sabre is a versatile T1 light seaplane gunship, equipped with dual energy blasters that deliver a solid DPS of 67.0. Its moderate weapon range of 425 and impressive sight range of 595 make it an excellent choice for reconnaissance and skirmishing against light to medium ground targets. With a speed of 157, the Sabre can quickly reposition or retreat, but its relatively low health of 1010 makes it vulnerable to concentrated anti-air defenses. Use the Sabre for hit-and-run tactics or to support ground forces, keeping it away from heavy anti-aircraft fire to maximize its effectiveness."
+        },
+        "Stork": {
+            "code": "armatlas",
+            "Tech": "T1",
+            "Explanation": "The Stork is a T1 airborne transport unit, ideal for quickly deploying troops across the battlefield with its impressive speed of 207. It excels in strategic maneuvers, allowing commanders to reposition units for surprise attacks or rapid reinforcements. Despite its utility, the Stork is vulnerable with only 265 health and no weapons, necessitating protection from anti-air units during operations. Its lack of offensive capabilities makes it a non-combatant, emphasizing its role in logistics and troop mobility."
+        },
+        "Blink": {
+            "code": "armpeep",
+            "Tech": "T1",
+            "Explanation": "The Blink serves as a T1 air scout, boasting impressive speed and an extensive sight range, making it an essential asset for reconnaissance missions. Its primary strength lies in its ability to quickly gather intelligence on enemy positions and movements due to its significant line of sight and rapid mobility. However, with no offensive capabilities and low health, it is vulnerable to anti-air defenses and enemy fire, necessitating careful maneuvering to avoid hostile encounters. Use the Blink to keep tabs on enemy expansions and troop concentrations, providing your forces with critical strategic information."
+        },
+        "Construction Seaplane": {
+            "code": "armcsa",
+            "Tech": "T1",
+            "Explanation": "The Construction Seaplane is a versatile T1 unit adept at establishing and expanding bases both on land and in water, making it an invaluable asset for players looking to control naval territories. With a respectable speed of 192, it can quickly traverse large distances, enabling rapid deployment and construction of essential structures. Although it boasts a moderate health pool of 405, it lacks any offensive capabilities, making it vulnerable to anti-air attacks and necessitating protection from combat units. Its ability to build both terrestrial and naval structures provides strategic flexibility, but its utility comes at the cost of prioritizing it in your early-game economy over more aggressive units."
+        },
+        "Cyclone": {
+            "code": "armsfig",
+            "Tech": "T1",
+            "Explanation": "The Cyclone is a T1 fighter seaplane specializing in air-to-air combat, making it an essential component for air superiority. With a DPS of 252.0 and a missile launcher that boasts a range of 710, it excels at intercepting enemy aircraft before they can pose a threat to ground or naval forces. Its high speed of 311 allows it to quickly patrol large areas, ensuring effective coverage and quick response to aerial threats. However, its relatively low health of 220 means it should avoid prolonged engagements and be supported by other units to maximize its effectiveness."
+        },
+        "Horizon": {
+            "code": "armsehak",
+            "Tech": "T1",
+            "Explanation": "The Horizon is a Tier 1 Reconnaissance Seaplane, primarily designed for gathering intelligence with its advanced radar and sonar capabilities. Its high speed of 338 allows it to swiftly scour large areas, making it invaluable for early-game scouting and detecting enemy movements both on the surface and underwater. Although it lacks any offensive weaponry and has a moderate health pool of 580, its extensive sight range of 1100 ensures it can remain at a safe distance while providing crucial information to allies. The Horizon's inability to engage in combat and its vulnerability to anti-air defenses necessitate careful management to fully leverage its surveillance strengths."
+        },
+        "Banshee": {
+            "code": "armkam",
+            "Tech": "T1",
+            "Explanation": "The Banshee is a nimble T1 light gunship specializing in quick, targeted strikes against lightly defended enemy infrastructure. With a speed of 185 and a sight range of 520, it excels at hit-and-run tactics, allowing it to scout and engage from a safe distance before enemies can retaliate effectively. Its cannon delivers a decent DPS of 39.0 over a range of 350, making it effective against isolated ground units and buildings. However, its relatively low health of 560 makes it vulnerable to concentrated anti-air defenses, necessitating careful maneuvering and retreat when faced with heavier opposition."
+        },
+        "Construction Aircraft": {
+            "code": "armca",
+            "Tech": "T1",
+            "Explanation": "The Construction Aircraft is a T1 unit designed for rapid expansion and versatile construction capabilities across any terrain. With its speed of 208, it excels in quickly reaching remote locations to establish new bases or support forward operations. Although it possesses no offensive capabilities and has relatively low health at 156, its ability to build a wide array of basic Tech 1 structures makes it indispensable for early-game development and map control. Its aerial nature allows it to bypass obstacles and enemy units on the ground, but players should be cautious of anti-air threats due to its lack of defense."
+        },
+        "Stormbringer": {
+            "code": "armthund",
+            "Tech": "T1",
+            "Explanation": "The Stormbringer serves as a T1 Light Bomber, excelling in targeting slow-moving units and static defenses. With a respectable DPS of 88.0 and a considerable weapon range of 1280, it delivers effective bombing runs, making it invaluable for disrupting enemy infrastructure and resource lines. Its speed of 255 allows for swift hit-and-run tactics, but its relatively low health of 670 necessitates careful management to avoid anti-air defenses. While cost-effective for early-game assaults, it should be deployed in groups to maximize impact and survivability."
+        },
+        "Abductor": {
+            "code": "armdfly",
+            "Tech": "T2",
+            "Explanation": "Abductor serves as a versatile T2 transport aircraft equipped with a potent EMP-BeamLaser, making it invaluable for disabling enemy units from a distance of 520 units. Its impressive speed of 225 allows it to quickly maneuver in and out of hostile territory, while the radar-stealth capability enhances its role in covert operations. With 1170 health, it can withstand moderate anti-air fire, although it lacks any direct damage output as its DPS is 0.0. This unit is ideal for disrupting enemy formations and safely extracting units, but its effectiveness is limited by its inability to engage in offensive combat directly."
+        },
+        "Advanced Construction Aircraft": {
+            "code": "armaca",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Aircraft serves as a versatile T2 builder, crucial for establishing advanced economic and defensive infrastructure. With a speed of 192, it is adept at quickly reaching remote and strategic locations, making it invaluable for rapid expansion or fortification of forward positions. Its lack of offensive capabilities and moderate health of 200 necessitate careful management to avoid enemy anti-air threats, but its ability to construct critical assets far outweighs these vulnerabilities. While it might be an investment due to its advanced tier, the strategic advantages it provides in terms of versatile construction options can turn the tide in prolonged engagements."
+        },
+        "Highwind": {
+            "code": "armhawk",
+            "Tech": "T2",
+            "Explanation": "The Highwind is a T2 Stealth Fighter excelling in air superiority with its impressive 536 DPS Missile Launcher and a remarkable weapon range of 740. Its speed of 359 allows it to quickly intercept and eliminate multiple or heavy air threats, making it a formidable presence in aerial combat. Despite its high offensive capabilities, the Highwind's relatively low health of 370 makes it vulnerable to concentrated anti-air attacks, necessitating strategic use of its stealth and speed for hit-and-run tactics. Due to its specialized role, deploying the Highwind is most effective when supported by other air units for comprehensive control of the skies."
+        },
+        "Hornet": {
+            "code": "armblade",
+            "Tech": "T2",
+            "Explanation": "The Hornet is a T2 gunship excelling in high-speed assaults with its impressive speed of 204, allowing it to rapidly engage and disengage from priority targets. Armed with a Missile Launcher, it delivers a potent DPS of 168.0 over a solid range of 420, making it effective against both ground forces and installations. Its substantial health of 3000 enables it to withstand moderate anti-aircraft fire, ensuring it can complete its assault missions with relative resilience. However, its effectiveness may be limited by its relatively high cost and the availability of heavy anti-air defenses, requiring strategic deployment to maximize its impact."
+        },
+        "Stiletto": {
+            "code": "armstil",
+            "Tech": "T2",
+            "Explanation": "Stiletto is a Tier 2 EMP bomber specialized in disabling enemy units with its paralyzing charges, making it an essential support unit for creating openings in enemy defenses. With a weapon range of 1280 and a speed of 300, it can swiftly deploy its EMP payload from a safe distance, rendering clusters of enemy units temporarily immobile and vulnerable to follow-up attacks. Despite its high speed and significant health pool of 1880, which allow it to survive some anti-air threats, Stiletto lacks offensive capabilities as it deals no direct damage. Its utility shines in coordinated assaults but requires protection from dedicated anti-air units due to its inability to defend itself."
+        },
+        "Cormorant": {
+            "code": "armlance",
+            "Tech": "T2",
+            "Explanation": "The Cormorant, a T2 torpedo bomber, excels in anti-naval operations with its TorpedoLauncher weapon capable of dealing a hefty 188 DPS over a 400-range. It's particularly effective against enemy ships and submarines, making it a valuable asset for controlling sea lanes and supporting amphibious assaults. With a speed of 285, it can swiftly respond to threats or reposition, though its moderate health of 1920 makes it vulnerable to concentrated anti-air attacks. While an excellent choice for undermining enemy naval forces, its reliance on a single weapon system means it requires protection from air superiority fighters to operate effectively."
+        },
+        "Blizzard": {
+            "code": "armpnix",
+            "Tech": "T2",
+            "Explanation": "Blizzard is a T2 bomber, specifically designed for heavy assault operations from the skies. With its formidable AircraftBomb, it delivers a massive DPS of 190, making it highly effective against clusters of units and structures, particularly when enemy anti-air defenses are sparse. Despite its slow speed of 258, its substantial health of 1130 allows it to withstand moderate anti-air fire, enabling it to complete bombing runs in moderately defended zones. However, its high-tech status and vulnerability to concentrated anti-aircraft fire necessitate careful planning and support from other air or ground units to maximize its destructive potential."
+        },
+        "Roughneck": {
+            "code": "armbrawl",
+            "Tech": "T2",
+            "Explanation": "The Roughneck is a versatile T2 gunship excelling in rapid assault and harassment roles. With a formidable DPS of 107.0 and a substantial health pool of 1780, it can effectively engage ground targets, making it ideal for disrupting enemy operations. Its speed of 161 allows for quick repositioning and hit-and-run tactics, while the 380 weapon range provides a solid strike distance. However, players should be cautious of its moderate cost and vulnerability to concentrated anti-air defenses, as its aerial nature can make it susceptible to focused fire."
+        },
+        "Liche": {
+            "code": "armliche",
+            "Tech": "T2",
+            "Explanation": "The Liche serves as a formidable T2 aerial assault unit, equipped with a powerful Missile Launcher that delivers a high DPS of 625, making it an exceptional choice for targeting fortified structures or high-value enemy units. Its impressive speed of 295 allows it to quickly enter combat zones and retreat when necessary, while its substantial health pool of 2300 HP provides resilience against anti-air defenses. However, its relatively short weapon range of 250 requires it to get closer to its targets, potentially exposing it to concentrated enemy fire. Use the Liche strategically to deliver swift, devastating strikes where enemy anti-air defenses are weakest, ensuring its survival and maximizing its destructive potential."
+        },
+        "Oracle": {
+            "code": "armawac",
+            "Tech": "T2",
+            "Explanation": "The Oracle serves as an advanced reconnaissance aircraft, essential for gathering intelligence across vast areas with its impressive sight range of 1275. Its primary strength lies in its ability to provide radar and sonar coverage, making it invaluable for detecting enemy movements and hidden units over land and sea. Although it has no offensive capabilities and a modest health pool of 890, its high speed of 317 allows it to swiftly navigate the battlefield, avoiding threats while supporting allied units. The Oracle's strategic use is in its ability to keep your forces informed, but it must be protected due to its lack of defenses and high-tech cost."
+        }
+    },   
+    "Sea": {
+        "Skater": {
+            "code": "armpt",
+            "Tech": "T1",
+            "Explanation": "The Skater is a T1 light scout and anti-air ship, designed for rapid reconnaissance and specialized air defense. With a speed of 93, it excels at quickly navigating coastal waters, making it ideal for scouting enemy positions or intercepting incoming air threats. Its BeamLaser and MissileLauncher provide a respectable DPS of 123, allowing it to effectively deter air units within its range of 760. However, with only 780 health, it lacks the durability for prolonged engagements, necessitating cautious positioning and support from other naval units."
+        },
+        "Grim Reaper": {
+            "code": "armrecl",
+            "Tech": "T1",
+            "Explanation": "The Grim Reaper is a T1 stealthy resurrection submarine designed for covert operations beneath the sea. With no direct offensive capabilities, its primary function is to resurrect sunken units, making it a strategic asset for reclaiming lost naval strength. Its modest speed and decent health allow it to maneuver effectively while avoiding detection, but it must be guarded against enemy submarines and anti-submarine warfare due to its vulnerability when exposed. This specialist unit excels in surprise recovery missions, but its lack of firepower necessitates support from more combative naval units to ensure its safety."
+        },
+        "Construction Ship": {
+            "code": "armcs",
+            "Tech": "T1",
+            "Explanation": "The Construction Ship is a T1 naval constructor, essential for expanding your maritime presence and establishing naval infrastructure. With a moderate speed of 65, it can efficiently traverse water bodies to build and repair structures, making it a crucial asset for maintaining a robust naval base. Although it lacks any offensive capabilities and has a limited sight range of 400, its high health of 1040 allows it to withstand some enemy fire while fulfilling its role. However, be cautious of its vulnerability in enemy waters due to its inability to defend itself."
+        },
+        "Banshee": {
+            "code": "armkam",
+            "Tech": "T1",
+            "Explanation": "The Banshee, a T1 Light Gunship, excels in executing rapid raids against unprotected targets due to its impressive speed of 185 and reasonable weapon range of 350. Armed with a cannon delivering 39 DPS, it is perfect for harassing enemy logistics and picking off isolated units. Its moderate health of 560 allows it to withstand minimal anti-air defenses, but it remains vulnerable to concentrated anti-aircraft fire and should avoid prolonged engagements. Though cost-efficient, the Banshee's effectiveness diminishes against fortified positions, highlighting its role in exploiting gaps in enemy defenses."
+        },
+        "Eel": {
+            "code": "armsub",
+            "Tech": "T1",
+            "Explanation": "The Eel is a T1 stealthy assault submarine, designed for underwater engagements with its powerful TorpedoLauncher. With a notable DPS of 86 and a respectable weapon range of 500, it excels in ambushing enemy naval units while remaining undetected. Its speed of 66 allows it to maneuver swiftly through the depths, making it ideal for hit-and-run tactics. However, its relatively low health of 840 necessitates strategic positioning to avoid prolonged confrontations or detection by enemy sonar-equipped units."
+        },
+        "Dolphin": {
+            "code": "armdecade",
+            "Tech": "T1",
+            "Explanation": "Dolphin is a T1 Light Assault Ship known for its speed and maneuverability, making it an excellent choice for quick raids on enemy coastlines or support in naval skirmishes. Armed with two cannons, it delivers a decent DPS of 135.0, allowing it to engage effectively against light naval units and unprotected structures within its 280 range. Its speed of 105 enables it to outmaneuver slower enemies and evade threats, though its relatively low health of 970 necessitates cautious engagement to avoid being overwhelmed by concentrated fire. While cost-effective, players should be mindful of its vulnerability to more fortified naval defenses or higher-tier ships."
+        },
+        "Corsair": {
+            "code": "armroy",
+            "Tech": "T1",
+            "Explanation": "The Corsair is a formidable T1 Naval Destroyer, boasting dual capabilities with both a Cannon and a Torpedo Launcher, making it versatile against surface and underwater threats. With a high DPS of 259 and a substantial health pool of 3700, it can endure prolonged engagements, effectively serving as a frontline assault ship. Its weapon range of 700 allows it to engage enemies from a safe distance, although its sight range is slightly shorter at 500, necessitating scouting support for optimal targeting. Despite its robust combat capabilities, its moderate speed of 67 may leave it vulnerable to faster units, and its significant cost necessitates careful deployment to maximize strategic value."
+        },
+        "Ellysaw": {
+            "code": "armpship",
+            "Tech": "T1",
+            "Explanation": "Ellysaw, a Tier 1 assault frigate, excels in providing formidable firepower with its dual cannons, delivering a solid DPS of 117.0. Its range of 470 makes it effective for mid-range engagements, allowing it to support coastal assaults and defend against enemy ships. With a sight range of 500 and a decent speed of 81, Ellysaw can effectively scout and engage enemy targets with agility. However, its moderate health of 2150 means it should avoid prolonged battles with heavier units, as it cannot withstand extended direct fire."
+        },
+        "Epoch": {
+            "code": "armepoch",
+            "Tech": "T2",
+            "Explanation": "The Epoch serves as a T2 naval flagship, boasting massive firepower with its 5 Cannons and 2 Missile Launchers, capable of delivering a staggering 1727 DPS. Its greatest strength lies in its impressive weapon range of 2450, allowing it to bombard enemies from a distance while staying relatively safe from return fire. With a robust health pool of 50,000, the Epoch can withstand substantial amounts of damage, making it a formidable presence on the battlefield. However, its slow speed of 54 may leave it vulnerable to faster, more agile units, making it crucial to provide it with adequate protection and support."
+        },
+        "Advanced Construction Sub": {
+            "code": "armacsub",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Sub, a Tier 2 sea constructor, excels in building and repairing naval structures and units, making it an essential asset for maritime dominance. With a health of 1110, it can withstand moderate threats, providing durability while performing its construction duties. Its speed of 72 allows it to navigate waters efficiently, although its lack of weaponry and offensive capabilities necessitates protection from combat units. This unit is invaluable for expanding naval presence and maintaining infrastructure but requires careful positioning to avoid enemy fire."
+        },
+        "Longbow": {
+            "code": "armmship",
+            "Tech": "T2",
+            "Explanation": "The Longbow, a T2 missile cruiser, excels in long-range engagements with its impressive 1550 weapon range, allowing it to strike from afar before opponents can retaliate. Its dual armament of a Cannon and Missile Launcher provides versatility in combat, making it effective against both naval and coastal threats. Despite its robust health of 3350, its moderate speed of 63 requires strategic positioning to maximize its impact while avoiding faster enemy units. However, its high DPS of 177.0 makes it a formidable force in naval battles, though its relatively short sight range of 319 necessitates support from scouting units for optimal targeting."
+        },
+        "Paladin": {
+            "code": "armcrus",
+            "Tech": "T2",
+            "Explanation": "Paladin is a formidable T2 medium assault cruiser, adept at engaging both surface and submerged threats with its versatile TorpedoLauncher, BeamLaser, and Cannon arsenal. With a substantial health pool of 5600, it can absorb considerable damage while providing heavy fire support, boasting a significant DPS of 482.0. Its speed of 60 allows it to reposition effectively across the battlefield, though not as swiftly as lighter units, making it less effective in rapid strike maneuvers. While its robust offensive capabilities and moderate speed make it an excellent choice for sustained assaults, its medium range of 500 necessitates support from longer-range units to counter distant threats efficiently."
+        },
+        "Dreadnought": {
+            "code": "armbats",
+            "Tech": "T2",
+            "Explanation": "The Dreadnought serves as a formidable T2 Heavy Battleship, boasting an impressive 8900 HP and armed with dual cannons that deliver a substantial 600 DPS over an expansive range of 880. Its primary strength lies in its ability to engage and dominate naval battles from a distance, making it ideal for establishing naval supremacy and supporting coastal assaults. Despite its formidable firepower and durability, its moderate speed of 58 can leave it vulnerable to faster, more agile units if caught out of position. The Dreadnought's high cost and significant investment mean it should be deployed strategically, focusing on areas where its overwhelming firepower can turn the tide of battle."
+        },
+        "Barracuda": {
+            "code": "armsubk",
+            "Tech": "T2",
+            "Explanation": "The Barracuda, a T2 submarine killer, excels in underwater combat with its guided TorpedoLauncher, boasting a significant DPS of 175 and a range of 400. Its speed of 81 allows it to maneuver swiftly beneath the waves, making it effective in hunting down enemy submarines. With a health pool of 2350, the Barracuda can withstand moderate defensive pressure while delivering lethal strikes. However, its reliance on torpedoes limits its effectiveness against surface or aerial targets, making it essential to pair it with units capable of handling threats above water."
+        },
+        "Maelstrom": {
+            "code": "armlship",
+            "Tech": "T2",
+            "Explanation": "The Maelstrom serves as a versatile T2 Raider Ship that excels in disrupting enemy fleets with its dual weapon systems—Missile Launcher and Lightning Cannon—providing a formidable DPS of 319.0. With a weapon range of 710, it can engage targets from a safe distance, making it particularly effective against light naval units and aerial threats, thanks to its light anti-air capabilities. Its speed of 99 allows it to swiftly maneuver through battle, outpacing many heavier ships. However, with a moderate health of 2200, it needs to avoid prolonged engagements with more powerful adversaries to prevent being overwhelmed."
+        },
+        "Haven": {
+            "code": "armantiship",
+            "Tech": "T2",
+            "Explanation": "The Haven is a versatile T2 Support Ship, primarily tasked with providing strategic support in naval engagements through its intel, mobile energy generation, and anti-nuke capabilities. With a formidable DPS of 750.0 and an impressive weapon range of 72,000, it excels in long-range engagements, making it ideal for maintaining control over contested waters and defending against missile attacks. Its relatively high health of 5,000 allows it to withstand significant damage, although its modest speed of 63 can make it vulnerable to faster enemy units. However, the Haven's unique combination of roles makes it an invaluable asset in maintaining strategic advantage on the water, particularly when dealing with missile threats."
+        },
+        "Dragonslayer": {
+            "code": "armaas",
+            "Tech": "T2",
+            "Explanation": "Dragonslayer serves as a specialized anti-air ship, designed to protect naval and coastal areas from airborne threats. With its impressive DPS of 430, it effectively neutralizes enemy aircraft using its Cannon and MissileLauncher, offering a formidable weapon range of 840. While its speed of 63 allows for moderate mobility across the waters, its sight range of 475 requires support to detect distant threats. Despite its robust health of 3900, its focus on aerial combat leaves it vulnerable to surface attacks, necessitating complementary ground or naval units for comprehensive defense."
+        },
+        "Voyager": {
+            "code": "armmls",
+            "Tech": "T2",
+            "Explanation": "Voyager is a T2 naval engineer that excels in constructing and repairing naval structures and vessels, making it an essential unit for maintaining a strong maritime presence. With a robust health of 1460 and a decent speed of 66, it can navigate the waters efficiently to perform its engineering duties. Despite lacking offensive capabilities, its large sight range of 300 helps spot potential threats and opportunities in the vicinity. However, its inability to defend itself necessitates protection from other combat units, especially when operating in hostile territories."
+        },
+        "Serpent": {
+            "code": "armserp",
+            "Tech": "T2",
+            "Explanation": "The Serpent is a formidable T2 Battle Submarine, excelling in underwater combat with its dual guided torpedo launchers that deliver a substantial DPS of 206 over a significant range of 800. Its robust health of 3550 allows it to withstand considerable enemy fire, making it an excellent choice for dominating naval engagements. With a decent speed of 45, it can maneuver effectively in underwater skirmishes, although its relatively limited sight range of 550 necessitates support from other units for optimal target detection. The Serpent's high impact in naval warfare comes at a considerable resource cost, requiring strategic deployment to maximize its effectiveness in controlling sea lanes."
+        },
+        "Bermuda": {
+            "code": "armsjam",
+            "Tech": "T2",
+            "Explanation": "Bermuda is a T2 radar jammer ship designed for stealth operations in naval engagements. With a sight range of 390 and a speed of 45, it excels at providing cover for advancing fleets by disrupting enemy radar detection, making it a strategic asset in surprise attacks or evasive maneuvers. Its lack of offensive capabilities and moderate health of 1350 make it vulnerable if left unprotected, so it should be accompanied by combat ships to ensure its safety. Despite being cost-effective, Bermuda's primary role is support, requiring careful positioning and protection to maximize its utility on the battlefield."
+        }
+    },
+    "Hover": {
+        "Sweeper": {
+            "code": "armah",
+            "Tech": "T1",
+            "Explanation": "The Sweeper is a T1 mobile anti-air hovercraft, adept at neutralizing light aircraft threats over both sea and land with its MissileLauncher. It boasts a commendable DPS of 85.0 and an impressive weapon range of 700, allowing it to engage aerial targets from a safe distance. Its hover capability grants it immunity to torpedoes, making it particularly effective in marine environments. However, the unit's relatively moderate speed of 89 and specific anti-air focus limit its effectiveness against ground-based threats."
+        },
+        "Crocodile": {
+            "code": "armanac",
+            "Tech": "T1",
+            "Explanation": "The Crocodile is a versatile T1 light hovercraft, equipped with a powerful plasma cannon that deals 70 DPS, making it effective for hit-and-run tactics against lighter units. With a weapon range of 370 and a sight range of 509, it can engage enemies from a safe distance while maintaining awareness of its surroundings. Its speed of 70 allows it to swiftly traverse different terrains, providing tactical flexibility and rapid response capabilities. However, its relatively moderate health of 1530 necessitates cautious positioning to avoid becoming overwhelmed by concentrated enemy fire."
+        },
+        "Sentry": {
+            "code": "armllt",
+            "Tech": "T1",
+            "Explanation": "The Sentry is a T1 Light Laser Tower adept at defending against light vehicles and bots with its continuous BeamLaser weapon. It offers a formidable defense with a DPS of 161.0 and a weapon range of 430, allowing it to engage enemies effectively from a moderate distance. With a health pool of 620, it can sustain some damage, making it a reliable choice for early base defense. However, its stationary nature means it must be strategically placed to cover vulnerable areas, and its effectiveness diminishes against heavily armored or long-range units."
+        },
+        "Seeker": {
+            "code": "armsh",
+            "Tech": "T1",
+            "Explanation": "The Seeker is a T1 hovercraft that excels as a fast reconnaissance unit, equipped with a BeamLaser for close-range skirmishes. Its main strength lies in its speed (114) and extended sight range (550), allowing it to quickly scout enemy positions and provide valuable intelligence. While its offensive capabilities are moderate with a DPS of 60.0, its low health (290) makes it vulnerable in prolonged engagements or against heavily armored opponents. The Seeker is best used for hit-and-run tactics or as a support unit to provide vision and distract enemy forces."
+        },
+        "Possum": {
+            "code": "armmh",
+            "Tech": "T1",
+            "Explanation": "The Possum is a T1 light hovercraft equipped with a StarburstLauncher, making it an effective long-range skirmisher with a weapon range of 710. Its high speed of 64 allows it to quickly reposition and evade enemy fire, making it ideal for hit-and-run tactics against slower, heavier units. With a moderate health pool of 530, the Possum can withstand some damage but should avoid prolonged engagements due to its relatively low durability. While its DPS of 50.0 is respectable for its class, players should be cautious of its vulnerability to concentrated fire and consider it a support unit best used in groups to exploit its range and mobility."
+        },
+        "Construction Hovercraft": {
+            "code": "armch",
+            "Tech": "T1",
+            "Explanation": "The Construction Hovercraft is a versatile T1 unit, playing the crucial role of a mobile builder capable of traversing both land and water. With its ability to construct basic Tech 1 structures alongside specialized naval installations, it excels in establishing forward bases and expanding strategic footholds across varied terrains. While its speed of 67 provides decent mobility for quick deployments, its lack of defensive weaponry and a modest health pool of 1440 necessitate careful positioning away from frontline combat. Its adaptability is countered by a need for protection, making it an indispensable, yet vulnerable asset in any commander's strategic arsenal."
+        },
+        "Lunkhead": {
+            "code": "armlun",
+            "Tech": "T3",
+            "Explanation": "The Lunkhead is a formidable T3 experimental hovertank, excelling as a versatile assault unit with both Cannon and TorpedoLauncher capabilities. With a solid 5300 HP and a decent weapon range of 575, it can engage both surface and submerged threats effectively, making it ideal for mixed terrain operations. Despite its moderate speed of 50, the Lunkhead's high DPS of 318.0 allows it to deal significant damage, though its high cost and slower mobility require careful positioning to maximize its impact. Use the Lunkhead to spearhead assaults where its dual weaponry and robust health can turn the tide, but be wary of overextending without support."
+        }
+    },   
+    "Factories": {
+        "Bot Lab": {
+            "code": "armlab",
+            "Tech": "T1",
+            "Explanation": "The Bot Lab is a vital production structure that serves as the backbone for assembling Tech 1 bot units, making it a cornerstone for early-game expansion and defense. With substantial health at 2900, it can withstand moderate harassment, allowing players time to reinforce their positions. However, its immobility and lack of weaponry necessitate strategic placement and protection from enemy raids. The Bot Lab's ability to produce a variety of units enables players to tailor their army composition to counter specific threats and seize control of key territories."
+        },
+        "Aircraft Plant": {
+            "code": "armap",
+            "Tech": "T1",
+            "Explanation": "The Aircraft Plant functions as a crucial production facility for Tech 1 aircraft, acting as the backbone of your aerial operations. With a substantial 2050 HP, it is relatively durable against early-game threats, ensuring continuity in aircraft production. While it possesses no offensive capabilities and must be defended by other units, its strategic role in pumping out versatile air units like scouts, fighters, and bombers cannot be overstated. Efficient placement and protection of this plant can provide the aerial superiority required to control the battlefield."
+        },
+        "Seaplane Platform": {
+            "code": "armplat",
+            "Tech": "T1",
+            "Explanation": "The Seaplane Platform is a crucial production structure designed for building Tech 1 seaplane units, serving as a strategic asset for players looking to exert influence over water-heavy maps. Its primary strength lies in its ability to produce versatile seaplane units that can provide reconnaissance, combat support, or harassment across vast oceanic expanses. While the platform itself is defenseless with a health pool of 2000 and a sight range of 169, its placement on water enables the deployment of seaplanes that can bypass terrain obstacles. However, its immobility and lack of inherent defenses make it vulnerable to enemy naval and aerial attacks, necessitating protection from other military assets."
+        },
+        "Shipyard": {
+            "code": "armsy",
+            "Tech": "T1",
+            "Explanation": "The Shipyard serves as a crucial naval production facility, specializing in the construction of Tech 1 watercraft units, essential for establishing and expanding naval dominance. Its robust health of 4100 makes it reasonably resilient to light attacks, providing a stable foothold in naval warfare. However, being stationary and with no direct offensive capabilities, it requires protection from enemy assaults, especially since it can only be constructed on water. Due to its immobility and lack of weaponry, positioning the Shipyard strategically and ensuring its defense with other naval or coastal units is vital for maintaining a steady production line and securing maritime control."
+        },
+        "Hovercraft Platform": {
+            "code": "armhp",
+            "Tech": "T1",
+            "Explanation": "The Hovercraft Platform serves as a vital production facility for Tech 1 hovercraft units, making it an essential asset for players seeking versatility in both land and water-based operations. With its substantial health pool of 3350, it can withstand moderate attacks, providing a reliable base to churn out units. However, its lack of offensive capabilities and mobility means it should be strategically placed and well-defended to maintain production efficiency. Its ability to produce hovercraft units allows players to adapt quickly to changing battlefield dynamics, offering a tactical edge in mixed terrain engagements."
+        },
+        "Amphibious Complex": {
+            "code": "armamsub",
+            "Tech": "T1",
+            "Explanation": "The Amphibious Complex is a T1 factory designed for producing versatile amphibious units, essential for maintaining control over both land and aquatic environments. With a robust health pool of 2650, this structure can withstand moderate attacks, making it a reliable asset in contested waters. Although it has no offensive capabilities or movement, its strategic placement underwater shields it from many surface threats. However, its immobile nature and lack of direct firepower mean it must be protected by other units to ensure continued production capabilities."
+        },
+        "Vehicle Plant": {
+            "code": "armvp",
+            "Tech": "T1",
+            "Explanation": "The Vehicle Plant is a fundamental production facility designed to construct Tech 1 vehicle units, serving as the backbone for any early-game ground assault or defense strategy. With substantial health of 3000, it can withstand moderate attacks, ensuring continuous vehicle production unless faced with a concentrated offensive. Although it has no offensive capabilities or mobility, its strategic value lies in its ability to rapidly produce a variety of vehicles, allowing players to adapt to changing battlefield conditions. However, its immobility and dependence on land placement mean it requires protection and strategic positioning within your base."
+        },
+        "Naval Hovercraft Platform": {
+            "code": "armfhp",
+            "Tech": "T1",
+            "Explanation": "The Naval Hovercraft Platform is a versatile production facility designed to manufacture Tech 1 hovercraft units, making it an essential component for establishing a strong naval presence. With a significant health pool of 3350, it can withstand moderate attacks, allowing it to persist in contested waters while churning out units. Although it has no offensive capabilities or movement speed, its strategic placement on water enables the deployment of adaptable hovercraft that can traverse both land and sea. Optimal positioning and protection of the platform are crucial, as its immobility makes it vulnerable to concentrated enemy fire."
+        },
+        "Advanced Shipyard": {
+            "code": "armasy",
+            "Tech": "T2",
+            "Explanation": "The Advanced Shipyard is a crucial T2 naval factory that specializes in the production of advanced naval units, making it an essential component for any player looking to dominate the seas. With a robust health of 6000, it can withstand significant enemy fire, allowing for continued production even under pressure. However, its lack of offensive capabilities and zero speed necessitates strategic placement and adequate defense to protect it from enemy assaults. Due to its construction only on water, securing a well-defended aquatic location is vital to maximizing its potential."
+        },
+        "Advanced Vehicle Plant": {
+            "code": "armavp",
+            "Tech": "T2",
+            "Explanation": "The Advanced Vehicle Plant serves as a crucial production facility for Tech 2 vehicles, allowing players to significantly bolster their army's capabilities on land. With a robust health of 4750, this plant can withstand moderate enemy assaults, giving players time to mount a defense or counterattack. Although it lacks offensive capabilities and mobility, its strength lies in enabling the deployment of high-impact, versatile tech units that can turn the tide of battle. However, its stationary nature and potentially high resource investment make it a priority target for opponents aiming to cripple production."
+        },
+        "Advanced Aircraft Plant": {
+            "code": "armaap",
+            "Tech": "T2",
+            "Explanation": "The Advanced Aircraft Plant is a crucial Tech 2 structure that enables the production of advanced aerial units, significantly enhancing your air superiority capabilities. With a robust health pool of 3750, it can withstand moderate enemy attacks, providing enough time for a response or repair. However, it must be strategically placed and well-defended, as it has no offensive capabilities and is immobile. Its primary strength lies in unlocking a range of powerful aircraft options that can dominate the battlefield from above, making it an indispensable asset in any advanced technology strategy."
+        },
+        "Advanced Bot Lab": {
+            "code": "armalab",
+            "Tech": "T2",
+            "Explanation": "The Advanced Bot Lab serves as a critical production facility for Tech 2 bot units, playing a pivotal role in mid-game strategy. With a substantial health pool of 4250, it can withstand moderate enemy harassment, allowing players to maintain a steady flow of advanced bots. Its immobility and lack of offensive capabilities necessitate strategic placement and protection, as its destruction can significantly hinder unit production. Being a land-only structure, it's essential to secure its location from both ground and air threats to ensure uninterrupted operations."
+        },
+        "Experimental Gantry": {
+            "code": "armshltxuw",
+            "Tech": "T3",
+            "Explanation": "The Experimental Gantry is a strategic production facility designed for constructing advanced T3 units, making it a cornerstone for late-game dominance. With a formidable health pool of 16,000, it can endure significant enemy attacks, allowing you to sustain unit production even under pressure. However, its lack of mobility and weaponry means it requires a robust defense to protect against direct assaults. Investing in this high-cost structure can be a game-changer, enabling the deployment of powerful experimental units that can turn the tide of battle."
+        }
+    },
+    "Defense": {
+        "Shark's Teeth": {
+            "code": "armfdrag",
+            "Tech": "T1",
+            "Explanation": "The Shark's Teeth functions as a robust naval defensive wall at the Tech 1 level, offering significant protection with its high health of 4450. Designed to block most Tech 1 naval units and low-altitude projectiles, it serves as a critical barrier in defensive strategies, particularly around strategic coastal areas and chokepoints. While it does not possess any offensive capabilities or speed, its primary strength lies in its ability to absorb damage and delay enemy progress. Its cost-effectiveness and durability make it an essential component for players seeking to fortify their positions on water maps."
+        },
+        "Ferret": {
+            "code": "armferret",
+            "Tech": "T1",
+            "Explanation": "The Ferret serves as a T1 anti-air missile battery, designed to provide essential air defense with its substantial DPS of 176.0. Its missile launcher boasts an impressive range of 840, allowing it to intercept and eliminate most T1 and some T2 aircraft effectively before they can pose a threat. With 1330 health, it can withstand moderate attacks, though its stationary nature makes it vulnerable to ground assaults if not adequately protected. Despite its lack of mobility and a limited sight range of 375, the Ferret is a cost-effective solution for securing airspace in early-game scenarios."
+        },
+        "Heavy Mine": {
+            "code": "armfmine3",
+            "Tech": "T1",
+            "Explanation": "The Heavy Mine, classified as a T1 defensive unit, is a powerful anti-naval asset designed to inflict significant damage on heavily armored naval units. With its impressive DPS of 1940, it excels at neutralizing enemy ships that venture too close, but its effectiveness is limited by its stationary nature and zero weapon range. The unit's low health of 11 makes it highly vulnerable to detection and destruction if not strategically placed. Due to its immobility and narrow sight range of 78, deploying it in chokepoints or high-traffic sea lanes maximizes its potential for surprise assaults."
+        },
+        "Beamer": {
+            "code": "armbeamer",
+            "Tech": "T1",
+            "Explanation": "The Beamer is a T1 defensive turret equipped with a powerful BeamLaser, serving as a formidable obstacle against enemy units with its continuous high-intensity laser beam. It boasts a high DPS of 266.0 and a substantial health pool of 1430, making it ideal for holding chokepoints and protecting key installations. With a weapon range of 480, it can effectively engage enemies before they come too close, though its fixed position means it cannot pursue retreating foes. The Beamer is cost-effective for early defense, but its lack of mobility requires strategic placement to maximize its impact on the battlefield."
+        },
+        "Juno": {
+            "code": "armjuno",
+            "Tech": "T1",
+            "Explanation": "The Juno is a specialized Tactical Support unit equipped with a Starburst Launcher capable of deploying anti-micro-electronics missiles across a massive range of 32,000 units. Its primary role is to disrupt enemy radar and communication systems, making it an invaluable asset for electronic warfare. While it boasts considerable health at 2350 HP, its complete lack of mobility means it must be strategically placed for optimal defense and disruption. The Juno is most effective when integrated into a defensive line, providing support by neutralizing enemy electronic capabilities, though its high cost necessitates careful placement to avoid resource wastage."
+        },
+        "Harpoon": {
+            "code": "armtl",
+            "Tech": "T1",
+            "Explanation": "The Harpoon is a T1 torpedo launcher designed to defend against naval threats, effectively targeting both ships and submarines within its substantial 500 range. With a formidable DPS of 187 and a sturdy 1300 health, it serves as a formidable deterrent against early naval incursions. However, its stationary nature and inability to engage targets outside of water make it vulnerable to air or land-based attacks, necessitating protective measures from other unit types. Its cost-effectiveness and defensive capabilities make it an essential component for securing coastal and underwater territories in the early game."
+        },
+        "Dragon's Claw": {
+            "code": "armclaw",
+            "Tech": "T1",
+            "Explanation": "Dragon's Claw is an innovative T1 defensive turret designed to surprise and disrupt enemy forces. It boasts a formidable Lightning Cannon with a solid DPS of 159, capable of delivering substantial damage to approaching enemies within its 430 range. Disguised as a block of Dragon's Teeth, it remains concealed until foes are near, offering a strategic advantage by catching them off guard. However, its static nature means it cannot reposition once deployed, making it essential to carefully choose its initial placement to maximize its defensive potential."
+        },
+        "Gauntlet": {
+            "code": "armguard",
+            "Tech": "T1",
+            "Explanation": "The Gauntlet serves as a T1 medium-range artillery battery, equipped with three powerful cannons that deliver a respectable DPS of 212.0. With its impressive weapon range of 1220, it excels at bombarding enemy positions from a distance, making it a valuable asset for supporting assaults or defending strategic locations. Although it has a substantial health pool of 3050, it is completely immobile, which means it requires protection from mobile units to prevent it from being easily flanked or overrun. Its lack of speed and mobility is compensated by its ability to deliver potent area-of-effect damage, making it ideal for softening up enemy formations before a direct engagement."
+        },
+        "Light Mine": {
+            "code": "armmine1",
+            "Tech": "T1",
+            "Explanation": "The Light Mine is a T1 defensive unit specializing in ambushing and damaging lightly armored units such as vehicles and bots. With a significant DPS of 445.0, it excels in providing a cost-effective deterrent against advancing enemy forces. Its lack of mobility and minimal health make it vulnerable to detection and neutralization if not strategically placed. Best deployed in chokepoints or high-traffic areas, its effectiveness is maximized when used in conjunction with other defensive structures or units to capitalize on its explosive potential."
+        },
+        "Manta": {
+            "code": "armfhlt",
+            "Tech": "T1",
+            "Explanation": "The Manta is a formidable defensive structure classified as a T1 Floating Heavy Laser Tower, designed to secure aquatic zones with its powerful BeamLaser. With a significant health pool of 4250, it can withstand considerable enemy fire, making it more robust than its land-based counterparts. Its impressive weapon range and sight range of 630 allow it to effectively engage and deter enemy units approaching from the water. However, its immobility and stationary nature mean it must be strategically placed to maximize its defensive potential, and it relies heavily on support from other units to protect against aerial threats."
+        },
+        "Overwatch": {
+            "code": "armhlt",
+            "Tech": "T1",
+            "Explanation": "The Overwatch is a formidable T1 defensive structure equipped with a powerful BeamLaser, designed to serve as a Heavy Defense Turret. Its significant strength lies in its impressive 620 weapon range, allowing it to comfortably outrange most Tier 1 land units, making it ideal for controlling choke points and protecting strategic locations. With a robust 2600 health, it can withstand considerable enemy fire, although its lack of mobility (speed is 0) means strategic placement is crucial for effectiveness. However, players should be cautious of artillery units, which can outrange and destroy it if not adequately defended."
+        },
+        "Nettle": {
+            "code": "armrl",
+            "Tech": "T1",
+            "Explanation": "The Nettle serves as a T1 stationary anti-air defense tower, specializing in neutralizing light aircraft with its MissileLauncher. Its significant weapon range of 765 allows it to cover a wide area, providing critical air defense in early stages of the game. While it boasts a respectable DPS of 68, its immobility and moderate health of 330 make it vulnerable to ground assaults if left unprotected. Due to its zero mobility, strategic placement is key, ensuring it complements other defensive structures to mitigate its vulnerability to direct attacks."
+        },
+        "Chainsaw": {
+            "code": "armcir",
+            "Tech": "T1",
+            "Explanation": "The Chainsaw serves as a formidable anti-air defense unit, designed to protect your base from aerial threats with its powerful MissileLauncher. Boasting a high DPS of 625 and an impressive weapon range of 1125, it excels at targeting and annihilating enemy aircraft before they can inflict damage. Its bomb-resistant design and substantial health pool of 4450 make it durable against air raids, ensuring prolonged operational capability. However, its immobility and limited sight range of 380 mean it relies heavily on external units for target acquisition and is best placed strategically across your defensive perimeter."
+        },
+        "Naval Nettle": {
+            "code": "armfrt",
+            "Tech": "T1",
+            "Explanation": "The Naval Nettle serves as a T1 light anti-air missile tower designed primarily for defensive operations against airborne threats. With a decent DPS of 96.0 and a substantial weapon range of 765, it excels at clearing light aircraft within its vicinity, making it an essential component of any naval defense strategy. Its ability to be constructed on water allows versatile placement along coastlines and strategic water routes. However, its stationary nature and modest health pool of 380 make it vulnerable to concentrated attacks, so it should be supported by other units to ensure its longevity in prolonged engagements."
+        },
+        "Dragon's Teeth": {
+            "code": "armdrag",
+            "Tech": "T1",
+            "Explanation": "Dragon's Teeth serve as a crucial defensive structure, primarily functioning as a barrier to obstruct T1 units and low-altitude projectiles. With substantial health of 2800, they excel in absorbing damage and providing strategic advantage by funneling enemy forces into kill zones or protecting valuable assets. Despite being immobile and having no offensive capabilities, their low cost makes them an efficient choice for establishing a defensive perimeter. However, care must be taken as they are vulnerable to higher-tier units and indirect fire, requiring complementary defenses for comprehensive protection."
+        },
+        "Medium Mine": {
+            "code": "armmine2",
+            "Tech": "T1",
+            "Explanation": "The Medium Mine is a strategic defensive unit, designed to eliminate tougher adversaries than its lighter counterparts, including medium tanks and heavier bots. With a formidable DPS of 1110.0, it excels at delivering a powerful, sudden blow to unsuspecting enemy units that venture too close. However, its zero speed and limited sight range of 83 make it reliant on careful placement and concealment within choke points or high-traffic areas. Its low health of 11 necessitates strategic deployment to avoid premature detection and destruction, ensuring it delivers its devastating payload at the optimal moment."
+        },
+        "Anemone": {
+            "code": "armdl",
+            "Tech": "T1",
+            "Explanation": "The Anemone is a T1 stationary torpedo launcher designed for coastal defense, specializing in targeting enemy ships and submarines. With a robust health pool of 2200 HP, it can withstand significant damage while delivering a formidable 150 DPS, making it a reliable choice for protecting shorelines against naval threats. Its 600 weapon range allows it to strike from a safe distance, but its stationary position means it lacks mobility, requiring strategic placement near water for maximum effectiveness. Despite its lack of movement, the Anemone's ability to deter both surface and underwater units makes it a valuable asset in establishing a strong coastal defense."
+        },
+        "Pit Bull": {
+            "code": "armpb",
+            "Tech": "T2",
+            "Explanation": "The Pit Bull serves as a formidable stationary defense turret, equipped with a heavy gauss cannon that delivers a high DPS of 422.0. With a weapon range of 730, it excels at controlling key chokepoints and repelling enemy advances before they can reach your base. Its substantial 2800 health ensures it can withstand heavy assaults, making it a reliable choice for static defense. However, its lack of mobility and high-tech level requirement mean it should be strategically placed to maximize its defensive potential."
+        },
+        "Naval Arbalest": {
+            "code": "armfflak",
+            "Tech": "T2",
+            "Explanation": "The Naval Arbalest is a T2 Anti-Air Naval Defense Platform designed to provide robust air defense with its powerful cannon. It excels in eliminating aerial threats with its impressive DPS of 469 and a significant weapon range of 775, making it essential for safeguarding coastal and naval operations. However, its lack of mobility and zero speed mean it must be strategically placed to maximize coverage and effectiveness. The unit's high health of 1920 and large AoE damage make it particularly effective against clustered air units, though its inability to move necessitates careful planning of placement."
+        },
+        "Fortification Wall": {
+            "code": "armfort",
+            "Tech": "T2",
+            "Explanation": "The Fortification Wall serves as a robust defensive structure, designed to impede the advancement of most Tech 1 and Tech 2 units with its impressive 8900 health. This makes it ideal for establishing fortified boundaries or creating choke points to control enemy movements. Despite its lack of offensive capabilities and immobility, its strength lies in its ability to absorb a substantial amount of damage, protecting more valuable assets behind it. However, its reliance on other defensive units for offensive support can be a drawback in scenarios where enemy firepower overwhelms stationary defenses."
+        },
+        "Citadel": {
+            "code": "armamd",
+            "Tech": "T2",
+            "Explanation": "The Citadel serves as a pivotal T2 Nuclear Missile Defense System with its primary role in intercepting and neutralizing incoming nuclear threats. With its StarburstLauncher capable of a staggering 72,000 weapon range, it provides extensive coverage, ensuring the safety of your base against intercontinental ballistic missiles. Its high health of 3,300 makes it resilient against moderate attacks, but its lack of mobility and substantial cost mean it should be strategically placed and protected. While offering powerful defense, its limited sight range of 201 requires supplementary scouting support to maximize its effectiveness."
+        },
+        "Rattlesnake": {
+            "code": "armamb",
+            "Tech": "T2",
+            "Explanation": "The Rattlesnake is a T2 pop-up plasma artillery battery that excels as a defensive structure with its impressive 1380 weapon range and a consistent DPS of 389.0. Its ability to cloak provides strategic advantages, allowing it to remain hidden until the perfect moment to unleash a barrage of cannon fire on unsuspecting enemies. With 4000 health, it can withstand considerable damage, making it a tough target to dislodge from fortified positions. However, its immobility and limited sight range of 442 necessitate pairing with scouting units or other defenses to maximize its effectiveness and avoid being caught off-guard by long-range threats."
+        },
+        "Mercury": {
+            "code": "armmercury",
+            "Tech": "T2",
+            "Explanation": "Mercury is a T2 Anti-Air Missile Launcher, excelling in long-range aircraft interception with its massive 2400 range. Its high DPS of 417.0 allows it to decimate enemy air threats before they can pose a risk to your base. However, it has no mobility with a speed of 0, making it a stationary defense unit. While its health is relatively moderate at 1670, its high-tech capability is best utilized as a strategic anti-air defense in protected locations."
+        },
+        "Ragnarok": {
+            "code": "armvulc",
+            "Tech": "T2",
+            "Explanation": "The Ragnarok functions as a T2 long-range artillery unit, designed to provide unparalleled firepower with its devastating rapid-fire plasma cannon. Its formidable 2708 DPS and extensive 5750 weapon range make it an ideal choice for obliterating enemy structures and units from a safe distance. However, its stationary nature, coupled with a high resource cost, requires strategic placement and protection against enemy assaults. While its impressive 32,000 health makes it resilient, players must ensure it is adequately defended to maximize its destructive potential."
+        },
+        "Tracer": {
+            "code": "armsd",
+            "Tech": "T2",
+            "Explanation": "The Tracer is a specialized Intrusion Countermeasure System (ICS) designed for detecting and neutralizing enemy stealth units. Despite having no direct offensive capabilities (DPS: 0.0), its formidable weapon range of 2000 allows it to cover extensive areas, making it an invaluable asset for maintaining strategic defense perimeters. With a robust health pool of 2650, it is resilient in withstanding enemy attempts to disable it. However, its stationary nature (Speed: 0) requires careful placement, as it cannot be repositioned without support, making it crucial to integrate it with mobile units for comprehensive security coverage."
+        },
+        "Gorgon": {
+            "code": "armkraken",
+            "Tech": "T2",
+            "Explanation": "The Gorgon, a floating rapid-fire plasma tower, serves as a formidable defensive structure, especially in aquatic environments. With a high DPS of 540 and an impressive weapon range of 800, it excels at deterring enemy naval and amphibious units before they can close in. Its substantial health pool of 4450 makes it resilient against sustained attacks, although its immobility means strategic placement is crucial. Despite its stationary nature, the Gorgon's ability to be constructed on water provides a unique advantage in securing naval chokepoints and supporting coastal defenses."
+        },
+        "Keeper": {
+            "code": "armgate",
+            "Tech": "T2",
+            "Explanation": "The Keeper serves as a robust defensive structure, primarily functioning as a shield generator with a high health pool of 3550. Its primary role is to deflect incoming plasma artillery, making it an essential asset for protecting critical infrastructure and units from long-range bombardments. Despite its lack of mobility and offensive capabilities, the Keeper excels in its ability to absorb substantial damage, creating a resilient defensive perimeter. However, its static nature and limited weapon range of 10 require strategic placement and support from offensive units to maximize its defensive potential."
+        },
+        "Armageddon": {
+            "code": "armsilo",
+            "Tech": "T2",
+            "Explanation": "The Armageddon serves as a T2 Strategic Nuclear Missile Launcher, capable of devastating entire enemy bases and armies with its unparalleled destructive power. With a massive weapon range of 72000, it can engage targets from a safe distance, making it an excellent choice for long-range assaults and area denial. Its high DPS of 317.0, combined with its ability to obliterate large areas, makes it an invaluable asset in late-game scenarios. However, its zero mobility and potentially high resource cost require players to protect it effectively while managing their economy for efficient use."
+        },
+        "Paralyzer": {
+            "code": "armemp",
+            "Tech": "T2",
+            "Explanation": "The Paralyzer is a T2 specialized artillery unit designed for tactical support with its EMP-StarburstLauncher, capable of disabling enemy units at an impressive range of 3650. Its primary strength lies in its ability to neutralize clusters of enemy forces, making it invaluable for initiating assaults or defending strategic positions. However, its lack of mobility and direct damage output means it must be protected by other units and positioned strategically to maximize its impact. The Paralyzer's high health ensures it can endure some counter-attacks while performing its role as a battlefield disruptor."
+        },
+        "Pulsar": {
+            "code": "armanni",
+            "Tech": "T2",
+            "Explanation": "The Pulsar serves as a formidable T2 defensive structure, primarily functioning as a Long-Range Beam Laser Tower. Its tremendous DPS of 1091 and exceptional weapon range of 1400 make it ideal for obliterating enemy units from a distance before they can close in. With a robust health pool of 6100, it can withstand significant enemy fire, making it a cornerstone in a fortified defense line. However, its immobility and potentially high cost require strategic placement, as it cannot be repositioned and may necessitate protection from fast-moving attackers."
+        },
+        "Basilica": {
+            "code": "armbrtha",
+            "Tech": "T2",
+            "Explanation": "The Basilica serves as a formidable T2 Long-Range Plasma Cannon (LRPC), specializing in delivering devastating artillery fire over vast distances with its impressive 4650 range. Its high DPS of 123.0 makes it a strategic asset for bombarding enemy bases or fortifications from afar, safely outside the reach of most counterattacks. However, its immobility and lack of sight range necessitate the support of scouting units to maximize its effectiveness and avoid being blindsided. While its substantial health of 4450 provides durability, it requires significant protection due to its inability to reposition or retreat."
+        },
+        "Moray": {
+            "code": "armatl",
+            "Tech": "T2",
+            "Explanation": "The Moray is a T2 advanced torpedo launcher designed for anti-naval operations, effectively targeting both ships and submarines within its impressive 915 weapon range. With a formidable DPS of 360.0, it excels at providing area denial and maintaining control over strategic waterways. Its high health of 2800 allows it to withstand considerable enemy fire, enhancing its role as a durable defensive unit. However, with a speed of 0, the Moray is stationary, necessitating strategic placement to maximize its impact and mitigate its immobility."
+        },
+        "Arbalest": {
+            "code": "armflak",
+            "Tech": "T2",
+            "Explanation": "The Arbalest serves as a formidable T2 anti-air defense unit, specializing in eliminating aerial threats with high damage output and a wide area of effect. Its 775-range cannon can effectively engage and neutralize clusters of enemy aircraft before they come within striking distance. While it boasts a substantial health pool of 1750, making it durable in defensive positions, its immobility and zero speed necessitate strategic placement to maximize its protective coverage. However, its lack of mobility and limited sight range of 525 require support from other units for optimal targeting and engagement of threats."
+        }
+    },
+    "Buildings": {
+        "Naval Construction Turret": {
+            "code": "armnanotcplat",
+            "Tech": "T1",
+            "Explanation": "The Naval Construction Turret is a T1 support structure designed for aquatic environments, specializing in assisting and repairing nearby naval units. With a robust 560 health, it can sustain moderate damage while providing essential maintenance support to allied forces. Its strength lies in its ability to enhance the efficiency of naval operations by rapidly constructing or repairing units, making it indispensable in prolonged battles. However, with no offensive capabilities and being stationary, it requires strategic placement and protection to maximize its utility without falling prey to enemy attacks."
+        },
+        "Naval Metal Storage": {
+            "code": "armuwms",
+            "Tech": "T1",
+            "Explanation": "The Naval Metal Storage is a critical infrastructure unit designed to significantly boost your metal storage capacity by 3000 units while being discreetly positioned underwater. As a T1 structure, it plays a vital support role, allowing players to efficiently manage and store larger quantities of metal resources crucial for sustained military and economic expansion. With a formidable health of 3600, it offers respectable durability against minor underwater threats, though it lacks any offensive capabilities or mobility. Its underwater placement makes it less vulnerable to direct attacks, yet players should still ensure its protection against dedicated naval or submarine assaults, given its strategic importance."
+        },
+        "Tidal Generator": {
+            "code": "armtide",
+            "Tech": "T1",
+            "Explanation": "The Tidal Generator is a T1 energy-producing structure designed to harness the power of water movement, making it an essential component for any base situated near water. With a health of 400, it is relatively durable for an energy structure, though it requires protection due to its lack of offensive capabilities and immobility. Its cost-effectiveness in generating energy makes it ideal for early-game economies, especially when other resources are scarce. However, its stationary nature and reliance on water bodies mean it can be vulnerable to naval attacks, necessitating strategic placement and defense."
+        },
+        "Wind Turbine": {
+            "code": "armwin",
+            "Tech": "T1",
+            "Explanation": "The Wind Turbine is an essential T1 energy production structure, converting wind power into energy without any direct combat capability. It boasts a modest health of 196, making it relatively fragile and susceptible to enemy raids if not well-protected. Its primary strength lies in its ability to generate energy at a very low operational cost, providing a sustainable source of power in wind-rich environments. However, its output can be inconsistent due to variable wind conditions, so it is best used in combination with other energy sources to maintain a stable energy supply."
+        },
+        "Energy Storage": {
+            "code": "armestor",
+            "Tech": "T1",
+            "Explanation": "The Energy Storage unit, categorized under T1 technology, plays a crucial role as a strategic resource enhancer, increasing your energy storage capacity by 6000 units. While it offers no offensive capabilities, its robust health of 1890 HP ensures it can withstand moderate attacks, buying you time to defend or relocate. The lack of mobility and weaponry necessitates careful placement, ideally within fortified bases or protected zones to maximize its long-term utility. Its primary weakness lies in its vulnerability when isolated, making it essential to integrate it within a larger defensive strategy to safeguard your energy reserves effectively."
+        },
+        "Radar Tower": {
+            "code": "armrad",
+            "Tech": "T1",
+            "Explanation": "The Radar Tower serves as a critical reconnaissance structure with a substantial sight range of 680, providing early detection of enemy movements. As a T1 unit, it is cost-effective and essential for maintaining map control and strategic planning. While it has no offensive capabilities and a low health of 90, making it vulnerable to attacks, its primary strength lies in relaying information, which can be pivotal in coordinating defenses or launching preemptive strikes. Its stationary nature necessitates careful placement to maximize coverage while minimizing exposure to enemy forces."
+        },
+        "Metal Storage": {
+            "code": "armmstor",
+            "Tech": "T1",
+            "Explanation": "The Metal Storage is a crucial infrastructure unit designed to increase your total metal storage capacity by 3000, enabling players to accumulate more resources during extended engagements. With a robust health of 2100, it can withstand moderate attacks, providing some resilience in the face of enemy raids. Although it lacks any direct offensive capabilities and has zero speed, its primary role is to support your economy by preventing resource overflow and ensuring efficient metal management. However, players should protect it adequately, as its destruction could lead to significant resource bottlenecks."
+        },
+        "Naval Radar / Sonar Tower": {
+            "code": "armfrad",
+            "Tech": "T1",
+            "Explanation": "The Naval Radar/Sonar Tower serves as an essential early warning system, providing comprehensive detection capabilities across air, land, and underwater domains. With a substantial sight range of 760, it acts as a critical intelligence-gathering asset, allowing commanders to anticipate and respond to enemy movements effectively. Despite its lack of offensive capabilities and low health of 110, its strategic placement near key naval routes or bases can significantly enhance a fleet's situational awareness. However, its immobility and vulnerability necessitate protective measures, such as placement out of enemy firing range or support from defensive units."
+        },
+        "Geothermal Powerplant": {
+            "code": "armgeo",
+            "Tech": "T1",
+            "Explanation": "The Geothermal Powerplant is a T1 static energy production structure that leverages geothermal vents to generate a consistent and significant amount of energy. With a solid health pool of 1940, it serves as a durable energy source that is crucial for sustaining your base's power needs, especially in energy-intensive operations. However, its immobility and dependency on geothermal locations make it vulnerable to strategic strikes and potentially limit placement options to specific map areas. It's essential to guard these powerplants with defenses due to their static nature and critical importance in maintaining energy levels for advanced unit production and base operations."
+        },
+        "Energy Converter": {
+            "code": "armmakr",
+            "Tech": "T1",
+            "Explanation": "The Energy Converter serves as a critical infrastructure unit for resource management, converting excess energy into metal to help sustain your war machine. With no offensive capabilities and a modest health pool of 167, it must be protected from enemy attacks, as it cannot defend itself or flee. The Energy Converter does not move and has a very limited sight range, making its placement in a well-defended base area essential. Although it doesn't contribute directly to combat, its role in resource conversion is vital for maintaining a balanced economy, especially in energy-rich environments."
+        },
+        "Twilight": {
+            "code": "armamex",
+            "Tech": "T1",
+            "Explanation": "The Twilight is a cloaked Metal Extractor designed for stealthy resource gathering in 'Beyond All Reason'. With a substantial health pool of 1610, it can withstand moderate enemy attacks, making it a durable choice for securing metal resources. Its unique ability to cloak allows it to operate undetected, providing a strategic advantage by keeping your resource operations hidden from enemy scouts. However, it lacks offensive capabilities and mobility, necessitating protection from other units to ensure its longevity on the battlefield."
+        },
+        "Construction Turret": {
+            "code": "armnanotc",
+            "Tech": "T1",
+            "Explanation": "The Construction Turret is a stationary support unit designed for efficient base development and repair operations. With its high build power, second only to the Commander, it excels at rapidly constructing structures and assisting in repairs, making it invaluable for maintaining a robust defensive line. Its lack of mobility and inability to attack means it must be placed strategically within your base to avoid enemy threats. Despite its vulnerability, its significant construction capabilities and 560 health make it a critical asset for expanding and reinforcing your stronghold."
+        },
+        "Offshore Geothermal Powerplant": {
+            "code": "armuwgeo",
+            "Tech": "T1",
+            "Explanation": "The Offshore Geothermal Powerplant is a strategic T1 energy structure designed for underwater deployment, ideal for players looking to capitalize on geothermal vents beneath the sea. With a health pool of 1940, it provides a robust and reliable source of energy without the need for surface protection, making it an excellent choice in maps with significant water areas. Its inability to move or defend itself means it's vulnerable to enemy naval or submarine attacks, so players should ensure it is well-guarded by naval units or defensive structures. The lack of direct offensive capabilities underscores its role as a critical energy provider rather than a combat unit."
+        },
+        "Metal Extractor": {
+            "code": "armmex",
+            "Tech": "T1",
+            "Explanation": "The Metal Extractor is a crucial economic unit classified as Tech Level 1, responsible for harvesting metal resources from designated metal spots on the map. With its 270 health, it is moderately durable but completely defenseless, as it possesses no weapons or DPS capabilities. Its stationary nature and lack of mobility make it vulnerable to enemy attacks, so it is advisable to fortify its surroundings with defensive structures or units. As a cornerstone of your resource economy, ensuring continuous operation of Metal Extractors is vital for sustaining production and maintaining an advantage over opponents."
+        },
+        "Beholder": {
+            "code": "armeyes",
+            "Tech": "T1",
+            "Explanation": "The Beholder serves as a T1 observation structure, excelling in reconnaissance with its extensive sight range of 560, allowing players to monitor enemy movements from a safe distance. Its ability to be constructed on challenging terrains such as steep cliffs makes it highly versatile for strategic placement. Despite having no offensive capabilities and a stationary speed, its low health of 280 makes it vulnerable to enemy attacks, necessitating careful positioning and protection. Its cost-effectiveness and adaptability make it an essential asset for early-game intel gathering and map control."
+        },
+        "Naval Energy Storage": {
+            "code": "armuwes",
+            "Tech": "T1",
+            "Explanation": "The Naval Energy Storage is a T1 support structure designed for underwater deployment, crucial for expanding your energy storage capacity by an additional 6000 units. Its robust health of 1890 makes it moderately resilient against enemy attacks, though it lacks any offensive capabilities. This unit does not move or attack, making it vulnerable if left unprotected, so it's best used in well-defended areas of your naval base. Its strategic importance lies in enabling sustained energy reserves, crucial for powering advanced units and structures during prolonged engagements."
+        },
+        "Advanced Solar Collector": {
+            "code": "armadvsol",
+            "Tech": "T1",
+            "Explanation": "The Advanced Solar Collector is a crucial energy production unit designed for early-game economic expansion. With its high health of 1130, it can withstand moderate damage, making it a more resilient choice compared to basic solar panels. Its role is pivotal for establishing a sustainable energy infrastructure, especially in sun-rich environments, allowing players to support energy-intensive operations. However, it lacks mobility and defensive capabilities, requiring strategic placement and protection against enemy raids."
+        },
+        "Sneaky Pete": {
+            "code": "armjamt",
+            "Tech": "T1",
+            "Explanation": "Sneaky Pete is a T1 mid-range radar jammer, designed to cloak your units from enemy radar detection. Its primary strength lies in its ability to provide stealth to nearby forces, making it a crucial asset in surprise attacks or defensive maneuvers. While it boasts a decent health pool of 790, its lack of offensive capabilities and zero speed render it vulnerable if left unprotected. It's essential to pair Sneaky Pete with mobile units for optimal protection and to maximize its strategic advantage on the battlefield."
+        },
+        "Naval Energy Converter": {
+            "code": "armfmkr",
+            "Tech": "T1",
+            "Explanation": "The Naval Energy Converter is a crucial T1 economic unit designed for aquatic environments, converting excess energy into valuable metal resources. With a sight range of 273, it can provide limited vision in its vicinity, though it is defenseless with no weapons or offensive capabilities. Its stationary nature and modest health of 167 make it vulnerable to enemy attacks, necessitating protection from naval or air units. Despite these vulnerabilities, its ability to bolster metal production is vital for sustaining and expanding your fleet and base, especially when energy is abundant."
+        },
+        "Solar Collector": {
+            "code": "armsolar",
+            "Tech": "T1",
+            "Explanation": "The Solar Collector is a T1 energy production unit essential for establishing a stable power economy in the early game. With no offensive capabilities and a static position due to its zero speed, its primary role is to generate energy by harnessing solar power. Its moderate health of 340 makes it relatively durable for a stationary target, but it should still be protected from enemy raids due to its inability to defend itself. The Solar Collector is cost-effective for early energy needs but should be supplemented with more robust energy sources as your base expands."
+        },
+        "Advanced Geothermal Powerplant": {
+            "code": "armageo",
+            "Tech": "T2",
+            "Explanation": "The Advanced Geothermal Powerplant is a critical T2 energy structure designed to harness geothermal steam to produce substantial energy for your base operations. With a robust health pool of 3600, it can withstand moderate enemy attacks, making it a relatively resilient energy source. However, its immobility and lack of defensive armament necessitate protective measures against targeted assaults. Due to its reliance on geothermal vents, strategic placement is essential to maximize its output and integrate it effectively into your energy infrastructure."
+        },
+        "Naval Fusion Reactor": {
+            "code": "armuwfus",
+            "Tech": "T2",
+            "Explanation": "The Naval Fusion Reactor is a vital T2 energy-producing structure designed to operate on water, making it crucial for maintaining energy supplies in naval-focused strategies. With a robust health pool of 5600, it can withstand moderate enemy assaults, but its immobility and lack of defenses make it vulnerable if left unprotected. Its primary strength lies in its ability to produce substantial energy, supporting energy-intensive operations and advanced units. To maximize its utility, ensure it is defended by naval units or structures, as its destruction can severely cripple your energy infrastructure."
+        },
+        "Naval Pinpointer": {
+            "code": "armfatf",
+            "Tech": "T2",
+            "Explanation": "The Naval Pinpointer is a specialized support unit crucial for enhancing your team's strategic capabilities on the water. As a T2 unit, it plays a pivotal role in improving radar accuracy by halving the radar dot 'wobble' for each targeting facility, providing your team with more precise enemy positions. While it boasts a substantial health pool of 1610, it lacks offensive capabilities and mobility, making it vulnerable if left unprotected. Its primary strength lies in augmenting radar data, making it indispensable for naval operations where precise targeting can turn the tide of battle."
+        },
+        "Cloakable Fusion Reactor": {
+            "code": "armckfus",
+            "Tech": "T2",
+            "Explanation": "The Cloakable Fusion Reactor is a strategic T2 energy production structure that offers the unique advantage of stealth through its cloaking ability, making it ideal for hidden power generation in vulnerable or contested areas. With a substantial health pool of 4450, it can withstand moderate attacks, but its true strength lies in remaining undetected to avoid becoming a target. While it cannot move or attack, the reactor's ability to generate significant energy without revealing its position can be pivotal in maintaining an uninterrupted energy supply. However, its cloak functionality comes at a high energy cost, and players must carefully manage their resources to keep it hidden effectively."
+        },
+        "Naval Advanced Energy Converter": {
+            "code": "armuwmmm",
+            "Tech": "T2",
+            "Explanation": "The Naval Advanced Energy Converter is a vital T2 resource infrastructure unit, designed to efficiently convert surplus energy into metal while being built on water, thus saving valuable land space. Its primary strength lies in its capacity to bolster the metal economy without requiring additional land territory, making it ideal for water-dominated maps or when land is already fully utilized. With a modest health of 445, it requires protection from enemy naval units, as it has no means of defense or mobility. Its strategic placement is crucial for a sustainable resource advantage, but its lack of direct combat utility means it must be used wisely in conjunction with defensive units."
+        },
+        "Prude": {
+            "code": "armgmm",
+            "Tech": "T2",
+            "Explanation": "The Prude is a T2 Safe Geothermal Powerplant designed to boost your energy production with a substantial output of 750 energy units. With its impressive 13,900 health, it can withstand moderate enemy attacks, making it a resilient addition to your base infrastructure. However, its lack of speed and weaponry means it must be strategically placed in secure areas, as it cannot defend itself or relocate. This unit is ideal for players looking to enhance their energy capacity while maintaining a fortified base."
+        },
+        "Pinpointer": {
+            "code": "armtarg",
+            "Tech": "T2",
+            "Explanation": "The Pinpointer is a T2 support unit specializing in enhancing radar accuracy for your entire team. Its primary role is to reduce radar dot 'wobble' by half, thereby improving targeting precision for allied units, which is crucial in long-range engagements and artillery strikes. With a substantial health pool of 2100, it can withstand some enemy fire, but its lack of speed and offensive capabilities means it should be strategically placed away from direct combat zones. Its effectiveness is amplified when multiple targeting facilities are constructed, making it a valuable asset in a well-coordinated team strategy."
+        },
+        "Air Repair Pad": {
+            "code": "armfasp",
+            "Tech": "T2",
+            "Explanation": "The Air Repair Pad serves as a vital support structure for maintaining the operational efficiency of your air fleet. With a strong health pool of 1670, it provides durability against enemy skirmishes, though it lacks offensive capabilities and mobility, making it vulnerable if left undefended. Its primary role is to quickly and efficiently repair damaged aircraft, ensuring they can return to battle sooner and sustain prolonged engagements. While it is crucial for reinforcing air superiority, its stationary nature and lack of defenses necessitate strategic placement and protection from ground and anti-air threats."
+        },
+        "Naval Advanced Metal Extractor": {
+            "code": "armuwmme",
+            "Tech": "T2",
+            "Explanation": "The Naval Advanced Metal Extractor is a critical T2 economic structure designed for underwater deployment, serving as a heavy resource gatherer. With a robust health of 2800, it provides a significant boost to your metal income by extracting more metal from aquatic resource nodes compared to basic extractors. Although it does not possess any defensive capabilities or mobility, making it vulnerable to enemy naval or air assaults, its strategic placement and protection are paramount to maintaining a strong economy. To maximize its potential, ensure it is well-defended by naval units or submerged defenses to safeguard your investment in contested waters."
+        },
+        "Fusion Reactor": {
+            "code": "armfus",
+            "Tech": "T2",
+            "Explanation": "The Fusion Reactor is a critical T2 energy production structure, essential for powering advanced operations and high-energy units. With a substantial health pool of 4450, it can withstand moderate attacks, making it a durable asset in your energy grid. Its lack of mobility and defensive capabilities means it should be strategically placed within secured areas or well-protected bases to avoid enemy raids. Despite its high cost and stationary nature, the Fusion Reactor is invaluable for maintaining a steady and ample energy supply, crucial for sustaining prolonged warfare and technological advancements."
+        },
+        "Decoy Fusion Reactor": {
+            "code": "armdf",
+            "Tech": "T2",
+            "Explanation": "The Decoy Fusion Reactor is a strategic T2 structure designed to mislead opponents by mimicking the appearance of a real fusion reactor. With a substantial health of 5200, it can withstand a fair amount of enemy fire, making it an effective distraction. Its primary strength lies in its ability to deceive enemy scouts and attacks, drawing them away from your actual energy production facilities. However, it offers no energy production or offensive capabilities, so its placement should be strategic to maximize its role as a diversion without consuming vital resources."
+        },
+        "Hardened Energy Storage": {
+            "code": "armuwadves",
+            "Tech": "T2",
+            "Explanation": "The Hardened Energy Storage is a vital T2 structure designed to significantly boost your energy reserves by 40,000 units. With an impressive health pool of 11,700, it can withstand moderate enemy assaults, making it a reliable asset in securing your energy economy. Its stationary nature means it lacks mobility and offensive capabilities, but its robust construction provides some resilience against attacks. Strategically placing these structures in secure areas of your base is essential to protect your energy infrastructure from potential threats."
+        },
+        "Advanced Metal Extractor": {
+            "code": "armmoho",
+            "Tech": "T2",
+            "Explanation": "The Advanced Metal Extractor is a vital economic unit in the game, classified as a Tier 2 structure that excels in resource gathering. With its significant health of 2800, it can withstand moderate enemy attacks, providing durability to your infrastructure. It is essential for players aiming to boost their metal income significantly, allowing for accelerated production of advanced units and structures. However, its high cost and immobility make it a prime target, necessitating protection from mobile defensive units or fortifications to ensure its longevity on the battlefield."
+        },
+        "Advanced Fusion Reactor": {
+            "code": "armafus",
+            "Tech": "T2",
+            "Explanation": "The Advanced Fusion Reactor is a critical infrastructure unit in the T2 technology tier, designed to generate substantial energy for sustaining large-scale operations. With a high health pool of 7900, it is durable enough to withstand moderate attacks, making it a reliable choice for energy production in secured areas. However, its lack of mobility and defensive capabilities means it requires protection from enemy raids, especially considering its significant resource investment. Strategically place it away from front lines and reinforce it with defensive structures or units to ensure consistent energy output."
+        },
+        "Advanced Radar Tower": {
+            "code": "armarad",
+            "Tech": "T2",
+            "Explanation": "The Advanced Radar Tower is an essential T2 support structure, primarily serving as a strategic intelligence-gathering asset. With its expansive sight range of 820, it excels in providing early warnings and tracking enemy movements, making it invaluable for maintaining situational awareness across the battlefield. Although it lacks offensive capabilities and is immobile, its relatively low health of 355 makes it vulnerable to direct attacks, necessitating protection from other units or defensive structures. Despite its high cost, the tactical advantage gained from its broad detection capability makes it a worthwhile investment for any commander looking to gain a strategic edge."
+        },
+        "Hardened Metal Storage": {
+            "code": "armuwadvms",
+            "Tech": "T2",
+            "Explanation": "The Hardened Metal Storage is a Tier 2 infrastructure unit designed to significantly enhance your resource management capabilities by increasing metal storage capacity by 10,000 units. With its robust health of 10,300, it is well-suited to withstand moderate enemy assaults, making it a reliable option for securing your metal reserves. Although it has no offensive capabilities, its primary role is to support your economy by ensuring that excess metal is stored safely for future use. Its stationary nature and lack of speed mean it should be strategically placed within well-defended zones to maximize protection and utility."
+        },
+        "Advanced Energy Converter": {
+            "code": "armmmkr",
+            "Tech": "T2",
+            "Explanation": "The Advanced Energy Converter is a critical support structure in the T2 tech tier, designed to efficiently convert surplus energy into valuable metal resources. With a health pool of 445, it is moderately resilient, though it should be placed in secure locations due to its inability to defend itself or move. Its primary strength lies in its ability to provide a steady stream of metal, which can be pivotal in sustaining a large army or accelerating tech advancements. However, its utility is contingent on maintaining a robust energy economy, and players must ensure sufficient energy production to maximize its output."
+        },
+        "Advanced Sonar Station": {
+            "code": "armason",
+            "Tech": "T2",
+            "Explanation": "The Advanced Sonar Station is a T2 defensive structure designed to detect enemy sea units, making it an essential component of naval surveillance and strategic planning. With a substantial health pool of 2350, it can withstand moderate amounts of enemy fire, ensuring longevity in contested waters. Despite its inability to attack, its strength lies in its extended sight range of 215, providing critical intelligence on enemy movements beneath the waves. However, its immobility and lack of direct offensive capabilities mean it must be protected by other units or defensive structures to prevent it from being easily targeted by enemy forces."
+        },
+        "Veil": {
+            "code": "armveil",
+            "Tech": "T2",
+            "Explanation": "The Veil is a crucial T2 unit serving as a long-range radar jammer, essential for concealing large forces or entire bases from enemy detection systems. With a decent health pool of 830, it can withstand some enemy fire, but its lack of speed and offensive capability necessitate positioning it carefully within a defensive perimeter. Its primary strength lies in its ability to disrupt enemy radar, making it invaluable for surprise attacks or defensive strategies where stealth is a priority. Despite being a non-combat unit, its strategic value in maintaining the element of surprise and protecting key assets from enemy radar cannot be underestimated."
+        }
+    }    
+ 
+}

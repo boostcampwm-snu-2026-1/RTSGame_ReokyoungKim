@@ -1,0 +1,17 @@
+{
+  "description": "Rubric database containing evaluation criteria for different stages of game generation",
+  "details": {
+    "gdd_check": {
+      "file": "rubric/files/gdd_check.json",
+      "description": "Evaluation criteria for checking GDD document quality and alignment with user intentions"
+    },
+    "rule_check": {
+      "file": "rubric/files/rule_check.json",
+      "description": "Evaluation criteria for checking gadget code implementation and verification"
+    },
+    "final_check": {
+      "file": "rubric/files/final_check.json",
+      "description": "Evaluation criteria for checking final game behavior and enemy unit activity"
+    }
+  }
+}

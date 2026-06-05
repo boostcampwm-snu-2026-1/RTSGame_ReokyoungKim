@@ -1,0 +1,816 @@
+{
+  "source": "https://springrts.com/wiki/Lua_SyncedRead",
+  "description": "Spring RTS Synced Read API - functions that read game state. Can be called from both synced and unsynced code.",
+  "categories": {
+    "Game State": {
+      "description": "Query game-wide state: god mode, cheating, game over, etc.",
+      "functions": [
+        {
+          "name": "Spring.GetGaiaTeamID",
+          "signature": "Spring.GetGaiaTeamID()",
+          "description": "Returns the Gaia (neutral) team ID."
+        },
+        {
+          "name": "Spring.IsGameOver",
+          "signature": "Spring.IsGameOver()",
+          "description": "Returns true if the game has ended."
+        },
+        {
+          "name": "Spring.IsGodModeEnabled",
+          "signature": "Spring.IsGodModeEnabled()",
+          "description": "Returns true if god mode is active."
+        },
+        {
+          "name": "Spring.IsCheatingEnabled",
+          "signature": "Spring.IsCheatingEnabled()",
+          "description": "Returns true if cheating is enabled."
+        },
+        {
+          "name": "Spring.FixedAllies",
+          "signature": "Spring.FixedAllies()",
+          "description": "Returns true if alliances are fixed (cannot be changed)."
+        }
+      ]
+    },
+    "RulesParams (Read)": {
+      "description": "Read custom key-value parameters set on game, teams, units, or features.",
+      "functions": [
+        {
+          "name": "Spring.GetGameRulesParam",
+          "signature": "Spring.GetGameRulesParam(string ruleName)",
+          "description": "Gets a global game rule parameter by name. Returns nil if not set."
+        },
+        {
+          "name": "Spring.GetTeamRulesParam",
+          "signature": "Spring.GetTeamRulesParam(number teamID, string ruleName)",
+          "description": "Gets a team rule parameter. Returns nil if not set."
+        },
+        {
+          "name": "Spring.GetUnitRulesParam",
+          "signature": "Spring.GetUnitRulesParam(number unitID, string ruleName)",
+          "description": "Gets a unit rule parameter. Returns nil if not set."
+        },
+        {
+          "name": "Spring.GetFeatureRulesParam",
+          "signature": "Spring.GetFeatureRulesParam(number featureID, string ruleName)",
+          "description": "Gets a feature rule parameter. Returns nil if not set."
+        },
+        {
+          "name": "Spring.GetGameRulesParams",
+          "signature": "Spring.GetGameRulesParams()",
+          "description": "Returns table of all game rule parameters."
+        },
+        {
+          "name": "Spring.GetTeamRulesParams",
+          "signature": "Spring.GetTeamRulesParams(number teamID)",
+          "description": "Returns table of all rule parameters for a team."
+        },
+        {
+          "name": "Spring.GetUnitRulesParams",
+          "signature": "Spring.GetUnitRulesParams(number unitID)",
+          "description": "Returns table of all rule parameters for a unit."
+        }
+      ]
+    },
+    "Mod & Map Options": {
+      "description": "Read mod and map configuration options.",
+      "functions": [
+        {
+          "name": "Spring.GetModOptions",
+          "signature": "Spring.GetModOptions()",
+          "description": "Returns table of all mod options (from lobby/modoptions)."
+        },
+        {
+          "name": "Spring.GetMapOptions",
+          "signature": "Spring.GetMapOptions()",
+          "description": "Returns table of all map options."
+        }
+      ]
+    },
+    "Speed & Time": {
+      "description": "Query game speed, frame count, and elapsed time.",
+      "functions": [
+        {
+          "name": "Spring.GetGameSpeed",
+          "signature": "Spring.GetGameSpeed()",
+          "description": "Returns userSpeedFactor, speedFactor, paused."
+        },
+        {
+          "name": "Spring.GetGameFrame",
+          "signature": "Spring.GetGameFrame()",
+          "description": "Returns current game frame number (two values: frameNum%dayFrames, frameNum/dayFrames)."
+        },
+        {
+          "name": "Spring.GetGameSeconds",
+          "signature": "Spring.GetGameSeconds()",
+          "description": "Returns elapsed game time in seconds."
+        }
+      ]
+    },
+    "Player & Team Info": {
+      "description": "Query player lists, team lists, alliances, and team details.",
+      "functions": [
+        {
+          "name": "Spring.GetPlayerList",
+          "signature": "Spring.GetPlayerList([number teamID | bool onlyActive])",
+          "description": "Returns table of player IDs. Optionally filter by team or active status."
+        },
+        {
+          "name": "Spring.GetTeamList",
+          "signature": "Spring.GetTeamList([number allyTeamID])",
+          "description": "Returns table of team IDs. Optionally filter by allyTeam."
+        },
+        {
+          "name": "Spring.GetAllyTeamList",
+          "signature": "Spring.GetAllyTeamList()",
+          "description": "Returns table of all allyTeam IDs."
+        },
+        {
+          "name": "Spring.GetPlayerInfo",
+          "signature": "Spring.GetPlayerInfo(number playerID)",
+          "description": "Returns name, active, spectator, teamID, allyTeamID, pingTime, cpuUsage, country, rank, customKeys."
+        },
+        {
+          "name": "Spring.GetTeamInfo",
+          "signature": "Spring.GetTeamInfo(number teamID)",
+          "description": "Returns teamID, leader, isDead, isAiTeam, side, allyTeam, incomeMultiplier, customKeys."
+        },
+        {
+          "name": "Spring.GetAIInfo",
+          "signature": "Spring.GetAIInfo(number teamID)",
+          "description": "Returns skirmishAIID, name, hostingPlayerID, shortName, version, options for AI teams."
+        },
+        {
+          "name": "Spring.AreTeamsAllied",
+          "signature": "Spring.AreTeamsAllied(number teamID1, number teamID2)",
+          "description": "Returns true if the two teams are allied."
+        },
+        {
+          "name": "Spring.ArePlayersAllied",
+          "signature": "Spring.ArePlayersAllied(number playerID1, number playerID2)",
+          "description": "Returns true if the two players are allied."
+        },
+        {
+          "name": "Spring.GetAllyTeamStartBox",
+          "signature": "Spring.GetAllyTeamStartBox(number allyID)",
+          "description": "Returns xMin, zMin, xMax, zMax of the start box."
+        },
+        {
+          "name": "Spring.GetTeamStartPosition",
+          "signature": "Spring.GetTeamStartPosition(number teamID)",
+          "description": "Returns x, y, z of the team's start position."
+        }
+      ]
+    },
+    "Team Resources": {
+      "description": "Query team resource levels, income, storage, and stats. CRITICAL for economy gadgets.",
+      "functions": [
+        {
+          "name": "Spring.GetTeamResources",
+          "signature": "Spring.GetTeamResources(number teamID, string \"metal\"|\"energy\")",
+          "description": "Returns currentLevel, storage, pull, income, expense, share, sent, received. Use select() or multiple assignment to get specific values."
+        },
+        {
+          "name": "Spring.GetTeamUnitStats",
+          "signature": "Spring.GetTeamUnitStats(number teamID)",
+          "description": "Returns killed, died, capturedBy, capturedFrom, received, sent unit counts."
+        },
+        {
+          "name": "Spring.GetTeamLuaAI",
+          "signature": "Spring.GetTeamLuaAI(number teamID)",
+          "description": "Returns the Lua AI name for the team, or nil."
+        }
+      ]
+    },
+    "Unit Queries": {
+      "description": "Find units by team, area, or proximity.",
+      "functions": [
+        {
+          "name": "Spring.GetAllUnits",
+          "signature": "Spring.GetAllUnits()",
+          "description": "Returns table of ALL unit IDs on the map. EXPENSIVE - avoid in GameFrame, use only in Initialize."
+        },
+        {
+          "name": "Spring.GetTeamUnits",
+          "signature": "Spring.GetTeamUnits(number teamID)",
+          "description": "Returns table of all unit IDs belonging to a team."
+        },
+        {
+          "name": "Spring.GetTeamUnitsSorted",
+          "signature": "Spring.GetTeamUnitsSorted(number teamID)",
+          "description": "Returns table of unit IDs sorted/grouped by unitDefID."
+        },
+        {
+          "name": "Spring.GetTeamUnitsCounts",
+          "signature": "Spring.GetTeamUnitsCounts(number teamID)",
+          "description": "Returns table of unitDefID -> count for a team."
+        },
+        {
+          "name": "Spring.GetTeamUnitsByDefs",
+          "signature": "Spring.GetTeamUnitsByDefs(number teamID, number unitDefID | table unitDefs)",
+          "description": "Returns table of unit IDs matching specific unitDefIDs for a team."
+        },
+        {
+          "name": "Spring.GetTeamUnitDefCount",
+          "signature": "Spring.GetTeamUnitDefCount(number teamID, number unitDefID)",
+          "description": "Returns count of units of a specific type for a team."
+        },
+        {
+          "name": "Spring.GetTeamUnitCount",
+          "signature": "Spring.GetTeamUnitCount(number teamID)",
+          "description": "Returns total unit count for a team."
+        },
+        {
+          "name": "Spring.GetUnitsInRectangle",
+          "signature": "Spring.GetUnitsInRectangle(number xmin, number zmin, number xmax, number zmax [, number teamID])",
+          "description": "Returns units within a rectangular area. Optional team filter."
+        },
+        {
+          "name": "Spring.GetUnitsInSphere",
+          "signature": "Spring.GetUnitsInSphere(number x, number y, number z, number radius [, number teamID])",
+          "description": "Returns units within a sphere. Optional team filter."
+        },
+        {
+          "name": "Spring.GetUnitsInCylinder",
+          "signature": "Spring.GetUnitsInCylinder(number x, number z, number radius [, number teamID])",
+          "description": "Returns units within a vertical cylinder. Optional team filter."
+        },
+        {
+          "name": "Spring.GetUnitNearestAlly",
+          "signature": "Spring.GetUnitNearestAlly(number unitID [, number range])",
+          "description": "Returns the nearest allied unit ID."
+        },
+        {
+          "name": "Spring.GetUnitNearestEnemy",
+          "signature": "Spring.GetUnitNearestEnemy(number unitID [, number range [, bool useLOS]])",
+          "description": "Returns the nearest enemy unit ID."
+        }
+      ]
+    },
+    "Unit Information": {
+      "description": "Read individual unit properties: ID validation, health, position, team, def, etc.",
+      "functions": [
+        {
+          "name": "Spring.ValidUnitID",
+          "signature": "Spring.ValidUnitID(number unitID)",
+          "description": "Returns true if the unitID is valid (unit exists). ALWAYS call before accessing unit properties."
+        },
+        {
+          "name": "Spring.GetUnitIsDead",
+          "signature": "Spring.GetUnitIsDead(number unitID)",
+          "description": "Returns true if the unit is dead/dying."
+        },
+        {
+          "name": "Spring.GetUnitDefID",
+          "signature": "Spring.GetUnitDefID(number unitID)",
+          "description": "Returns the unitDefID. Use with UnitDefs[unitDefID] to look up static def data."
+        },
+        {
+          "name": "Spring.GetUnitTeam",
+          "signature": "Spring.GetUnitTeam(number unitID)",
+          "description": "Returns the team ID that owns this unit."
+        },
+        {
+          "name": "Spring.GetUnitAllyTeam",
+          "signature": "Spring.GetUnitAllyTeam(number unitID)",
+          "description": "Returns the allyTeam ID of this unit."
+        },
+        {
+          "name": "Spring.GetUnitHealth",
+          "signature": "Spring.GetUnitHealth(number unitID)",
+          "description": "Returns health, maxHealth, paralyzeDamage, captureProgress, buildProgress."
+        },
+        {
+          "name": "Spring.GetUnitIsStunned",
+          "signature": "Spring.GetUnitIsStunned(number unitID)",
+          "description": "Returns stunned_or_inbuild, stunned, inbuild."
+        },
+        {
+          "name": "Spring.GetUnitPosition",
+          "signature": "Spring.GetUnitPosition(number unitID [, bool midPos [, bool aimPos]])",
+          "description": "Returns baseX, baseY, baseZ. Optionally also midpoint and aimpoint positions."
+        },
+        {
+          "name": "Spring.GetUnitDirection",
+          "signature": "Spring.GetUnitDirection(number unitID)",
+          "description": "Returns dirX, dirY, dirZ facing direction vector."
+        },
+        {
+          "name": "Spring.GetUnitVelocity",
+          "signature": "Spring.GetUnitVelocity(number unitID)",
+          "description": "Returns velX, velY, velZ, velLength."
+        },
+        {
+          "name": "Spring.GetUnitRotation",
+          "signature": "Spring.GetUnitRotation(number unitID)",
+          "description": "Returns pitch, yaw, roll."
+        },
+        {
+          "name": "Spring.GetUnitHeading",
+          "signature": "Spring.GetUnitHeading(number unitID)",
+          "description": "Returns heading as integer."
+        },
+        {
+          "name": "Spring.GetUnitMaxRange",
+          "signature": "Spring.GetUnitMaxRange(number unitID)",
+          "description": "Returns the maximum engagement range."
+        },
+        {
+          "name": "Spring.GetUnitExperience",
+          "signature": "Spring.GetUnitExperience(number unitID)",
+          "description": "Returns the unit's current experience level."
+        },
+        {
+          "name": "Spring.GetUnitNeutral",
+          "signature": "Spring.GetUnitNeutral(number unitID)",
+          "description": "Returns true if the unit is neutral."
+        },
+        {
+          "name": "Spring.GetUnitArmored",
+          "signature": "Spring.GetUnitArmored(number unitID)",
+          "description": "Returns armored state and armor multiplier."
+        },
+        {
+          "name": "Spring.GetUnitIsActive",
+          "signature": "Spring.GetUnitIsActive(number unitID)",
+          "description": "Returns true if the unit is active (turned on)."
+        },
+        {
+          "name": "Spring.GetUnitIsCloaked",
+          "signature": "Spring.GetUnitIsCloaked(number unitID)",
+          "description": "Returns true if the unit is currently cloaked."
+        },
+        {
+          "name": "Spring.GetUnitMass",
+          "signature": "Spring.GetUnitMass(number unitID)",
+          "description": "Returns the unit's mass."
+        },
+        {
+          "name": "Spring.GetUnitHeight",
+          "signature": "Spring.GetUnitHeight(number unitID)",
+          "description": "Returns the unit's height."
+        },
+        {
+          "name": "Spring.GetUnitRadius",
+          "signature": "Spring.GetUnitRadius(number unitID)",
+          "description": "Returns the unit's radius."
+        },
+        {
+          "name": "Spring.GetUnitBuildFacing",
+          "signature": "Spring.GetUnitBuildFacing(number unitID)",
+          "description": "Returns the build facing direction (0-3)."
+        },
+        {
+          "name": "Spring.GetUnitIsBuilding",
+          "signature": "Spring.GetUnitIsBuilding(number unitID)",
+          "description": "Returns the unitID of the unit being built, or nil."
+        },
+        {
+          "name": "Spring.GetUnitCurrentBuildPower",
+          "signature": "Spring.GetUnitCurrentBuildPower(number unitID)",
+          "description": "Returns the current build power of a builder unit."
+        },
+        {
+          "name": "Spring.GetUnitTransporter",
+          "signature": "Spring.GetUnitTransporter(number unitID)",
+          "description": "Returns the transporter unitID, or nil if not transported."
+        },
+        {
+          "name": "Spring.GetUnitIsTransporting",
+          "signature": "Spring.GetUnitIsTransporting(number unitID)",
+          "description": "Returns table of transported unit IDs."
+        },
+        {
+          "name": "Spring.GetUnitLastAttacker",
+          "signature": "Spring.GetUnitLastAttacker(number unitID)",
+          "description": "Returns the unitID of the last unit that attacked this unit."
+        },
+        {
+          "name": "Spring.GetUnitSeparation",
+          "signature": "Spring.GetUnitSeparation(number unitID1, number unitID2 [, bool 2D [, bool surfaceDist]])",
+          "description": "Returns distance between two units."
+        },
+        {
+          "name": "Spring.GetUnitStates",
+          "signature": "Spring.GetUnitStates(number unitID)",
+          "description": "Returns table of unit states (fireState, moveState, repeat, cloak, active, trajectory, autoRepairLevel, loopbackAttack)."
+        }
+      ]
+    },
+    "Unit Resourcing (Read)": {
+      "description": "Read per-unit resource generation and consumption. Useful for economy gadgets.",
+      "functions": [
+        {
+          "name": "Spring.GetUnitResources",
+          "signature": "Spring.GetUnitResources(number unitID)",
+          "description": "Returns metalMake, metalUse, energyMake, energyUse for this unit."
+        },
+        {
+          "name": "Spring.GetUnitMetalExtraction",
+          "signature": "Spring.GetUnitMetalExtraction(number unitID)",
+          "description": "Returns the metal extraction rate for an extractor unit."
+        },
+        {
+          "name": "Spring.GetUnitHarvestStorage",
+          "signature": "Spring.GetUnitHarvestStorage(number unitID)",
+          "description": "Returns the harvest storage metal amount."
+        }
+      ]
+    },
+    "Unit Weapons (Read)": {
+      "description": "Read unit weapon state, damage, and targeting info.",
+      "functions": [
+        {
+          "name": "Spring.GetUnitWeaponState",
+          "signature": "Spring.GetUnitWeaponState(number unitID, number weaponNum)",
+          "description": "Returns angleGood, loaded, reloadFrame, salvoLeft, numStockpiled."
+        },
+        {
+          "name": "Spring.GetUnitWeaponDamages",
+          "signature": "Spring.GetUnitWeaponDamages(number unitID, number weaponNum, string tag)",
+          "description": "Returns specific damage tag value for a weapon."
+        },
+        {
+          "name": "Spring.GetUnitWeaponVectors",
+          "signature": "Spring.GetUnitWeaponVectors(number unitID, number weaponNum)",
+          "description": "Returns weapon position (posX,posY,posZ) and direction (dirX,dirY,dirZ)."
+        },
+        {
+          "name": "Spring.GetUnitWeaponTarget",
+          "signature": "Spring.GetUnitWeaponTarget(number unitID, number weaponNum)",
+          "description": "Returns target type and target ID/position."
+        },
+        {
+          "name": "Spring.GetUnitWeaponCanFire",
+          "signature": "Spring.GetUnitWeaponCanFire(number unitID, number weaponNum)",
+          "description": "Returns true if the weapon can currently fire."
+        },
+        {
+          "name": "Spring.GetUnitShieldState",
+          "signature": "Spring.GetUnitShieldState(number unitID [, number weaponID])",
+          "description": "Returns isEnabled, curPower for a shield weapon."
+        }
+      ]
+    },
+    "Unit LOS (Read)": {
+      "description": "Check unit visibility and LOS status.",
+      "functions": [
+        {
+          "name": "Spring.IsUnitInLos",
+          "signature": "Spring.IsUnitInLos(number unitID, number allyID)",
+          "description": "Returns true if unit is in line of sight for the allyTeam."
+        },
+        {
+          "name": "Spring.IsUnitInRadar",
+          "signature": "Spring.IsUnitInRadar(number unitID, number allyID)",
+          "description": "Returns true if unit is detected by radar for the allyTeam."
+        },
+        {
+          "name": "Spring.IsUnitInAirLos",
+          "signature": "Spring.IsUnitInAirLos(number unitID, number allyID)",
+          "description": "Returns true if unit is in air LOS for the allyTeam."
+        },
+        {
+          "name": "Spring.GetUnitLosState",
+          "signature": "Spring.GetUnitLosState(number unitID [, number allyTeamID [, bool raw]])",
+          "description": "Returns LOS state for a unit relative to an allyTeam."
+        },
+        {
+          "name": "Spring.GetUnitSensorRadius",
+          "signature": "Spring.GetUnitSensorRadius(number unitID, string type)",
+          "description": "Returns sensor radius. type: 'los','airLos','radar','sonar','seismic','radarJammer','sonarJammer'."
+        }
+      ]
+    },
+    "Unit Command Queue": {
+      "description": "Read a unit's current command queue and factory build orders.",
+      "functions": [
+        {
+          "name": "Spring.GetUnitCommands",
+          "signature": "Spring.GetUnitCommands(number unitID [, number count])",
+          "description": "Returns command queue table (or queue size if count is a number)."
+        },
+        {
+          "name": "Spring.GetCommandQueue",
+          "signature": "Spring.GetCommandQueue(number unitID [, number count])",
+          "description": "Alias for GetUnitCommands."
+        },
+        {
+          "name": "Spring.GetFullBuildQueue",
+          "signature": "Spring.GetFullBuildQueue(number unitID)",
+          "description": "Returns full build queue for a factory."
+        },
+        {
+          "name": "Spring.GetRealBuildQueue",
+          "signature": "Spring.GetRealBuildQueue(number unitID)",
+          "description": "Returns real (deduplicated) build queue for a factory."
+        },
+        {
+          "name": "Spring.GetFactoryCommands",
+          "signature": "Spring.GetFactoryCommands(number unitID [, number count])",
+          "description": "Returns factory-specific command queue."
+        },
+        {
+          "name": "Spring.GetUnitCmdDescs",
+          "signature": "Spring.GetUnitCmdDescs(number unitID [, number startIndex [, number endIndex]])",
+          "description": "Returns table of command description entries for a unit."
+        },
+        {
+          "name": "Spring.FindUnitCmdDesc",
+          "signature": "Spring.FindUnitCmdDesc(number unitID, number cmdID)",
+          "description": "Returns the index of a command description by cmdID."
+        }
+      ]
+    },
+    "Feature Queries": {
+      "description": "Find and query features (wrecks, props, trees) on the map.",
+      "functions": [
+        {
+          "name": "Spring.GetAllFeatures",
+          "signature": "Spring.GetAllFeatures()",
+          "description": "Returns table of ALL feature IDs. EXPENSIVE - use sparingly."
+        },
+        {
+          "name": "Spring.GetFeaturesInRectangle",
+          "signature": "Spring.GetFeaturesInRectangle(number xMin, number zMin, number xMax, number zMax)",
+          "description": "Returns features within a rectangular area."
+        },
+        {
+          "name": "Spring.GetFeaturesInSphere",
+          "signature": "Spring.GetFeaturesInSphere(number x, number y, number z, number radius)",
+          "description": "Returns features within a sphere."
+        },
+        {
+          "name": "Spring.GetFeaturesInCylinder",
+          "signature": "Spring.GetFeaturesInCylinder(number x, number z, number radius)",
+          "description": "Returns features within a vertical cylinder."
+        },
+        {
+          "name": "Spring.ValidFeatureID",
+          "signature": "Spring.ValidFeatureID(number featureID)",
+          "description": "Returns true if the featureID is valid."
+        },
+        {
+          "name": "Spring.GetFeatureDefID",
+          "signature": "Spring.GetFeatureDefID(number featureID)",
+          "description": "Returns the featureDefID. Use with FeatureDefs[featureDefID]."
+        },
+        {
+          "name": "Spring.GetFeatureTeam",
+          "signature": "Spring.GetFeatureTeam(number featureID)",
+          "description": "Returns the team that owns the feature."
+        },
+        {
+          "name": "Spring.GetFeatureAllyTeam",
+          "signature": "Spring.GetFeatureAllyTeam(number featureID)",
+          "description": "Returns the allyTeam of the feature."
+        },
+        {
+          "name": "Spring.GetFeatureHealth",
+          "signature": "Spring.GetFeatureHealth(number featureID)",
+          "description": "Returns health, maxHealth, resurrectProgress."
+        },
+        {
+          "name": "Spring.GetFeaturePosition",
+          "signature": "Spring.GetFeaturePosition(number featureID [, bool midPos [, bool aimPos]])",
+          "description": "Returns position (bpX, bpY, bpZ). Optionally midpoint and aimpoint."
+        },
+        {
+          "name": "Spring.GetFeatureResources",
+          "signature": "Spring.GetFeatureResources(number featureID)",
+          "description": "Returns remainingMetal, maxMetal, remainingEnergy, maxEnergy, reclaimLeft, reclaimTime."
+        },
+        {
+          "name": "Spring.GetFeatureDirection",
+          "signature": "Spring.GetFeatureDirection(number featureID)",
+          "description": "Returns dirX, dirY, dirZ."
+        },
+        {
+          "name": "Spring.GetFeatureVelocity",
+          "signature": "Spring.GetFeatureVelocity(number featureID [, bool norm])",
+          "description": "Returns velX, velY, velZ, velLength."
+        },
+        {
+          "name": "Spring.GetFeatureHeading",
+          "signature": "Spring.GetFeatureHeading(number featureID)",
+          "description": "Returns heading."
+        },
+        {
+          "name": "Spring.GetFeatureResurrect",
+          "signature": "Spring.GetFeatureResurrect(number featureID)",
+          "description": "Returns unitDefName and buildFacing for resurrection."
+        },
+        {
+          "name": "Spring.GetFeatureNoSelect",
+          "signature": "Spring.GetFeatureNoSelect(number featureID)",
+          "description": "Returns true if feature is non-selectable."
+        },
+        {
+          "name": "Spring.GetFeatureBlocking",
+          "signature": "Spring.GetFeatureBlocking(number featureID)",
+          "description": "Returns blocking flags (isBlocking, isSolidObjectCollidable, etc)."
+        },
+        {
+          "name": "Spring.GetFeatureMass",
+          "signature": "Spring.GetFeatureMass(number featureID)",
+          "description": "Returns the feature's mass."
+        },
+        {
+          "name": "Spring.GetFeatureRadius",
+          "signature": "Spring.GetFeatureRadius(number featureID)",
+          "description": "Returns the feature's radius."
+        },
+        {
+          "name": "Spring.GetFeatureHeight",
+          "signature": "Spring.GetFeatureHeight(number featureID)",
+          "description": "Returns the feature's height."
+        }
+      ]
+    },
+    "Ground & Terrain": {
+      "description": "Read terrain height, ground info, metal map, and pathfinding.",
+      "functions": [
+        {
+          "name": "Spring.GetGroundHeight",
+          "signature": "Spring.GetGroundHeight(number x, number z)",
+          "description": "Returns ground height (y) at the given x,z coordinates."
+        },
+        {
+          "name": "Spring.GetGroundOrigHeight",
+          "signature": "Spring.GetGroundOrigHeight(number x, number z)",
+          "description": "Returns original (unmodified) ground height."
+        },
+        {
+          "name": "Spring.GetGroundNormal",
+          "signature": "Spring.GetGroundNormal(number x, number z [, bool smoothedNormal])",
+          "description": "Returns normal vector (x,y,z) and slope at position."
+        },
+        {
+          "name": "Spring.GetGroundInfo",
+          "signature": "Spring.GetGroundInfo(number x, number z)",
+          "description": "Returns terrain type name, metal, hardness, movement speeds, receiveTracks."
+        },
+        {
+          "name": "Spring.GetGroundBlocked",
+          "signature": "Spring.GetGroundBlocked(number x, number z)",
+          "description": "Returns what (if anything) is blocking the ground at the position."
+        },
+        {
+          "name": "Spring.GetGroundExtremes",
+          "signature": "Spring.GetGroundExtremes()",
+          "description": "Returns minHeight, maxHeight of the map."
+        },
+        {
+          "name": "Spring.GetSmoothMeshHeight",
+          "signature": "Spring.GetSmoothMeshHeight(number x, number z)",
+          "description": "Returns smooth mesh height at position."
+        },
+        {
+          "name": "Spring.GetMetalAmount",
+          "signature": "Spring.GetMetalAmount(number x, number z)",
+          "description": "Returns metal density at position."
+        },
+        {
+          "name": "Spring.GetMetalMapSize",
+          "signature": "Spring.GetMetalMapSize()",
+          "description": "Returns metal map sizeX, sizeY."
+        },
+        {
+          "name": "Spring.TestMoveOrder",
+          "signature": "Spring.TestMoveOrder(number unitDefID, number posX, number posY, number posZ [, ...])",
+          "description": "Tests if a unit type can move to the given position. Returns bool."
+        },
+        {
+          "name": "Spring.TestBuildOrder",
+          "signature": "Spring.TestBuildOrder(number unitDefID, number x, number y, number z, number facing)",
+          "description": "Tests if a building can be placed. Returns blocking status."
+        },
+        {
+          "name": "Spring.Pos2BuildPos",
+          "signature": "Spring.Pos2BuildPos(number unitDefID, number x, number y, number z [, number facing])",
+          "description": "Snaps a position to valid build grid for the given unitDef."
+        },
+        {
+          "name": "Spring.GetUnitEstimatedPath",
+          "signature": "Spring.GetUnitEstimatedPath(number unitID)",
+          "description": "Returns waypoints table and waypointIndices for a unit's current path."
+        }
+      ]
+    },
+    "LOS & Visibility": {
+      "description": "Check if map positions are visible.",
+      "functions": [
+        {
+          "name": "Spring.IsPosInLos",
+          "signature": "Spring.IsPosInLos(number x, number y, number z, number allyID)",
+          "description": "Returns true if position is in line of sight for allyTeam."
+        },
+        {
+          "name": "Spring.IsPosInRadar",
+          "signature": "Spring.IsPosInRadar(number x, number y, number z, number allyID)",
+          "description": "Returns true if position is in radar for allyTeam."
+        },
+        {
+          "name": "Spring.IsPosInAirLos",
+          "signature": "Spring.IsPosInAirLos(number x, number y, number z, number allyID)",
+          "description": "Returns true if position is in air LOS for allyTeam."
+        },
+        {
+          "name": "Spring.GetPositionLosState",
+          "signature": "Spring.GetPositionLosState(number x, number y, number z [, number allyID])",
+          "description": "Returns losOrRadar, inLos, inRadar, jammed."
+        }
+      ]
+    },
+    "Projectile Queries": {
+      "description": "Read projectile information.",
+      "functions": [
+        {
+          "name": "Spring.GetProjectilesInRectangle",
+          "signature": "Spring.GetProjectilesInRectangle(number xmin, number zmin, number xmax, number zmax [, bool excludeWeapon [, bool excludePiece]])",
+          "description": "Returns projectile IDs in a rectangular area."
+        },
+        {
+          "name": "Spring.GetProjectileOwnerID",
+          "signature": "Spring.GetProjectileOwnerID(number projectileID)",
+          "description": "Returns the unitID that fired this projectile."
+        },
+        {
+          "name": "Spring.GetProjectileTeamID",
+          "signature": "Spring.GetProjectileTeamID(number projectileID)",
+          "description": "Returns the team that owns this projectile."
+        },
+        {
+          "name": "Spring.GetProjectileDefID",
+          "signature": "Spring.GetProjectileDefID(number projectileID)",
+          "description": "Returns the weaponDefID of this projectile."
+        },
+        {
+          "name": "Spring.GetProjectilePosition",
+          "signature": "Spring.GetProjectilePosition(number projectileID)",
+          "description": "Returns posX, posY, posZ."
+        },
+        {
+          "name": "Spring.GetProjectileVelocity",
+          "signature": "Spring.GetProjectileVelocity(number projectileID)",
+          "description": "Returns velX, velY, velZ."
+        },
+        {
+          "name": "Spring.GetProjectileTarget",
+          "signature": "Spring.GetProjectileTarget(number projectileID)",
+          "description": "Returns target type and target ID or position."
+        },
+        {
+          "name": "Spring.GetProjectileTimeToLive",
+          "signature": "Spring.GetProjectileTimeToLive(number projectileID)",
+          "description": "Returns remaining time to live in frames."
+        }
+      ]
+    },
+    "Vectors & Heading": {
+      "description": "Utility functions for heading/vector conversion and wind.",
+      "functions": [
+        {
+          "name": "Spring.GetHeadingFromVector",
+          "signature": "Spring.GetHeadingFromVector(number x, number z)",
+          "description": "Converts a direction vector to a heading value."
+        },
+        {
+          "name": "Spring.GetVectorFromHeading",
+          "signature": "Spring.GetVectorFromHeading(number heading)",
+          "description": "Converts a heading to a direction vector (x, z)."
+        },
+        {
+          "name": "Spring.GetWind",
+          "signature": "Spring.GetWind()",
+          "description": "Returns dirX, dirY, dirZ, strength, normDirX, normDirY, normDirZ."
+        }
+      ]
+    },
+    "COB Variables (Read)": {
+      "description": "Read COB script variables.",
+      "functions": [
+        {
+          "name": "Spring.GetCOBUnitVar",
+          "signature": "Spring.GetCOBUnitVar(number unitID, number varID [, bool unpack])",
+          "description": "Returns COB unit variable value."
+        },
+        {
+          "name": "Spring.GetCOBTeamVar",
+          "signature": "Spring.GetCOBTeamVar(number teamID, number varID [, bool unpack])",
+          "description": "Returns COB team variable value."
+        },
+        {
+          "name": "Spring.GetCOBAllyTeamVar",
+          "signature": "Spring.GetCOBAllyTeamVar(number allyID, number varID [, bool unpack])",
+          "description": "Returns COB allyTeam variable value."
+        },
+        {
+          "name": "Spring.GetCOBGlobalVar",
+          "signature": "Spring.GetCOBGlobalVar(number varID [, bool unpack])",
+          "description": "Returns COB global variable value."
+        }
+      ]
+    }
+  }
+}

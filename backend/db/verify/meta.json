@@ -1,0 +1,13 @@
+{
+  "description": "Verification gadgets for testing game setup and unit behavior",
+  "details": {
+    "verify_movement": {
+      "file": "verify/files/verify_movement.lua",
+      "description": "Verifies unit placement matches config and tests unit movement capability"
+    },
+    "verify_endcondition": {
+      "file": "verify/files/verify_endcondition.lua",
+      "description": "Verifies that game win/lose conditions trigger correctly"
+    }
+  }
+}

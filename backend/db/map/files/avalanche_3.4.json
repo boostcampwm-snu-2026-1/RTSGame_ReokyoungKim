@@ -1,0 +1,711 @@
+{ "Avalanche 3.4": {
+        "size": [8, 8],
+        "description": "A cold winter map with snowy plains and icy cliffs, offering a distinct visual style and terrain barriers."
+    },
+  "terrain_info":[
+  {
+    "sector_id": "A1",
+    "center": [
+      256,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "A2",
+    "center": [
+      768,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "A3",
+    "center": [
+      1280,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "A4",
+    "center": [
+      1792,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 2,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "A5",
+    "center": [
+      2304,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 20,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "A6",
+    "center": [
+      2816,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 58,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "A7",
+    "center": [
+      3328,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 72,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "A8",
+    "center": [
+      3840,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 80,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "B1",
+    "center": [
+      256,
+      768
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -3,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "B2",
+    "center": [
+      768,
+      768
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "B3",
+    "center": [
+      1280,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 2,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "B4",
+    "center": [
+      1792,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 2,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "B5",
+    "center": [
+      2304,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 3,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "B6",
+    "center": [
+      2816,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 26,
+    "description": "Land, High Ground Rugged (Snow)"
+  },
+  {
+    "sector_id": "B7",
+    "center": [
+      3328,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 64,
+    "description": "Land, High Ground Rugged (Snow)"
+  },
+  {
+    "sector_id": "B8",
+    "center": [
+      3840,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 71,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "C1",
+    "center": [
+      256,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -15,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C2",
+    "center": [
+      768,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 0,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C3",
+    "center": [
+      1280,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 10,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C4",
+    "center": [
+      1792,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 6,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C5",
+    "center": [
+      2304,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 3,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C6",
+    "center": [
+      2816,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 12,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "C7",
+    "center": [
+      3328,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 28,
+    "description": "Land, High Ground Rugged (Snow)"
+  },
+  {
+    "sector_id": "C8",
+    "center": [
+      3840,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 55,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "D1",
+    "center": [
+      256,
+      1792
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -22,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "D2",
+    "center": [
+      768,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -26,
+    "description": "Shore/Mixed, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "D3",
+    "center": [
+      1280,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -33,
+    "description": "Shore/Mixed, Lowland Rugged (Snow)"
+  },
+  {
+    "sector_id": "D4",
+    "center": [
+      1792,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 2,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "D5",
+    "center": [
+      2304,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "D6",
+    "center": [
+      2816,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 3,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "D7",
+    "center": [
+      3328,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 4,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "D8",
+    "center": [
+      3840,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 21,
+    "description": "Land, High Ground Smooth (Snow)"
+  },
+  {
+    "sector_id": "E1",
+    "center": [
+      256,
+      2304
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -23,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "E2",
+    "center": [
+      768,
+      2304
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -32,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "E3",
+    "center": [
+      1280,
+      2304
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -45,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "E4",
+    "center": [
+      1792,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -24,
+    "description": "Shore/Mixed, Lowland Rugged (Snow)"
+  },
+  {
+    "sector_id": "E5",
+    "center": [
+      2304,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 3,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "E6",
+    "center": [
+      2816,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 7,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "E7",
+    "center": [
+      3328,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "E8",
+    "center": [
+      3840,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 2,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "F1",
+    "center": [
+      256,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -26,
+    "description": "Shore/Mixed, Lowland Rugged (Snow)"
+  },
+  {
+    "sector_id": "F2",
+    "center": [
+      768,
+      2816
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -45,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "F3",
+    "center": [
+      1280,
+      2816
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ice",
+    "avg_height": -46,
+    "description": "Deep Water, Lowland Smooth (Ice)"
+  },
+  {
+    "sector_id": "F4",
+    "center": [
+      1792,
+      2816
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -45,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "F5",
+    "center": [
+      2304,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -30,
+    "description": "Shore/Mixed, Lowland Rugged (Snow)"
+  },
+  {
+    "sector_id": "F6",
+    "center": [
+      2816,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 11,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "F7",
+    "center": [
+      3328,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "F8",
+    "center": [
+      3840,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "G1",
+    "center": [
+      256,
+      3328
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -44,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "G2",
+    "center": [
+      768,
+      3328
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ice",
+    "avg_height": -46,
+    "description": "Deep Water, Lowland Smooth (Ice)"
+  },
+  {
+    "sector_id": "G3",
+    "center": [
+      1280,
+      3328
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -45,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "G4",
+    "center": [
+      1792,
+      3328
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -31,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "G5",
+    "center": [
+      2304,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -23,
+    "description": "Shore/Mixed, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "G6",
+    "center": [
+      2816,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -3,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "G7",
+    "center": [
+      3328,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 0,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "G8",
+    "center": [
+      3840,
+      3328
+    ],
+    "surface": "Land",
+    "terrain": "Snow",
+    "avg_height": 1,
+    "description": "Land, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "H1",
+    "center": [
+      256,
+      3840
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ice",
+    "avg_height": -46,
+    "description": "Deep Water, Lowland Smooth (Ice)"
+  },
+  {
+    "sector_id": "H2",
+    "center": [
+      768,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -42,
+    "description": "Shore/Mixed, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "H3",
+    "center": [
+      1280,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -26,
+    "description": "Shore/Mixed, Lowland Rugged (Snow)"
+  },
+  {
+    "sector_id": "H4",
+    "center": [
+      1792,
+      3840
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -24,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "H5",
+    "center": [
+      2304,
+      3840
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -22,
+    "description": "Deep Water, Lowland Smooth (Snow)"
+  },
+  {
+    "sector_id": "H6",
+    "center": [
+      2816,
+      3840
+    ],
+    "surface": "Deep Water",
+    "terrain": "Snow",
+    "avg_height": -21,
+    "description": "Deep Water, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "H7",
+    "center": [
+      3328,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": -12,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  },
+  {
+    "sector_id": "H8",
+    "center": [
+      3840,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Snow",
+    "avg_height": 0,
+    "description": "Shore/Mixed, Flat Plains Smooth (Snow)"
+  }
+]
+}

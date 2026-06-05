@@ -1,0 +1,71 @@
+[
+    {
+        "name": "allow_production",
+        "role": "Enforces a strict production whitelist. Teams can ONLY build the listed units.",
+        "config_fmt": {
+        "<TeamID_String>": ["<Allowed_UnitCode_1>", "<Allowed_UnitCode_2>"]
+        }
+    },
+    {
+        "name": "auto_construct",
+        "role": "Instantly completes construction (0 build time) for specific units.",
+        "config_fmt": {
+        "<TeamID_String>": ["<Target_UnitCode_1>", "<Target_UnitCode_2>"]
+        }
+    },
+    {
+        "name": "control_despawn",
+        "role": "Removes specific units when triggers (Time or Unit Count) are met. Useful for 'Phase Transitions' or 'Objective-based mechanics' (e.g., killing a boss stops minion spawns).",
+        "config_fmt": {
+            "<TeamID_String>": [
+                            {
+                                "condition": [
+                                    "and", 
+                                    { 
+                                        "time (OPTIONAL)": "<seconds>",
+                                        "<Check_TeamID>(OPTIONAL)": ["<UnitCode> == <Count>"] 
+                                    }
+                                ],
+                                "despawn_unit": {
+                                    "<UnitCode>": "<Count>"
+                                }
+                            }
+                        ]
+        }
+    },
+    {
+        "name": "control_spawn",
+        "role": "Spawns units when triggers (Time or Unit Count) are met. Essential for 'Wave Defense', 'Reinforcements', or 'Boss Fights'.",
+        "config_fmt": {
+            "<TeamID_String>": [
+                            {
+                                "condition": [
+                                    "and", 
+                                    { 
+                                        "time (OPTIONAL)": "<seconds>",
+                                        "<Check_TeamID> (OPTIONAL)": ["<UnitCode> == <Count>"] 
+                                    }
+                                ],
+                                "unit_placement": [
+                                    ["<UnitCode>", ["<X>", "<Z>"]],
+                                    ["<UnitCode>", ["<X>", "<Z>"]]
+                                ]
+                            }
+                        ]
+        }
+    },
+    {
+        "name": "prioritize_target",
+        "role": "Forces a team's units to ignore standard targeting and prioritize attacking specific high-value targets within range (500). Essential for 'Assassination' or 'Boss Focus' scenarios.",
+        "config_fmt": {
+        "<TeamID_String>": ["<Priority_Target_UnitCode_1>", "<Priority_Target_UnitCode_2>"]
+        }
+    },
+    {
+        "name": "restrict_attack",
+        "role": "Prevents a team from attacking specific unit types. Essential for 'Escort Missions' (e.g., don't kill the Ally VIP) or 'Capture Objectives' (don't destroy the building you need to capture).",
+        "config_fmt": {
+        "<TeamID_String>": ["<Restricted_Target_UnitCode_1>", "<Restricted_Target_UnitCode_2>"]
+        }
+    }
+]

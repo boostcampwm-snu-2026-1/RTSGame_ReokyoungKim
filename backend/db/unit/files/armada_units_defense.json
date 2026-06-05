@@ -1,0 +1,169 @@
+{
+    "Defense": {
+        "Shark's Teeth": {
+            "code": "armfdrag",
+            "Tech": "T1",
+            "Explanation": "The Shark's Teeth functions as a robust naval defensive wall at the Tech 1 level, offering significant protection with its high health of 4450. Designed to block most Tech 1 naval units and low-altitude projectiles, it serves as a critical barrier in defensive strategies, particularly around strategic coastal areas and chokepoints. While it does not possess any offensive capabilities or speed, its primary strength lies in its ability to absorb damage and delay enemy progress. Its cost-effectiveness and durability make it an essential component for players seeking to fortify their positions on water maps."
+        },
+        "Ferret": {
+            "code": "armferret",
+            "Tech": "T1",
+            "Explanation": "The Ferret serves as a T1 anti-air missile battery, designed to provide essential air defense with its substantial DPS of 176.0. Its missile launcher boasts an impressive range of 840, allowing it to intercept and eliminate most T1 and some T2 aircraft effectively before they can pose a threat. With 1330 health, it can withstand moderate attacks, though its stationary nature makes it vulnerable to ground assaults if not adequately protected. Despite its lack of mobility and a limited sight range of 375, the Ferret is a cost-effective solution for securing airspace in early-game scenarios."
+        },
+        "Heavy Mine": {
+            "code": "armfmine3",
+            "Tech": "T1",
+            "Explanation": "The Heavy Mine, classified as a T1 defensive unit, is a powerful anti-naval asset designed to inflict significant damage on heavily armored naval units. With its impressive DPS of 1940, it excels at neutralizing enemy ships that venture too close, but its effectiveness is limited by its stationary nature and zero weapon range. The unit's low health of 11 makes it highly vulnerable to detection and destruction if not strategically placed. Due to its immobility and narrow sight range of 78, deploying it in chokepoints or high-traffic sea lanes maximizes its potential for surprise assaults."
+        },
+        "Beamer": {
+            "code": "armbeamer",
+            "Tech": "T1",
+            "Explanation": "The Beamer is a T1 defensive turret equipped with a powerful BeamLaser, serving as a formidable obstacle against enemy units with its continuous high-intensity laser beam. It boasts a high DPS of 266.0 and a substantial health pool of 1430, making it ideal for holding chokepoints and protecting key installations. With a weapon range of 480, it can effectively engage enemies before they come too close, though its fixed position means it cannot pursue retreating foes. The Beamer is cost-effective for early defense, but its lack of mobility requires strategic placement to maximize its impact on the battlefield."
+        },
+        "Juno": {
+            "code": "armjuno",
+            "Tech": "T1",
+            "Explanation": "The Juno is a specialized Tactical Support unit equipped with a Starburst Launcher capable of deploying anti-micro-electronics missiles across a massive range of 32,000 units. Its primary role is to disrupt enemy radar and communication systems, making it an invaluable asset for electronic warfare. While it boasts considerable health at 2350 HP, its complete lack of mobility means it must be strategically placed for optimal defense and disruption. The Juno is most effective when integrated into a defensive line, providing support by neutralizing enemy electronic capabilities, though its high cost necessitates careful placement to avoid resource wastage."
+        },
+        "Harpoon": {
+            "code": "armtl",
+            "Tech": "T1",
+            "Explanation": "The Harpoon is a T1 torpedo launcher designed to defend against naval threats, effectively targeting both ships and submarines within its substantial 500 range. With a formidable DPS of 187 and a sturdy 1300 health, it serves as a formidable deterrent against early naval incursions. However, its stationary nature and inability to engage targets outside of water make it vulnerable to air or land-based attacks, necessitating protective measures from other unit types. Its cost-effectiveness and defensive capabilities make it an essential component for securing coastal and underwater territories in the early game."
+        },
+        "Dragon's Claw": {
+            "code": "armclaw",
+            "Tech": "T1",
+            "Explanation": "Dragon's Claw is an innovative T1 defensive turret designed to surprise and disrupt enemy forces. It boasts a formidable Lightning Cannon with a solid DPS of 159, capable of delivering substantial damage to approaching enemies within its 430 range. Disguised as a block of Dragon's Teeth, it remains concealed until foes are near, offering a strategic advantage by catching them off guard. However, its static nature means it cannot reposition once deployed, making it essential to carefully choose its initial placement to maximize its defensive potential."
+        },
+        "Gauntlet": {
+            "code": "armguard",
+            "Tech": "T1",
+            "Explanation": "The Gauntlet serves as a T1 medium-range artillery battery, equipped with three powerful cannons that deliver a respectable DPS of 212.0. With its impressive weapon range of 1220, it excels at bombarding enemy positions from a distance, making it a valuable asset for supporting assaults or defending strategic locations. Although it has a substantial health pool of 3050, it is completely immobile, which means it requires protection from mobile units to prevent it from being easily flanked or overrun. Its lack of speed and mobility is compensated by its ability to deliver potent area-of-effect damage, making it ideal for softening up enemy formations before a direct engagement."
+        },
+        "Light Mine": {
+            "code": "armmine1",
+            "Tech": "T1",
+            "Explanation": "The Light Mine is a T1 defensive unit specializing in ambushing and damaging lightly armored units such as vehicles and bots. With a significant DPS of 445.0, it excels in providing a cost-effective deterrent against advancing enemy forces. Its lack of mobility and minimal health make it vulnerable to detection and neutralization if not strategically placed. Best deployed in chokepoints or high-traffic areas, its effectiveness is maximized when used in conjunction with other defensive structures or units to capitalize on its explosive potential."
+        },
+        "Manta": {
+            "code": "armfhlt",
+            "Tech": "T1",
+            "Explanation": "The Manta is a formidable defensive structure classified as a T1 Floating Heavy Laser Tower, designed to secure aquatic zones with its powerful BeamLaser. With a significant health pool of 4250, it can withstand considerable enemy fire, making it more robust than its land-based counterparts. Its impressive weapon range and sight range of 630 allow it to effectively engage and deter enemy units approaching from the water. However, its immobility and stationary nature mean it must be strategically placed to maximize its defensive potential, and it relies heavily on support from other units to protect against aerial threats."
+        },
+        "Overwatch": {
+            "code": "armhlt",
+            "Tech": "T1",
+            "Explanation": "The Overwatch is a formidable T1 defensive structure equipped with a powerful BeamLaser, designed to serve as a Heavy Defense Turret. Its significant strength lies in its impressive 620 weapon range, allowing it to comfortably outrange most Tier 1 land units, making it ideal for controlling choke points and protecting strategic locations. With a robust 2600 health, it can withstand considerable enemy fire, although its lack of mobility (speed is 0) means strategic placement is crucial for effectiveness. However, players should be cautious of artillery units, which can outrange and destroy it if not adequately defended."
+        },
+        "Nettle": {
+            "code": "armrl",
+            "Tech": "T1",
+            "Explanation": "The Nettle serves as a T1 stationary anti-air defense tower, specializing in neutralizing light aircraft with its MissileLauncher. Its significant weapon range of 765 allows it to cover a wide area, providing critical air defense in early stages of the game. While it boasts a respectable DPS of 68, its immobility and moderate health of 330 make it vulnerable to ground assaults if left unprotected. Due to its zero mobility, strategic placement is key, ensuring it complements other defensive structures to mitigate its vulnerability to direct attacks."
+        },
+        "Chainsaw": {
+            "code": "armcir",
+            "Tech": "T1",
+            "Explanation": "The Chainsaw serves as a formidable anti-air defense unit, designed to protect your base from aerial threats with its powerful MissileLauncher. Boasting a high DPS of 625 and an impressive weapon range of 1125, it excels at targeting and annihilating enemy aircraft before they can inflict damage. Its bomb-resistant design and substantial health pool of 4450 make it durable against air raids, ensuring prolonged operational capability. However, its immobility and limited sight range of 380 mean it relies heavily on external units for target acquisition and is best placed strategically across your defensive perimeter."
+        },
+        "Naval Nettle": {
+            "code": "armfrt",
+            "Tech": "T1",
+            "Explanation": "The Naval Nettle serves as a T1 light anti-air missile tower designed primarily for defensive operations against airborne threats. With a decent DPS of 96.0 and a substantial weapon range of 765, it excels at clearing light aircraft within its vicinity, making it an essential component of any naval defense strategy. Its ability to be constructed on water allows versatile placement along coastlines and strategic water routes. However, its stationary nature and modest health pool of 380 make it vulnerable to concentrated attacks, so it should be supported by other units to ensure its longevity in prolonged engagements."
+        },
+        "Dragon's Teeth": {
+            "code": "armdrag",
+            "Tech": "T1",
+            "Explanation": "Dragon's Teeth serve as a crucial defensive structure, primarily functioning as a barrier to obstruct T1 units and low-altitude projectiles. With substantial health of 2800, they excel in absorbing damage and providing strategic advantage by funneling enemy forces into kill zones or protecting valuable assets. Despite being immobile and having no offensive capabilities, their low cost makes them an efficient choice for establishing a defensive perimeter. However, care must be taken as they are vulnerable to higher-tier units and indirect fire, requiring complementary defenses for comprehensive protection."
+        },
+        "Medium Mine": {
+            "code": "armmine2",
+            "Tech": "T1",
+            "Explanation": "The Medium Mine is a strategic defensive unit, designed to eliminate tougher adversaries than its lighter counterparts, including medium tanks and heavier bots. With a formidable DPS of 1110.0, it excels at delivering a powerful, sudden blow to unsuspecting enemy units that venture too close. However, its zero speed and limited sight range of 83 make it reliant on careful placement and concealment within choke points or high-traffic areas. Its low health of 11 necessitates strategic deployment to avoid premature detection and destruction, ensuring it delivers its devastating payload at the optimal moment."
+        },
+        "Anemone": {
+            "code": "armdl",
+            "Tech": "T1",
+            "Explanation": "The Anemone is a T1 stationary torpedo launcher designed for coastal defense, specializing in targeting enemy ships and submarines. With a robust health pool of 2200 HP, it can withstand significant damage while delivering a formidable 150 DPS, making it a reliable choice for protecting shorelines against naval threats. Its 600 weapon range allows it to strike from a safe distance, but its stationary position means it lacks mobility, requiring strategic placement near water for maximum effectiveness. Despite its lack of movement, the Anemone's ability to deter both surface and underwater units makes it a valuable asset in establishing a strong coastal defense."
+        },
+        "Pit Bull": {
+            "code": "armpb",
+            "Tech": "T2",
+            "Explanation": "The Pit Bull serves as a formidable stationary defense turret, equipped with a heavy gauss cannon that delivers a high DPS of 422.0. With a weapon range of 730, it excels at controlling key chokepoints and repelling enemy advances before they can reach your base. Its substantial 2800 health ensures it can withstand heavy assaults, making it a reliable choice for static defense. However, its lack of mobility and high-tech level requirement mean it should be strategically placed to maximize its defensive potential."
+        },
+        "Naval Arbalest": {
+            "code": "armfflak",
+            "Tech": "T2",
+            "Explanation": "The Naval Arbalest is a T2 Anti-Air Naval Defense Platform designed to provide robust air defense with its powerful cannon. It excels in eliminating aerial threats with its impressive DPS of 469 and a significant weapon range of 775, making it essential for safeguarding coastal and naval operations. However, its lack of mobility and zero speed mean it must be strategically placed to maximize coverage and effectiveness. The unit's high health of 1920 and large AoE damage make it particularly effective against clustered air units, though its inability to move necessitates careful planning of placement."
+        },
+        "Fortification Wall": {
+            "code": "armfort",
+            "Tech": "T2",
+            "Explanation": "The Fortification Wall serves as a robust defensive structure, designed to impede the advancement of most Tech 1 and Tech 2 units with its impressive 8900 health. This makes it ideal for establishing fortified boundaries or creating choke points to control enemy movements. Despite its lack of offensive capabilities and immobility, its strength lies in its ability to absorb a substantial amount of damage, protecting more valuable assets behind it. However, its reliance on other defensive units for offensive support can be a drawback in scenarios where enemy firepower overwhelms stationary defenses."
+        },
+        "Citadel": {
+            "code": "armamd",
+            "Tech": "T2",
+            "Explanation": "The Citadel serves as a pivotal T2 Nuclear Missile Defense System with its primary role in intercepting and neutralizing incoming nuclear threats. With its StarburstLauncher capable of a staggering 72,000 weapon range, it provides extensive coverage, ensuring the safety of your base against intercontinental ballistic missiles. Its high health of 3,300 makes it resilient against moderate attacks, but its lack of mobility and substantial cost mean it should be strategically placed and protected. While offering powerful defense, its limited sight range of 201 requires supplementary scouting support to maximize its effectiveness."
+        },
+        "Rattlesnake": {
+            "code": "armamb",
+            "Tech": "T2",
+            "Explanation": "The Rattlesnake is a T2 pop-up plasma artillery battery that excels as a defensive structure with its impressive 1380 weapon range and a consistent DPS of 389.0. Its ability to cloak provides strategic advantages, allowing it to remain hidden until the perfect moment to unleash a barrage of cannon fire on unsuspecting enemies. With 4000 health, it can withstand considerable damage, making it a tough target to dislodge from fortified positions. However, its immobility and limited sight range of 442 necessitate pairing with scouting units or other defenses to maximize its effectiveness and avoid being caught off-guard by long-range threats."
+        },
+        "Mercury": {
+            "code": "armmercury",
+            "Tech": "T2",
+            "Explanation": "Mercury is a T2 Anti-Air Missile Launcher, excelling in long-range aircraft interception with its massive 2400 range. Its high DPS of 417.0 allows it to decimate enemy air threats before they can pose a risk to your base. However, it has no mobility with a speed of 0, making it a stationary defense unit. While its health is relatively moderate at 1670, its high-tech capability is best utilized as a strategic anti-air defense in protected locations."
+        },
+        "Ragnarok": {
+            "code": "armvulc",
+            "Tech": "T2",
+            "Explanation": "The Ragnarok functions as a T2 long-range artillery unit, designed to provide unparalleled firepower with its devastating rapid-fire plasma cannon. Its formidable 2708 DPS and extensive 5750 weapon range make it an ideal choice for obliterating enemy structures and units from a safe distance. However, its stationary nature, coupled with a high resource cost, requires strategic placement and protection against enemy assaults. While its impressive 32,000 health makes it resilient, players must ensure it is adequately defended to maximize its destructive potential."
+        },
+        "Tracer": {
+            "code": "armsd",
+            "Tech": "T2",
+            "Explanation": "The Tracer is a specialized Intrusion Countermeasure System (ICS) designed for detecting and neutralizing enemy stealth units. Despite having no direct offensive capabilities (DPS: 0.0), its formidable weapon range of 2000 allows it to cover extensive areas, making it an invaluable asset for maintaining strategic defense perimeters. With a robust health pool of 2650, it is resilient in withstanding enemy attempts to disable it. However, its stationary nature (Speed: 0) requires careful placement, as it cannot be repositioned without support, making it crucial to integrate it with mobile units for comprehensive security coverage."
+        },
+        "Gorgon": {
+            "code": "armkraken",
+            "Tech": "T2",
+            "Explanation": "The Gorgon, a floating rapid-fire plasma tower, serves as a formidable defensive structure, especially in aquatic environments. With a high DPS of 540 and an impressive weapon range of 800, it excels at deterring enemy naval and amphibious units before they can close in. Its substantial health pool of 4450 makes it resilient against sustained attacks, although its immobility means strategic placement is crucial. Despite its stationary nature, the Gorgon's ability to be constructed on water provides a unique advantage in securing naval chokepoints and supporting coastal defenses."
+        },
+        "Keeper": {
+            "code": "armgate",
+            "Tech": "T2",
+            "Explanation": "The Keeper serves as a robust defensive structure, primarily functioning as a shield generator with a high health pool of 3550. Its primary role is to deflect incoming plasma artillery, making it an essential asset for protecting critical infrastructure and units from long-range bombardments. Despite its lack of mobility and offensive capabilities, the Keeper excels in its ability to absorb substantial damage, creating a resilient defensive perimeter. However, its static nature and limited weapon range of 10 require strategic placement and support from offensive units to maximize its defensive potential."
+        },
+        "Armageddon": {
+            "code": "armsilo",
+            "Tech": "T2",
+            "Explanation": "The Armageddon serves as a T2 Strategic Nuclear Missile Launcher, capable of devastating entire enemy bases and armies with its unparalleled destructive power. With a massive weapon range of 72000, it can engage targets from a safe distance, making it an excellent choice for long-range assaults and area denial. Its high DPS of 317.0, combined with its ability to obliterate large areas, makes it an invaluable asset in late-game scenarios. However, its zero mobility and potentially high resource cost require players to protect it effectively while managing their economy for efficient use."
+        },
+        "Paralyzer": {
+            "code": "armemp",
+            "Tech": "T2",
+            "Explanation": "The Paralyzer is a T2 specialized artillery unit designed for tactical support with its EMP-StarburstLauncher, capable of disabling enemy units at an impressive range of 3650. Its primary strength lies in its ability to neutralize clusters of enemy forces, making it invaluable for initiating assaults or defending strategic positions. However, its lack of mobility and direct damage output means it must be protected by other units and positioned strategically to maximize its impact. The Paralyzer's high health ensures it can endure some counter-attacks while performing its role as a battlefield disruptor."
+        },
+        "Pulsar": {
+            "code": "armanni",
+            "Tech": "T2",
+            "Explanation": "The Pulsar serves as a formidable T2 defensive structure, primarily functioning as a Long-Range Beam Laser Tower. Its tremendous DPS of 1091 and exceptional weapon range of 1400 make it ideal for obliterating enemy units from a distance before they can close in. With a robust health pool of 6100, it can withstand significant enemy fire, making it a cornerstone in a fortified defense line. However, its immobility and potentially high cost require strategic placement, as it cannot be repositioned and may necessitate protection from fast-moving attackers."
+        },
+        "Basilica": {
+            "code": "armbrtha",
+            "Tech": "T2",
+            "Explanation": "The Basilica serves as a formidable T2 Long-Range Plasma Cannon (LRPC), specializing in delivering devastating artillery fire over vast distances with its impressive 4650 range. Its high DPS of 123.0 makes it a strategic asset for bombarding enemy bases or fortifications from afar, safely outside the reach of most counterattacks. However, its immobility and lack of sight range necessitate the support of scouting units to maximize its effectiveness and avoid being blindsided. While its substantial health of 4450 provides durability, it requires significant protection due to its inability to reposition or retreat."
+        },
+        "Moray": {
+            "code": "armatl",
+            "Tech": "T2",
+            "Explanation": "The Moray is a T2 advanced torpedo launcher designed for anti-naval operations, effectively targeting both ships and submarines within its impressive 915 weapon range. With a formidable DPS of 360.0, it excels at providing area denial and maintaining control over strategic waterways. Its high health of 2800 allows it to withstand considerable enemy fire, enhancing its role as a durable defensive unit. However, with a speed of 0, the Moray is stationary, necessitating strategic placement to maximize its impact and mitigate its immobility."
+        },
+        "Arbalest": {
+            "code": "armflak",
+            "Tech": "T2",
+            "Explanation": "The Arbalest serves as a formidable T2 anti-air defense unit, specializing in eliminating aerial threats with high damage output and a wide area of effect. Its 775-range cannon can effectively engage and neutralize clusters of enemy aircraft before they come within striking distance. While it boasts a substantial health pool of 1750, making it durable in defensive positions, its immobility and zero speed necessitate strategic placement to maximize its protective coverage. However, its lack of mobility and limited sight range of 525 require support from other units for optimal targeting and engagement of threats."
+        }
+    }
+}

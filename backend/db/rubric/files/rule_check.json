@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "project": "BAR_Minigame_Generator",
+    "version": "1.0",
+    "description": "Technical Lua code quality rubric for BAR Rules (formerly Gadgets)",
+    "categories": [
+      "Syntax & Structure",
+      "API Compliance",
+      "Robustness",
+      "Engine Synchronization",
+      "Logic & Schema Alignment"
+    ]
+  },
+  "rubrics": [
+    {
+      "category": "Syntax & Structure",
+      "criterion": "Basic Rule Structure",
+      "description": "Must be valid Lua with 'rule:GetInfo()' defined correctly and 'enabled = true' set inside the info table."
+    },
+    {
+      "category": "API Compliance",
+      "criterion": "Spring API Validation",
+      "description": "All 'Spring.*' functions must be real and used with correct signatures. Standard Recoil/BAR APIs (e.g., AddUnitDamage, GetUnitsInSphere) must not be flagged as invalid if used correctly. Flag hallucinated functions."
+    },
+    {
+      "category": "Robustness",
+      "criterion": "Null Safety & Performance",
+      "description": "UnitIDs must be validated with 'Spring.ValidUnitID' before access. Handles nil values properly and avoids expensive global loops like 'Spring.GetAllUnits' inside high-frequency call-ins (e.g., GameFrame)."
+    },
+    {
+      "category": "Engine Synchronization",
+      "criterion": "Synced State Integrity",
+      "description": "All game-changing logic (MoveCtrl, AddUnitDamage, Spawn) must be strictly contained within 'if ruleHandler:IsSyncedCode() then' blocks."
+    },
+    {
+      "category": "Logic & Schema Alignment",
+      "criterion": "Target Logic Fidelity",
+      "description": "The code must accurately implement the 'Target Logic Description' without missing requested mechanics."
+    },
+    {
+      "category": "Logic & Schema Alignment",
+      "criterion": "Configuration Schema Consistency",
+      "description": "A 'local config' table must be defined. All config variables must be used in the logic, and no 'Magic Numbers' (hardcoded constants) should exist outside the config table."
+    }
+  ]
+}

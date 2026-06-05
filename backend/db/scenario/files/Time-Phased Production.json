@@ -1,0 +1,5 @@
+{
+  "specification": "In this race, the main goal for allied forces is to build 1 Welder as fast as possible within 30 minutes. The enemy has a Commander that builds factories and a large army to attack at any time. Allied forces must protect their base while growing their economy to succeed. Victory is achieved by making the Welder within 30 minutes. Defeat occurs if the time runs out or if all allied units are killed.",
+  "rule": [],
+  "decision": ["ConstructionWithPos", "ProductionWithFactory", "GroupMovement"]
+}

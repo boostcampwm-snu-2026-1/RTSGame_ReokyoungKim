@@ -1,0 +1,159 @@
+{
+    "Bot": {
+        "Lazarus": {
+            "code": "armrectr",
+            "Tech": "T1",
+            "Explanation": "The Lazarus is a T1 Resurrection Bot designed to breathe life back into the battlefield by reanimating wrecks into fully functioning units. Its primary strength lies in its ability to economically bolster your forces without the need for additional resources, making it invaluable in lengthy skirmishes. While its utility is unmatched in post-battlefield recovery, the Lazarus is not designed for frontline combat due to its lack of offensive capabilities and relatively low durability. Though it moves at a moderate speed, its strategic significance is amplified when paired with combat units to reclaim lost ground swiftly."
+        },
+        "Crossbow": {
+            "code": "armjeth",
+            "Tech": "T1",
+            "Explanation": "The Crossbow is a T1 Amphibious Anti-Air Bot, designed to provide cost-effective aerial defense in both land and water environments. Its affordability and ability to target light air units make it an essential component for early-game strategies, particularly in maps with diverse terrain. While its firepower is sufficient for deterring or eliminating enemy scouts and light bombers, its effectiveness diminishes against heavily armored or numerous air threats. Therefore, it is best employed in numbers and supported by more versatile units to counter stronger aerial assaults."
+        },
+        "Construction Bot": {
+            "code": "armck",
+            "Tech": "T1",
+            "Explanation": "The Construction Bot is a versatile T1 unit designed for establishing foundational infrastructure quickly and efficiently. As the cheapest construction unit available, its primary role is to expand early territory by constructing basic structures, making it an essential component for any early-game strategy. Despite its low cost and utility, the Construction Bot is lightly armored and lacks weaponry, making it vulnerable to enemy attacks. Therefore, it should always be accompanied by combat units or positioned away from the front lines to maximize its utility in base development."
+        },
+        "Tick": {
+            "code": "armflea",
+            "Tech": "T1",
+            "Explanation": "The Tick is a T1 fast scout bot designed for rapid reconnaissance missions, offering exceptional speed to quickly traverse the battlefield. Its primary strength lies in its low cost, allowing commanders to deploy multiple units for widespread intelligence gathering. While its offensive capabilities are minimal, the Tick's agility makes it highly effective at evading enemy fire, though it remains vulnerable due to its low HP. Utilize the Tick to keep constant tabs on enemy movements and positions, but be cautious as its fragility means it cannot withstand direct combat."
+        },
+        "Centurion": {
+            "code": "armwar",
+            "Tech": "T1",
+            "Explanation": "The Centurion is classified as a Heavy Infantry Bot, excelling in front-line engagements with its dual rapid-fire lasers, making it particularly effective against swarms of light units. Its durability allows it to withstand considerable damage, serving as a reliable anchor in your forces. While the Centurion's robust design comes at a higher cost compared to lighter units, its slower speed can make it susceptible to faster, more agile enemies. Utilize the Centurion in conjunction with faster units to cover its weaknesses and maximize its battlefield impact."
+        },
+        "Rocketeer": {
+            "code": "armrock",
+            "Tech": "T1",
+            "Explanation": "The Rocketeer is a T1 Light Rocket Bot designed primarily for offensive operations against fortified enemy positions. With its long-range rocket weaponry, it excels at dismantling static defenses and providing crucial fire support to allied units from a distance. Its relatively low hit points make it vulnerable to concentrated enemy fire, so it's best deployed in groups and supported by other units to maximize its effectiveness. Although cost-effective, its moderate speed requires careful maneuvering to avoid becoming an easy target for faster enemy units."
+        },
+        "Pawn": {
+            "code": "armpw",
+            "Tech": "T1",
+            "Explanation": "The Pawn, a T1 basic infantry bot, excels as a cost-effective raider perfect for early-game territorial expansion and disruption. With its affordable build cost and swift movement speed, it can effectively target and overrun poorly defended expansions, isolated artillery units, and even lone commanders. However, its relatively low HP makes it vulnerable to concentrated fire or more advanced units, necessitating strategic use in numbers or with support from other units. Utilize the Pawn's speed and numbers to exploit enemy weaknesses and gain an early tactical advantage."
+        },
+        "Mace": {
+            "code": "armham",
+            "Tech": "T1",
+            "Explanation": "The Mace is a Light Assault Bot designed for early-stage skirmishes, excelling in delivering substantial damage at a low production cost. Its primary strength lies in its powerful plasma weapon, which can effectively dispatch lightly armored units and structures from a moderate range. However, its relatively low HP makes it vulnerable to concentrated enemy fire, necessitating strategic positioning and support from other units. Due to its balanced speed and firepower, the Mace is ideal for hit-and-run tactics and supporting more durable units in combined arms operations."
+        },
+        "Armada Commander": {
+            "code": "armcom",
+            "Tech": "T1",
+            "Explanation": "The Armada Commander serves as a cornerstone unit, pivotal for both developing your base and spearheading early-game assaults. It boasts substantial HP, allowing it to withstand significant damage, making it a resilient frontline leader. Equipped with a powerful energy weapon and a considerable range, it excels at both defense and supporting offensive maneuvers. However, its relatively high cost means losing the Commander can be a significant strategic setback, necessitating cautious deployment and protection."
+        },
+        "Archangel": {
+            "code": "armaak",
+            "Tech": "T2",
+            "Explanation": "The Archangel serves as a Tier 2 Advanced Anti-Air Bot, designed to provide robust air defense with its dual missile systems. Its long-range missiles can target and engage distant aerial threats effectively, while the mid-range rapid-fire missiles are ideal for quickly dispatching closer, fast-moving aircraft. Although the Archangel excels at clearing the skies, its specialization in anti-air combat means it lacks ground attack capabilities, making it vulnerable to terrestrial threats and requiring support from ground units. Its advanced technology might entail a higher cost, but its capability to safeguard your forces from air assaults justifies the investment."
+        },
+        "Tumbleweed": {
+            "code": "armvader",
+            "Tech": "T2",
+            "Explanation": "The Tumbleweed is a T2 crawling bomb that excels in delivering explosive damage directly to enemy units and structures. Its primary strength lies in its ability to stealthily approach targets before detonating, making it an effective tool for disrupting enemy defenses or taking out high-value targets. However, its utility comes at the cost of low survivability and the need for precise control, as it can be easily destroyed before reaching its target. Due to its specialized role, the Tumbleweed is best used in surprise attacks or as a sacrificial unit to dismantle tightly packed enemy formations."
+        },
+        "Fatboy": {
+            "code": "armfboy",
+            "Tech": "T2",
+            "Explanation": "The Fatboy is a formidable Heavy Assault Bot, excelling in mid-range engagements with its powerful plasma weaponry, capable of dealing massive Area of Effect (AoE) damage. Its robust HP allows it to withstand significant enemy fire, making it an excellent choice for breaking through fortified positions or leading a charge against a cluster of enemy units. However, its considerable cost and moderate speed make it less suitable for rapid deployment or skirmishes where agility is crucial. Deploy the Fatboy strategically to maximize its devastating impact on battlefield clusters, while ensuring it is supported by faster units to cover its flanks."
+        },
+        "Sprinter": {
+            "code": "armfast",
+            "Tech": "T2",
+            "Explanation": "The Sprinter is a Tech 2 fast raider bot designed for rapid hit-and-run tactics, excelling in skirmishes due to its impressive speed and agility. Armed with a short-range rapid-fire machine gun, it is effective at quickly overwhelming lightly armored targets and disrupting enemy lines. However, its reliance on speed means it has relatively low HP, making it vulnerable to sustained fire and ineffective against heavily fortified positions. The Sprinter's low cost and rapid deployment make it ideal for reconnaissance, harassment, and exploiting openings in enemy defenses."
+        },
+        "Commander": {
+            "code": "armdecom",
+            "Tech": "T2",
+            "Explanation": "The Decoy Commander, mimicking the appearance of the Armada Commander, serves as a strategic deception unit to mislead opponents. While it can construct basic Tech 1 structures and place mines, its primary role is to act as a diversion, drawing enemy fire and attention away from your real Commander. Its main strength lies in its ability to sow confusion, making it an essential tool for psychological warfare and tactical misdirection. However, it lacks the combat and strategic versatility of the actual Commander, and its effectiveness is diminished if the enemy identifies it as a decoy."
+        },
+        "Umbrella": {
+            "code": "armscab",
+            "Tech": "T2",
+            "Explanation": "The Umbrella is a T2 mobile nuclear missile defense system designed to intercept and neutralize incoming intercontinental ballistic missiles, ensuring strategic protection for high-value areas. Its primary strength lies in its ability to provide a mobile layer of defense against nuclear threats, making it an essential unit for safeguarding key infrastructure and forces. However, its role is highly specialized, and it must be strategically positioned to intercept missiles effectively, as it does not contribute to direct combat engagements. While the cost can be high, its value in preventing catastrophic damage makes it indispensable in late-game scenarios where nuclear threats are prevalent."
+        },
+        "Platypus": {
+            "code": "armamph",
+            "Tech": "T2",
+            "Explanation": "The Platypus is a T2 Amphibious Raider known for its exceptional speed, allowing it to traverse both land and water seamlessly. Equipped with a light laser and a basic anti-air missile launcher, it excels in hit-and-run tactics, providing versatile engagement options against both ground and aerial targets. Its primary strength lies in its ability to quickly reposition and harass enemy lines, making it a valuable asset for disrupting enemy formations and supply lines. However, its light armament and armor make it vulnerable to concentrated fire, requiring careful management and support in larger confrontations."
+        },
+        "Compass": {
+            "code": "armmark",
+            "Tech": "T2",
+            "Explanation": "The Compass serves as a T2 Mobile Radar Bot, essential for gathering intelligence on enemy unit positions within its operational range. Its strength lies in providing real-time reconnaissance data, which can be crucial for planning strategic maneuvers and avoiding ambushes. However, the Compass lacks offensive capabilities and possesses limited armor, making it vulnerable and requiring protection from more robust units. Due to its moderate cost, deploying multiple Compasses can significantly enhance battlefield awareness without substantial resource investment."
+        },
+        "Advanced Construction Bot": {
+            "code": "armack",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Bot is a versatile T2 unit essential for expanding your technological capabilities and infrastructure. Its ability to construct Tech 2 structures makes it invaluable for players seeking to develop advanced defenses, resource production, and high-tech units. While it is not designed for combat and lacks defensive capabilities, its true strength lies in its ability to rapidly establish a superior economy and tech advantage. However, its higher cost means it should be protected and used strategically to maximize its impact on the battlefield."
+        },
+        "Recluse": {
+            "code": "armsptk",
+            "Tech": "T2",
+            "Explanation": "The Recluse, a T2 all-terrain spider bot, excels as a versatile skirmisher with its long-range multiple rocket launchers. Its ability to traverse diverse landscapes makes it ideal for harassing enemy positions and exploiting terrain advantages. While its firepower is formidable against lightly armored units, its relatively low HP and moderate speed require cautious positioning to avoid direct confrontations with stronger foes. The Recluse's cost is justified by its adaptability, making it a valuable asset for strategic map control and hit-and-run tactics."
+        },
+        "Sharpshooter": {
+            "code": "armsnipe",
+            "Tech": "T2",
+            "Explanation": "The Sharpshooter is a T2 long-range sniper bot designed for precision strikes against high-value targets. Its powerful weapon delivers an impressive 2500 damage per shot, making it ideal for eliminating enemy commanders and heavy units from a distance. However, the Sharpshooter's high cost and slower rate of fire require careful positioning and protection from faster, lighter units that can close the gap. Employ it strategically to dismantle enemy fortifications and disrupt key positions, but ensure it is adequately defended to maximize its battlefield impact."
+        },
+        "Ghost": {
+            "code": "armspy",
+            "Tech": "T2",
+            "Explanation": "The Ghost is a T2 stealthy and cloakable spy bot, designed for reconnaissance and intelligence gathering without being detected. Its ability to remain invisible to enemy units makes it ideal for infiltrating enemy bases, gathering vital information, and planning strategic assaults. While its low HP makes it vulnerable if detected, its stealth capabilities allow it to maneuver through enemy lines undetected, providing critical insights that can turn the tide of battle. However, players should be cautious of energy costs associated with maintaining its cloaked state, which can be a drain on resources if not managed carefully."
+        },
+        "Butler": {
+            "code": "armfark",
+            "Tech": "T2",
+            "Explanation": "The Butler is a T2 fast assistance bot, primarily designed to excel in repair and maintenance roles on the battlefield. Its speed allows it to quickly reach and repair damaged units, keeping your forces operational during prolonged engagements. While it can construct a limited selection of Tech 1 structures, its primary strength lies in its ability to enhance the longevity and effectiveness of your army through rapid repairs. However, the Butler is not equipped for direct combat and should be kept away from front-line skirmishes where its minimal defensive capabilities would be a liability."
+        },
+        "Smuggler": {
+            "code": "armaser",
+            "Tech": "T2",
+            "Explanation": "The Smuggler is a Tier 2 mobile radar jamming bot designed to excel in stealth and concealment operations. Its primary strength lies in its ability to cloak allied units within its range, preventing them from being detected on enemy minimaps. This capability is crucial during covert maneuvers or surprise attacks, making it an invaluable support unit in sophisticated strategies. However, its utility is balanced by its specialized role, limiting its effectiveness to scenarios where radar jamming is pivotal, and it typically lacks offensive capabilities and robust defenses."
+        },
+        "Welder": {
+            "code": "armzeus",
+            "Tech": "T2",
+            "Explanation": "The Welder serves as a versatile T2 assault bot, excelling in frontline engagements with its potent lightning cannon. Its balanced attributes make it highly effective in both offensive pushes and defensive holds, providing reliable damage output and moderate resilience on the battlefield. While not the fastest unit, its speed is sufficient for keeping pace with most formations, though care should be taken to avoid over-extension due to its susceptibility to concentrated enemy fire. The Welder's relatively moderate cost allows for deployment in sizable numbers, enhancing its impact when used in coordinated group tactics."
+        },
+        "Gunslinger": {
+            "code": "armmav",
+            "Tech": "T2",
+            "Explanation": "The Gunslinger is a T2 fast skirmish bot, adept at swiftly dismantling most T1 units and some lighter T2 adversaries. Its high speed and mobility make it an excellent choice for hit-and-run tactics, allowing it to exploit enemy weaknesses and avoid heavier firepower. While its offensive capabilities are formidable against less armored foes, it can struggle against high-cost, heavily armored units due to its relatively moderate damage output. Despite this, its efficiency and cost-effectiveness make it a valuable addition to any mid-game strategy, particularly in disrupting enemy lines and supporting larger assaults."
+        },
+        "Hound": {
+            "code": "armfido",
+            "Tech": "T2",
+            "Explanation": "The Hound serves as a versatile skirmisher with its mid-range, low-velocity plasma mortar, capable of providing consistent fire support against lightly armored units. Its speed allows it to maneuver quickly around the battlefield, making it effective for hit-and-run tactics and flanking maneuvers. While the Hound boasts decent durability, it may struggle against concentrated fire from heavier units or anti-vehicle defenses due to its moderate armor. Its cost is justified by its ability to disrupt enemy formations and provide agile mid-range attacks, though careful positioning is required to maximize its effectiveness."
+        },
+        "Webber": {
+            "code": "armspid",
+            "Tech": "T2",
+            "Explanation": "The Webber is a T2 all-terrain spiderbot designed for disabling enemy units with its short-range EMP beam. Its unique ability to traverse difficult terrains makes it ideal for ambushes and flanking maneuvers, where it can immobilize key targets, allowing allies to engage without retaliation. Despite its strategic utility, the Webber's reliance on close proximity to its targets can be a vulnerability, particularly against faster or heavily armored foes. Furthermore, its specialized role and relatively high cost necessitate careful deployment to maximize its battlefield impact."
+        },
+        "Titan": {
+            "code": "armbanth",
+            "Tech": "T3",
+            "Explanation": "The Titan is a formidable Heavy Assault Bot, excelling in direct confrontations with its immense HP and devastating firepower. Its long-range armaments allow it to engage enemies from a distance, making it ideal for breaking through fortified positions and anchoring frontline assaults. While its high cost demands careful resource management, and its slower speed requires strategic deployment to avoid being outmaneuvered, the Titan's sheer power and durability can turn the tide of battle when used effectively. Deploy it as the spearhead of your offensive operations to maximize its impact on the battlefield."
+        },
+        "Vanguard": {
+            "code": "armvang",
+            "Tech": "T3",
+            "Explanation": "The Vanguard is a T3 Experimental All-Terrain Mech designed for heavy assault roles, equipped with a formidable heavy plasma cannon. Its ability to traverse varied terrains makes it a versatile choice for pushing through enemy lines and dominating the battlefield with its long-range bombardment capabilities. While its high cost and slower speed may limit its deployment in fast-paced skirmishes, the Vanguard excels in situations where its firepower can be maximized for strategic territorial control. Its robust construction ensures it can withstand significant damage, making it a durable asset in prolonged engagements."
+        },
+        "Razorback": {
+            "code": "armraz",
+            "Tech": "T3",
+            "Explanation": "The Razorback is a T3 fast experimental battle mech designed for high-impact assault roles on the battlefield. With its twin rapid-fire laser guns, it excels in delivering sustained firepower against enemy units, making it ideal for breaking through fortified positions. Its speed allows it to outmaneuver slower adversaries, creating opportunities for flanking or swift retreats when necessary. However, its relatively high cost necessitates strategic deployment to ensure its effectiveness and to mitigate the risk of resource drain."
+        },
+        "Marauder": {
+            "code": "armmar",
+            "Tech": "T3",
+            "Explanation": "The Marauder is a T3 fast amphibious assault mech, designed for swift and versatile operations across diverse terrains. Armed with dual powerful gauss guns, it excels in delivering heavy damage to enemy units, while its twin light anti-air missile turrets provide a solid defense against aerial threats. Its amphibious capabilities allow it to traverse both land and water, making it invaluable for surprise attacks and flanking maneuvers. However, its high tech level and cost may limit deployment to strategic missions where speed and multi-environment adaptability are crucial."
+        }
+    }
+}

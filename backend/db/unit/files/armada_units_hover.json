@@ -1,0 +1,39 @@
+{
+    "Hover": {
+        "Sweeper": {
+            "code": "armah",
+            "Tech": "T1",
+            "Explanation": "The Sweeper is a T1 mobile anti-air hovercraft, adept at neutralizing light aircraft threats over both sea and land with its MissileLauncher. It boasts a commendable DPS of 85.0 and an impressive weapon range of 700, allowing it to engage aerial targets from a safe distance. Its hover capability grants it immunity to torpedoes, making it particularly effective in marine environments. However, the unit's relatively moderate speed of 89 and specific anti-air focus limit its effectiveness against ground-based threats."
+        },
+        "Crocodile": {
+            "code": "armanac",
+            "Tech": "T1",
+            "Explanation": "The Crocodile is a versatile T1 light hovercraft, equipped with a powerful plasma cannon that deals 70 DPS, making it effective for hit-and-run tactics against lighter units. With a weapon range of 370 and a sight range of 509, it can engage enemies from a safe distance while maintaining awareness of its surroundings. Its speed of 70 allows it to swiftly traverse different terrains, providing tactical flexibility and rapid response capabilities. However, its relatively moderate health of 1530 necessitates cautious positioning to avoid becoming overwhelmed by concentrated enemy fire."
+        },
+        "Sentry": {
+            "code": "armllt",
+            "Tech": "T1",
+            "Explanation": "The Sentry is a T1 Light Laser Tower adept at defending against light vehicles and bots with its continuous BeamLaser weapon. It offers a formidable defense with a DPS of 161.0 and a weapon range of 430, allowing it to engage enemies effectively from a moderate distance. With a health pool of 620, it can sustain some damage, making it a reliable choice for early base defense. However, its stationary nature means it must be strategically placed to cover vulnerable areas, and its effectiveness diminishes against heavily armored or long-range units."
+        },
+        "Seeker": {
+            "code": "armsh",
+            "Tech": "T1",
+            "Explanation": "The Seeker is a T1 hovercraft that excels as a fast reconnaissance unit, equipped with a BeamLaser for close-range skirmishes. Its main strength lies in its speed (114) and extended sight range (550), allowing it to quickly scout enemy positions and provide valuable intelligence. While its offensive capabilities are moderate with a DPS of 60.0, its low health (290) makes it vulnerable in prolonged engagements or against heavily armored opponents. The Seeker is best used for hit-and-run tactics or as a support unit to provide vision and distract enemy forces."
+        },
+        "Possum": {
+            "code": "armmh",
+            "Tech": "T1",
+            "Explanation": "The Possum is a T1 light hovercraft equipped with a StarburstLauncher, making it an effective long-range skirmisher with a weapon range of 710. Its high speed of 64 allows it to quickly reposition and evade enemy fire, making it ideal for hit-and-run tactics against slower, heavier units. With a moderate health pool of 530, the Possum can withstand some damage but should avoid prolonged engagements due to its relatively low durability. While its DPS of 50.0 is respectable for its class, players should be cautious of its vulnerability to concentrated fire and consider it a support unit best used in groups to exploit its range and mobility."
+        },
+        "Construction Hovercraft": {
+            "code": "armch",
+            "Tech": "T1",
+            "Explanation": "The Construction Hovercraft is a versatile T1 unit, playing the crucial role of a mobile builder capable of traversing both land and water. With its ability to construct basic Tech 1 structures alongside specialized naval installations, it excels in establishing forward bases and expanding strategic footholds across varied terrains. While its speed of 67 provides decent mobility for quick deployments, its lack of defensive weaponry and a modest health pool of 1440 necessitate careful positioning away from frontline combat. Its adaptability is countered by a need for protection, making it an indispensable, yet vulnerable asset in any commander's strategic arsenal."
+        },
+        "Lunkhead": {
+            "code": "armlun",
+            "Tech": "T3",
+            "Explanation": "The Lunkhead is a formidable T3 experimental hovertank, excelling as a versatile assault unit with both Cannon and TorpedoLauncher capabilities. With a solid 5300 HP and a decent weapon range of 575, it can engage both surface and submerged threats effectively, making it ideal for mixed terrain operations. Despite its moderate speed of 50, the Lunkhead's high DPS of 318.0 allows it to deal significant damage, though its high cost and slower mobility require careful positioning to maximize its impact. Use the Lunkhead to spearhead assaults where its dual weaponry and robust health can turn the tide, but be wary of overextending without support."
+        }
+    }
+}

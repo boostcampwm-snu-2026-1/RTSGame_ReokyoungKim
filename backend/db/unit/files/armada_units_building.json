@@ -1,0 +1,199 @@
+{
+    "Buildings": {
+        "Naval Construction Turret": {
+            "code": "armnanotcplat",
+            "Tech": "T1",
+            "Explanation": "The Naval Construction Turret is a T1 support structure designed for aquatic environments, specializing in assisting and repairing nearby naval units. With a robust 560 health, it can sustain moderate damage while providing essential maintenance support to allied forces. Its strength lies in its ability to enhance the efficiency of naval operations by rapidly constructing or repairing units, making it indispensable in prolonged battles. However, with no offensive capabilities and being stationary, it requires strategic placement and protection to maximize its utility without falling prey to enemy attacks."
+        },
+        "Naval Metal Storage": {
+            "code": "armuwms",
+            "Tech": "T1",
+            "Explanation": "The Naval Metal Storage is a critical infrastructure unit designed to significantly boost your metal storage capacity by 3000 units while being discreetly positioned underwater. As a T1 structure, it plays a vital support role, allowing players to efficiently manage and store larger quantities of metal resources crucial for sustained military and economic expansion. With a formidable health of 3600, it offers respectable durability against minor underwater threats, though it lacks any offensive capabilities or mobility. Its underwater placement makes it less vulnerable to direct attacks, yet players should still ensure its protection against dedicated naval or submarine assaults, given its strategic importance."
+        },
+        "Tidal Generator": {
+            "code": "armtide",
+            "Tech": "T1",
+            "Explanation": "The Tidal Generator is a T1 energy-producing structure designed to harness the power of water movement, making it an essential component for any base situated near water. With a health of 400, it is relatively durable for an energy structure, though it requires protection due to its lack of offensive capabilities and immobility. Its cost-effectiveness in generating energy makes it ideal for early-game economies, especially when other resources are scarce. However, its stationary nature and reliance on water bodies mean it can be vulnerable to naval attacks, necessitating strategic placement and defense."
+        },
+        "Wind Turbine": {
+            "code": "armwin",
+            "Tech": "T1",
+            "Explanation": "The Wind Turbine is an essential T1 energy production structure, converting wind power into energy without any direct combat capability. It boasts a modest health of 196, making it relatively fragile and susceptible to enemy raids if not well-protected. Its primary strength lies in its ability to generate energy at a very low operational cost, providing a sustainable source of power in wind-rich environments. However, its output can be inconsistent due to variable wind conditions, so it is best used in combination with other energy sources to maintain a stable energy supply."
+        },
+        "Energy Storage": {
+            "code": "armestor",
+            "Tech": "T1",
+            "Explanation": "The Energy Storage unit, categorized under T1 technology, plays a crucial role as a strategic resource enhancer, increasing your energy storage capacity by 6000 units. While it offers no offensive capabilities, its robust health of 1890 HP ensures it can withstand moderate attacks, buying you time to defend or relocate. The lack of mobility and weaponry necessitates careful placement, ideally within fortified bases or protected zones to maximize its long-term utility. Its primary weakness lies in its vulnerability when isolated, making it essential to integrate it within a larger defensive strategy to safeguard your energy reserves effectively."
+        },
+        "Radar Tower": {
+            "code": "armrad",
+            "Tech": "T1",
+            "Explanation": "The Radar Tower serves as a critical reconnaissance structure with a substantial sight range of 680, providing early detection of enemy movements. As a T1 unit, it is cost-effective and essential for maintaining map control and strategic planning. While it has no offensive capabilities and a low health of 90, making it vulnerable to attacks, its primary strength lies in relaying information, which can be pivotal in coordinating defenses or launching preemptive strikes. Its stationary nature necessitates careful placement to maximize coverage while minimizing exposure to enemy forces."
+        },
+        "Metal Storage": {
+            "code": "armmstor",
+            "Tech": "T1",
+            "Explanation": "The Metal Storage is a crucial infrastructure unit designed to increase your total metal storage capacity by 3000, enabling players to accumulate more resources during extended engagements. With a robust health of 2100, it can withstand moderate attacks, providing some resilience in the face of enemy raids. Although it lacks any direct offensive capabilities and has zero speed, its primary role is to support your economy by preventing resource overflow and ensuring efficient metal management. However, players should protect it adequately, as its destruction could lead to significant resource bottlenecks."
+        },
+        "Naval Radar / Sonar Tower": {
+            "code": "armfrad",
+            "Tech": "T1",
+            "Explanation": "The Naval Radar/Sonar Tower serves as an essential early warning system, providing comprehensive detection capabilities across air, land, and underwater domains. With a substantial sight range of 760, it acts as a critical intelligence-gathering asset, allowing commanders to anticipate and respond to enemy movements effectively. Despite its lack of offensive capabilities and low health of 110, its strategic placement near key naval routes or bases can significantly enhance a fleet's situational awareness. However, its immobility and vulnerability necessitate protective measures, such as placement out of enemy firing range or support from defensive units."
+        },
+        "Geothermal Powerplant": {
+            "code": "armgeo",
+            "Tech": "T1",
+            "Explanation": "The Geothermal Powerplant is a T1 static energy production structure that leverages geothermal vents to generate a consistent and significant amount of energy. With a solid health pool of 1940, it serves as a durable energy source that is crucial for sustaining your base's power needs, especially in energy-intensive operations. However, its immobility and dependency on geothermal locations make it vulnerable to strategic strikes and potentially limit placement options to specific map areas. It's essential to guard these powerplants with defenses due to their static nature and critical importance in maintaining energy levels for advanced unit production and base operations."
+        },
+        "Energy Converter": {
+            "code": "armmakr",
+            "Tech": "T1",
+            "Explanation": "The Energy Converter serves as a critical infrastructure unit for resource management, converting excess energy into metal to help sustain your war machine. With no offensive capabilities and a modest health pool of 167, it must be protected from enemy attacks, as it cannot defend itself or flee. The Energy Converter does not move and has a very limited sight range, making its placement in a well-defended base area essential. Although it doesn't contribute directly to combat, its role in resource conversion is vital for maintaining a balanced economy, especially in energy-rich environments."
+        },
+        "Twilight": {
+            "code": "armamex",
+            "Tech": "T1",
+            "Explanation": "The Twilight is a cloaked Metal Extractor designed for stealthy resource gathering in 'Beyond All Reason'. With a substantial health pool of 1610, it can withstand moderate enemy attacks, making it a durable choice for securing metal resources. Its unique ability to cloak allows it to operate undetected, providing a strategic advantage by keeping your resource operations hidden from enemy scouts. However, it lacks offensive capabilities and mobility, necessitating protection from other units to ensure its longevity on the battlefield."
+        },
+        "Construction Turret": {
+            "code": "armnanotc",
+            "Tech": "T1",
+            "Explanation": "The Construction Turret is a stationary support unit designed for efficient base development and repair operations. With its high build power, second only to the Commander, it excels at rapidly constructing structures and assisting in repairs, making it invaluable for maintaining a robust defensive line. Its lack of mobility and inability to attack means it must be placed strategically within your base to avoid enemy threats. Despite its vulnerability, its significant construction capabilities and 560 health make it a critical asset for expanding and reinforcing your stronghold."
+        },
+        "Offshore Geothermal Powerplant": {
+            "code": "armuwgeo",
+            "Tech": "T1",
+            "Explanation": "The Offshore Geothermal Powerplant is a strategic T1 energy structure designed for underwater deployment, ideal for players looking to capitalize on geothermal vents beneath the sea. With a health pool of 1940, it provides a robust and reliable source of energy without the need for surface protection, making it an excellent choice in maps with significant water areas. Its inability to move or defend itself means it's vulnerable to enemy naval or submarine attacks, so players should ensure it is well-guarded by naval units or defensive structures. The lack of direct offensive capabilities underscores its role as a critical energy provider rather than a combat unit."
+        },
+        "Metal Extractor": {
+            "code": "armmex",
+            "Tech": "T1",
+            "Explanation": "The Metal Extractor is a crucial economic unit classified as Tech Level 1, responsible for harvesting metal resources from designated metal spots on the map. With its 270 health, it is moderately durable but completely defenseless, as it possesses no weapons or DPS capabilities. Its stationary nature and lack of mobility make it vulnerable to enemy attacks, so it is advisable to fortify its surroundings with defensive structures or units. As a cornerstone of your resource economy, ensuring continuous operation of Metal Extractors is vital for sustaining production and maintaining an advantage over opponents."
+        },
+        "Beholder": {
+            "code": "armeyes",
+            "Tech": "T1",
+            "Explanation": "The Beholder serves as a T1 observation structure, excelling in reconnaissance with its extensive sight range of 560, allowing players to monitor enemy movements from a safe distance. Its ability to be constructed on challenging terrains such as steep cliffs makes it highly versatile for strategic placement. Despite having no offensive capabilities and a stationary speed, its low health of 280 makes it vulnerable to enemy attacks, necessitating careful positioning and protection. Its cost-effectiveness and adaptability make it an essential asset for early-game intel gathering and map control."
+        },
+        "Naval Energy Storage": {
+            "code": "armuwes",
+            "Tech": "T1",
+            "Explanation": "The Naval Energy Storage is a T1 support structure designed for underwater deployment, crucial for expanding your energy storage capacity by an additional 6000 units. Its robust health of 1890 makes it moderately resilient against enemy attacks, though it lacks any offensive capabilities. This unit does not move or attack, making it vulnerable if left unprotected, so it's best used in well-defended areas of your naval base. Its strategic importance lies in enabling sustained energy reserves, crucial for powering advanced units and structures during prolonged engagements."
+        },
+        "Advanced Solar Collector": {
+            "code": "armadvsol",
+            "Tech": "T1",
+            "Explanation": "The Advanced Solar Collector is a crucial energy production unit designed for early-game economic expansion. With its high health of 1130, it can withstand moderate damage, making it a more resilient choice compared to basic solar panels. Its role is pivotal for establishing a sustainable energy infrastructure, especially in sun-rich environments, allowing players to support energy-intensive operations. However, it lacks mobility and defensive capabilities, requiring strategic placement and protection against enemy raids."
+        },
+        "Sneaky Pete": {
+            "code": "armjamt",
+            "Tech": "T1",
+            "Explanation": "Sneaky Pete is a T1 mid-range radar jammer, designed to cloak your units from enemy radar detection. Its primary strength lies in its ability to provide stealth to nearby forces, making it a crucial asset in surprise attacks or defensive maneuvers. While it boasts a decent health pool of 790, its lack of offensive capabilities and zero speed render it vulnerable if left unprotected. It's essential to pair Sneaky Pete with mobile units for optimal protection and to maximize its strategic advantage on the battlefield."
+        },
+        "Naval Energy Converter": {
+            "code": "armfmkr",
+            "Tech": "T1",
+            "Explanation": "The Naval Energy Converter is a crucial T1 economic unit designed for aquatic environments, converting excess energy into valuable metal resources. With a sight range of 273, it can provide limited vision in its vicinity, though it is defenseless with no weapons or offensive capabilities. Its stationary nature and modest health of 167 make it vulnerable to enemy attacks, necessitating protection from naval or air units. Despite these vulnerabilities, its ability to bolster metal production is vital for sustaining and expanding your fleet and base, especially when energy is abundant."
+        },
+        "Solar Collector": {
+            "code": "armsolar",
+            "Tech": "T1",
+            "Explanation": "The Solar Collector is a T1 energy production unit essential for establishing a stable power economy in the early game. With no offensive capabilities and a static position due to its zero speed, its primary role is to generate energy by harnessing solar power. Its moderate health of 340 makes it relatively durable for a stationary target, but it should still be protected from enemy raids due to its inability to defend itself. The Solar Collector is cost-effective for early energy needs but should be supplemented with more robust energy sources as your base expands."
+        },
+        "Advanced Geothermal Powerplant": {
+            "code": "armageo",
+            "Tech": "T2",
+            "Explanation": "The Advanced Geothermal Powerplant is a critical T2 energy structure designed to harness geothermal steam to produce substantial energy for your base operations. With a robust health pool of 3600, it can withstand moderate enemy attacks, making it a relatively resilient energy source. However, its immobility and lack of defensive armament necessitate protective measures against targeted assaults. Due to its reliance on geothermal vents, strategic placement is essential to maximize its output and integrate it effectively into your energy infrastructure."
+        },
+        "Naval Fusion Reactor": {
+            "code": "armuwfus",
+            "Tech": "T2",
+            "Explanation": "The Naval Fusion Reactor is a vital T2 energy-producing structure designed to operate on water, making it crucial for maintaining energy supplies in naval-focused strategies. With a robust health pool of 5600, it can withstand moderate enemy assaults, but its immobility and lack of defenses make it vulnerable if left unprotected. Its primary strength lies in its ability to produce substantial energy, supporting energy-intensive operations and advanced units. To maximize its utility, ensure it is defended by naval units or structures, as its destruction can severely cripple your energy infrastructure."
+        },
+        "Naval Pinpointer": {
+            "code": "armfatf",
+            "Tech": "T2",
+            "Explanation": "The Naval Pinpointer is a specialized support unit crucial for enhancing your team's strategic capabilities on the water. As a T2 unit, it plays a pivotal role in improving radar accuracy by halving the radar dot 'wobble' for each targeting facility, providing your team with more precise enemy positions. While it boasts a substantial health pool of 1610, it lacks offensive capabilities and mobility, making it vulnerable if left unprotected. Its primary strength lies in augmenting radar data, making it indispensable for naval operations where precise targeting can turn the tide of battle."
+        },
+        "Cloakable Fusion Reactor": {
+            "code": "armckfus",
+            "Tech": "T2",
+            "Explanation": "The Cloakable Fusion Reactor is a strategic T2 energy production structure that offers the unique advantage of stealth through its cloaking ability, making it ideal for hidden power generation in vulnerable or contested areas. With a substantial health pool of 4450, it can withstand moderate attacks, but its true strength lies in remaining undetected to avoid becoming a target. While it cannot move or attack, the reactor's ability to generate significant energy without revealing its position can be pivotal in maintaining an uninterrupted energy supply. However, its cloak functionality comes at a high energy cost, and players must carefully manage their resources to keep it hidden effectively."
+        },
+        "Naval Advanced Energy Converter": {
+            "code": "armuwmmm",
+            "Tech": "T2",
+            "Explanation": "The Naval Advanced Energy Converter is a vital T2 resource infrastructure unit, designed to efficiently convert surplus energy into metal while being built on water, thus saving valuable land space. Its primary strength lies in its capacity to bolster the metal economy without requiring additional land territory, making it ideal for water-dominated maps or when land is already fully utilized. With a modest health of 445, it requires protection from enemy naval units, as it has no means of defense or mobility. Its strategic placement is crucial for a sustainable resource advantage, but its lack of direct combat utility means it must be used wisely in conjunction with defensive units."
+        },
+        "Prude": {
+            "code": "armgmm",
+            "Tech": "T2",
+            "Explanation": "The Prude is a T2 Safe Geothermal Powerplant designed to boost your energy production with a substantial output of 750 energy units. With its impressive 13,900 health, it can withstand moderate enemy attacks, making it a resilient addition to your base infrastructure. However, its lack of speed and weaponry means it must be strategically placed in secure areas, as it cannot defend itself or relocate. This unit is ideal for players looking to enhance their energy capacity while maintaining a fortified base."
+        },
+        "Pinpointer": {
+            "code": "armtarg",
+            "Tech": "T2",
+            "Explanation": "The Pinpointer is a T2 support unit specializing in enhancing radar accuracy for your entire team. Its primary role is to reduce radar dot 'wobble' by half, thereby improving targeting precision for allied units, which is crucial in long-range engagements and artillery strikes. With a substantial health pool of 2100, it can withstand some enemy fire, but its lack of speed and offensive capabilities means it should be strategically placed away from direct combat zones. Its effectiveness is amplified when multiple targeting facilities are constructed, making it a valuable asset in a well-coordinated team strategy."
+        },
+        "Air Repair Pad": {
+            "code": "armfasp",
+            "Tech": "T2",
+            "Explanation": "The Air Repair Pad serves as a vital support structure for maintaining the operational efficiency of your air fleet. With a strong health pool of 1670, it provides durability against enemy skirmishes, though it lacks offensive capabilities and mobility, making it vulnerable if left undefended. Its primary role is to quickly and efficiently repair damaged aircraft, ensuring they can return to battle sooner and sustain prolonged engagements. While it is crucial for reinforcing air superiority, its stationary nature and lack of defenses necessitate strategic placement and protection from ground and anti-air threats."
+        },
+        "Naval Advanced Metal Extractor": {
+            "code": "armuwmme",
+            "Tech": "T2",
+            "Explanation": "The Naval Advanced Metal Extractor is a critical T2 economic structure designed for underwater deployment, serving as a heavy resource gatherer. With a robust health of 2800, it provides a significant boost to your metal income by extracting more metal from aquatic resource nodes compared to basic extractors. Although it does not possess any defensive capabilities or mobility, making it vulnerable to enemy naval or air assaults, its strategic placement and protection are paramount to maintaining a strong economy. To maximize its potential, ensure it is well-defended by naval units or submerged defenses to safeguard your investment in contested waters."
+        },
+        "Fusion Reactor": {
+            "code": "armfus",
+            "Tech": "T2",
+            "Explanation": "The Fusion Reactor is a critical T2 energy production structure, essential for powering advanced operations and high-energy units. With a substantial health pool of 4450, it can withstand moderate attacks, making it a durable asset in your energy grid. Its lack of mobility and defensive capabilities means it should be strategically placed within secured areas or well-protected bases to avoid enemy raids. Despite its high cost and stationary nature, the Fusion Reactor is invaluable for maintaining a steady and ample energy supply, crucial for sustaining prolonged warfare and technological advancements."
+        },
+        "Decoy Fusion Reactor": {
+            "code": "armdf",
+            "Tech": "T2",
+            "Explanation": "The Decoy Fusion Reactor is a strategic T2 structure designed to mislead opponents by mimicking the appearance of a real fusion reactor. With a substantial health of 5200, it can withstand a fair amount of enemy fire, making it an effective distraction. Its primary strength lies in its ability to deceive enemy scouts and attacks, drawing them away from your actual energy production facilities. However, it offers no energy production or offensive capabilities, so its placement should be strategic to maximize its role as a diversion without consuming vital resources."
+        },
+        "Hardened Energy Storage": {
+            "code": "armuwadves",
+            "Tech": "T2",
+            "Explanation": "The Hardened Energy Storage is a vital T2 structure designed to significantly boost your energy reserves by 40,000 units. With an impressive health pool of 11,700, it can withstand moderate enemy assaults, making it a reliable asset in securing your energy economy. Its stationary nature means it lacks mobility and offensive capabilities, but its robust construction provides some resilience against attacks. Strategically placing these structures in secure areas of your base is essential to protect your energy infrastructure from potential threats."
+        },
+        "Advanced Metal Extractor": {
+            "code": "armmoho",
+            "Tech": "T2",
+            "Explanation": "The Advanced Metal Extractor is a vital economic unit in the game, classified as a Tier 2 structure that excels in resource gathering. With its significant health of 2800, it can withstand moderate enemy attacks, providing durability to your infrastructure. It is essential for players aiming to boost their metal income significantly, allowing for accelerated production of advanced units and structures. However, its high cost and immobility make it a prime target, necessitating protection from mobile defensive units or fortifications to ensure its longevity on the battlefield."
+        },
+        "Advanced Fusion Reactor": {
+            "code": "armafus",
+            "Tech": "T2",
+            "Explanation": "The Advanced Fusion Reactor is a critical infrastructure unit in the T2 technology tier, designed to generate substantial energy for sustaining large-scale operations. With a high health pool of 7900, it is durable enough to withstand moderate attacks, making it a reliable choice for energy production in secured areas. However, its lack of mobility and defensive capabilities means it requires protection from enemy raids, especially considering its significant resource investment. Strategically place it away from front lines and reinforce it with defensive structures or units to ensure consistent energy output."
+        },
+        "Advanced Radar Tower": {
+            "code": "armarad",
+            "Tech": "T2",
+            "Explanation": "The Advanced Radar Tower is an essential T2 support structure, primarily serving as a strategic intelligence-gathering asset. With its expansive sight range of 820, it excels in providing early warnings and tracking enemy movements, making it invaluable for maintaining situational awareness across the battlefield. Although it lacks offensive capabilities and is immobile, its relatively low health of 355 makes it vulnerable to direct attacks, necessitating protection from other units or defensive structures. Despite its high cost, the tactical advantage gained from its broad detection capability makes it a worthwhile investment for any commander looking to gain a strategic edge."
+        },
+        "Hardened Metal Storage": {
+            "code": "armuwadvms",
+            "Tech": "T2",
+            "Explanation": "The Hardened Metal Storage is a Tier 2 infrastructure unit designed to significantly enhance your resource management capabilities by increasing metal storage capacity by 10,000 units. With its robust health of 10,300, it is well-suited to withstand moderate enemy assaults, making it a reliable option for securing your metal reserves. Although it has no offensive capabilities, its primary role is to support your economy by ensuring that excess metal is stored safely for future use. Its stationary nature and lack of speed mean it should be strategically placed within well-defended zones to maximize protection and utility."
+        },
+        "Advanced Energy Converter": {
+            "code": "armmmkr",
+            "Tech": "T2",
+            "Explanation": "The Advanced Energy Converter is a critical support structure in the T2 tech tier, designed to efficiently convert surplus energy into valuable metal resources. With a health pool of 445, it is moderately resilient, though it should be placed in secure locations due to its inability to defend itself or move. Its primary strength lies in its ability to provide a steady stream of metal, which can be pivotal in sustaining a large army or accelerating tech advancements. However, its utility is contingent on maintaining a robust energy economy, and players must ensure sufficient energy production to maximize its output."
+        },
+        "Advanced Sonar Station": {
+            "code": "armason",
+            "Tech": "T2",
+            "Explanation": "The Advanced Sonar Station is a T2 defensive structure designed to detect enemy sea units, making it an essential component of naval surveillance and strategic planning. With a substantial health pool of 2350, it can withstand moderate amounts of enemy fire, ensuring longevity in contested waters. Despite its inability to attack, its strength lies in its extended sight range of 215, providing critical intelligence on enemy movements beneath the waves. However, its immobility and lack of direct offensive capabilities mean it must be protected by other units or defensive structures to prevent it from being easily targeted by enemy forces."
+        },
+        "Veil": {
+            "code": "armveil",
+            "Tech": "T2",
+            "Explanation": "The Veil is a crucial T2 unit serving as a long-range radar jammer, essential for concealing large forces or entire bases from enemy detection systems. With a decent health pool of 830, it can withstand some enemy fire, but its lack of speed and offensive capability necessitate positioning it carefully within a defensive perimeter. Its primary strength lies in its ability to disrupt enemy radar, making it invaluable for surprise attacks or defensive strategies where stealth is a priority. Despite being a non-combat unit, its strategic value in maintaining the element of surprise and protecting key assets from enemy radar cannot be underestimated."
+        }
+    }
+}

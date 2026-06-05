@@ -1,0 +1,25 @@
+{
+  "description": "Gadget codes for game customization and scenario-specific mechanics",
+  "details": {
+    "prioritize_target": {
+      "file": "rule/files/prioritize_target.json",
+      "description": "Forces a team's units to prioritize attacking specific target units within configurable range"
+    },
+    "spawn_unit": {
+      "file": "rule/files/spawn_unit.json",
+      "description": "Spawns units when specified conditions (time or unit count) are met"
+    },
+    "despawn_unit": {
+      "file": "rule/files/despawn_unit.json",
+      "description": "Removes units when specified conditions (time or unit count) are met"
+    },
+    "autoconstruct_building": {
+      "file": "rule/files/autoconstruct_building.json",
+      "description": "Automatically completes construction of specified building types instantly when placed"
+    },
+    "restrict_target": {
+      "file": "rule/files/restrict_target.json",
+      "description": "Prevents a team's units from attacking specified target types and redirects to nearest valid target"
+    }
+  }
+}

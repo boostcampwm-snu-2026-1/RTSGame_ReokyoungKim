@@ -1,0 +1,8 @@
+{
+"SimpleConstruction": "Periodically evaluates the current build queue to prioritize pending tasks and determines a strategic sequence for at least ten upcoming constructions.",
+"ConstructionWithPos": "Prioritizes pending projects and determines a sequence of at least ten new constructions with exact [x, y] grid placements.",
+"SimpleProduction": "Systematically determines the production sequence of unit types from factories to maintain a consistent and strategic military force.",
+"ProductionWithFactory": "Manages individual factory outputs by determining the exact sequence and type of units to be produced at each specific facility.",
+"SimpleMovement": "Systematically assigns movement targets to individual units by designating precise [x, y] coordinates on the grid for tactical maneuvering.",
+"GroupMovement": "Organizes combat units into tactical squads, excluding non-combatants like commanders or builders, and directs their movement to precise [x, y] coordinates using specific engagement commands."
+}

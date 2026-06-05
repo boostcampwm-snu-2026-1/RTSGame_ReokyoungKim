@@ -1,0 +1,24 @@
+{
+  "code": {
+    "name": "restrict_target",
+    "path": "rule/codes/restrict_target.lua",
+    "description": "Prevents a team's units from attacking specified target types. When attempting to attack a restricted target, automatically redirects to the nearest valid target.",
+    "config_format": {
+      "<team_id>": ["<restricted_unit_name>", "<restricted_unit_name>"]
+    },
+    "config_example": {
+      "0": ["armsolar", "armwin", "armmex"],
+      "1": ["armcom"]
+    }
+  },
+  "verify_code": {
+    "path": "rule/verify_codes/restrict_target.lua",
+    "description": "Verifies that units cannot attack restricted targets and are redirected to valid targets.",
+    "config_format": {
+      "<team_id>": ["<restricted_unit_name>"]
+    },
+    "config_example": {
+      "0": ["armsolar"]
+    }
+  }
+}

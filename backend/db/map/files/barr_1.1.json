@@ -1,0 +1,711 @@
+{ "BarR 1.1": {
+        "size": [8, 8],
+        "description": "A compact rocky wasteland featuring rugged cliffs and sandy paths that create tactical choke points."
+    },
+  "terrain_info":[
+  {
+    "sector_id": "A1",
+    "center": [
+      256,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A2",
+    "center": [
+      768,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A3",
+    "center": [
+      1280,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A4",
+    "center": [
+      1792,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 35,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A5",
+    "center": [
+      2304,
+      256
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 27,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A6",
+    "center": [
+      2816,
+      256
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -10,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A7",
+    "center": [
+      3328,
+      256
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -29,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "A8",
+    "center": [
+      3840,
+      256
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -25,
+    "description": "Shore/Mixed, Lowland Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "B1",
+    "center": [
+      256,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B2",
+    "center": [
+      768,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B3",
+    "center": [
+      1280,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 35,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B4",
+    "center": [
+      1792,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B5",
+    "center": [
+      2304,
+      768
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 29,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B6",
+    "center": [
+      2816,
+      768
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -9,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B7",
+    "center": [
+      3328,
+      768
+    ],
+    "surface": "Deep Water",
+    "terrain": "Rocky Sand",
+    "avg_height": -33,
+    "description": "Deep Water, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "B8",
+    "center": [
+      3840,
+      768
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -24,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "C1",
+    "center": [
+      256,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 74,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "C2",
+    "center": [
+      768,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Crumbled Rock",
+    "avg_height": 72,
+    "description": "Land, High Ground Rugged (Crumbled Rock)"
+  },
+  {
+    "sector_id": "C3",
+    "center": [
+      1280,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Crumbled Rock",
+    "avg_height": 52,
+    "description": "Land, High Ground Smooth (Crumbled Rock)"
+  },
+  {
+    "sector_id": "C4",
+    "center": [
+      1792,
+      1280
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 31,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "C5",
+    "center": [
+      2304,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 19,
+    "description": "Shore/Mixed, Flat Plains Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "C6",
+    "center": [
+      2816,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -30,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "C7",
+    "center": [
+      3328,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Hard Rock Cliff",
+    "avg_height": 0,
+    "description": "Shore/Mixed, Flat Plains Rugged Steep/Impassable (Hard Rock Cliff)"
+  },
+  {
+    "sector_id": "C8",
+    "center": [
+      3840,
+      1280
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 31,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "D1",
+    "center": [
+      256,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 70,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "D2",
+    "center": [
+      768,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 53,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "D3",
+    "center": [
+      1280,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 28,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "D4",
+    "center": [
+      1792,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 0,
+    "description": "Shore/Mixed, Flat Plains Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "D5",
+    "center": [
+      2304,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -25,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "D6",
+    "center": [
+      2816,
+      1792
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -5,
+    "description": "Shore/Mixed, Lowland Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "D7",
+    "center": [
+      3328,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "D8",
+    "center": [
+      3840,
+      1792
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "E1",
+    "center": [
+      256,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 35,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "E2",
+    "center": [
+      768,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "E3",
+    "center": [
+      1280,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -1,
+    "description": "Shore/Mixed, Lowland Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "E4",
+    "center": [
+      1792,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -26,
+    "description": "Shore/Mixed, Lowland Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "E5",
+    "center": [
+      2304,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 3,
+    "description": "Shore/Mixed, Flat Plains Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "E6",
+    "center": [
+      2816,
+      2304
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 24,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "E7",
+    "center": [
+      3328,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 49,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "E8",
+    "center": [
+      3840,
+      2304
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 71,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "F1",
+    "center": [
+      256,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 29,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "F2",
+    "center": [
+      768,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Crumbled Rock",
+    "avg_height": 2,
+    "description": "Shore/Mixed, Flat Plains Rugged (Crumbled Rock)"
+  },
+  {
+    "sector_id": "F3",
+    "center": [
+      1280,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -30,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "F4",
+    "center": [
+      1792,
+      2816
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 17,
+    "description": "Shore/Mixed, Flat Plains Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "F5",
+    "center": [
+      2304,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "F6",
+    "center": [
+      2816,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Crumbled Rock",
+    "avg_height": 49,
+    "description": "Land, High Ground Smooth (Crumbled Rock)"
+  },
+  {
+    "sector_id": "F7",
+    "center": [
+      3328,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Crumbled Rock",
+    "avg_height": 69,
+    "description": "Land, High Ground Rugged (Crumbled Rock)"
+  },
+  {
+    "sector_id": "F8",
+    "center": [
+      3840,
+      2816
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 72,
+    "description": "Land, High Ground Rugged (Rocky Sand)"
+  },
+  {
+    "sector_id": "G1",
+    "center": [
+      256,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -25,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G2",
+    "center": [
+      768,
+      3328
+    ],
+    "surface": "Deep Water",
+    "terrain": "Rocky Sand",
+    "avg_height": -33,
+    "description": "Deep Water, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G3",
+    "center": [
+      1280,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -14,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G4",
+    "center": [
+      1792,
+      3328
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 25,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G5",
+    "center": [
+      2304,
+      3328
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G6",
+    "center": [
+      2816,
+      3328
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 35,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G7",
+    "center": [
+      3328,
+      3328
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "G8",
+    "center": [
+      3840,
+      3328
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H1",
+    "center": [
+      256,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -28,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H2",
+    "center": [
+      768,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -31,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H3",
+    "center": [
+      1280,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": -17,
+    "description": "Shore/Mixed, Lowland Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H4",
+    "center": [
+      1792,
+      3840
+    ],
+    "surface": "Shore/Mixed",
+    "terrain": "Rocky Sand",
+    "avg_height": 22,
+    "description": "Shore/Mixed, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H5",
+    "center": [
+      2304,
+      3840
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H6",
+    "center": [
+      2816,
+      3840
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H7",
+    "center": [
+      3328,
+      3840
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 35,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  },
+  {
+    "sector_id": "H8",
+    "center": [
+      3840,
+      3840
+    ],
+    "surface": "Land",
+    "terrain": "Rocky Sand",
+    "avg_height": 34,
+    "description": "Land, Flat Plains Smooth (Rocky Sand)"
+  }
+]
+}

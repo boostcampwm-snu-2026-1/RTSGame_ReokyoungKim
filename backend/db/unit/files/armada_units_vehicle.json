@@ -1,0 +1,119 @@
+{
+    "Vehicle": {
+        "Janus": {
+            "code": "armjanus",
+            "Tech": "T1",
+            "Explanation": "The Janus is a T1 Tactical Missile Vehicle, designed for medium-range assaults with its dual Missile Launcher setup. Its formidable firepower, delivering 660 damage per shot over a wide area, makes it highly effective against clustered enemy units and light structures. Despite its relatively low speed and moderate health, which make it vulnerable to fast-moving or high-damage opponents, the Janus excels in hit-and-run tactics and providing support from a safe distance. Use it to soften enemy defenses or to break through tightly packed formations, while keeping it protected from direct frontline engagements."
+        },
+        "Shellshocker": {
+            "code": "armart",
+            "Tech": "T1",
+            "Explanation": "The Shellshocker is a light artillery vehicle designed primarily for dismantling Tech 1 defense towers from a safe distance. With its impressive weapon range of 710, it can bombard targets while staying out of reach from most defensive structures, making it a valuable asset in early-stage engagements to soften enemy fortifications. Its moderate speed allows it to reposition efficiently on the battlefield, but with only 620 health, it is vulnerable to fast-moving units and concentrated enemy fire. While not suited for frontline combat due to its fragility, the Shellshocker excels in supporting roles, providing crucial artillery support during sieges."
+        },
+        "Beaver": {
+            "code": "armbeaver",
+            "Tech": "T1",
+            "Explanation": "The Beaver serves as a versatile T1 amphibious construction vehicle, ideal for establishing forward bases across diverse terrains. With its ability to traverse both land and underwater, it excels in expanding your reach to strategic coastal and aquatic locations. Despite its robust health of 1030, it lacks offensive capabilities, making it vulnerable to enemy attacks if not adequately protected. Use its speed of 42 to swiftly maneuver through challenging environments, but ensure it's accompanied by combat units to safeguard its construction endeavors."
+        },
+        "Whistler": {
+            "code": "armsam",
+            "Tech": "T1",
+            "Explanation": "The Whistler serves as a versatile medium-range missile truck, capable of outranging most Tier 1 defensive units with its dual missile launchers boasting a 700 range. Its dual role as a light mobile anti-air unit makes it invaluable for providing cover against aerial threats while supporting ground assaults. With a speed of 55 and a health pool of 820, it balances mobility and durability, although it may not withstand prolonged direct confrontations with heavier units. Strategically, it is best deployed in groups to maximize its DPS of 74 and to protect it from being overwhelmed by faster or more heavily armored opponents."
+        },
+        "Pincer": {
+            "code": "armpincer",
+            "Tech": "T1",
+            "Explanation": "The Pincer serves as a versatile light amphibious tank, capable of maneuvering both on land and underwater, making it ideal for surprise attacks across mixed terrains. With a decent DPS of 77 and a respectable weapon range of 305, it can effectively harass enemy units while remaining relatively safe from return fire. Its health pool of 1340 allows it to absorb moderate damage, but its speed of 63 means it may struggle to retreat quickly from faster adversaries. The Pincer is most effective when used for hit-and-run tactics in coastal or aquatic environments, though its moderate speed could be a liability in open confrontations."
+        },
+        "Rover": {
+            "code": "armfav",
+            "Tech": "T1",
+            "Explanation": "The Rover is a T1 fast scout vehicle designed to swiftly gather intelligence on enemy movements with its impressive speed of 168 and extensive sight range of 635. Equipped with a BeamLaser, it delivers a moderate DPS of 38.0, making it capable of engaging lightly armored targets while performing reconnaissance. Its low cost allows for rapid deployment in numbers, enhancing its effectiveness in scouting and early skirmishes. However, with only 105 health, it is vulnerable to concentrated enemy fire, requiring careful maneuvering to avoid destruction."
+        },
+        "Construction Vehicle": {
+            "code": "armcv",
+            "Tech": "T1",
+            "Explanation": "The Construction Vehicle is a T1 unit specialized for building essential structures and expanding your base on flat terrain. With a decent speed of 54 and a health pool of 1380, it is resilient enough to withstand some early-game harassment while efficiently setting up infrastructure. However, it lacks offensive capabilities, making it vulnerable if caught without escort or protection. Use it strategically to claim territory and establish a strong economic foundation, but ensure it is protected by combat units to prevent easy targeting by enemy forces."
+        },
+        "Groundhog": {
+            "code": "armmlv",
+            "Tech": "T1",
+            "Explanation": "The Groundhog is a T1 Minelayer Vehicle adept at stealth operations and strategic area denial. With a speed of 75, it can swiftly navigate the battlefield to deploy mines, creating hazardous zones for enemy units to traverse. Its mini-radar jammer enhances its stealth capabilities by masking its presence and the mines it lays, making it invaluable for ambush tactics and defensive preparations. However, it lacks any direct offensive capabilities and has moderate health at 335, necessitating careful maneuvering to avoid direct combat engagement."
+        },
+        "Stout": {
+            "code": "armstump",
+            "Tech": "T1",
+            "Explanation": "The Stout, or \"armstump,\" serves as a Medium Assault Tank, forming the backbone of any Tier 1 armored offensive. With its considerable health pool of 1780, it can withstand significant enemy fire while delivering a respectable DPS of 83. Its cannon has a decent range of 350, allowing it to engage targets effectively before closing in. However, its speed of 76 can be a limiting factor, making it less suitable for rapid maneuvers or quick retreats, thus requiring tactical positioning and support from faster units."
+        },
+        "Blitz": {
+            "code": "armflash",
+            "Tech": "T1",
+            "Explanation": "The Blitz is a Tier 1 fast assault tank designed for rapid strikes and close combat engagements. With its impressive speed of 101, it can quickly traverse the battlefield, allowing it to flank enemies or retreat when necessary. Its dual rapid-fire cannons deliver a substantial DPS of 90, making it effective in skirmishes against lightly armored units. However, its relatively short weapon range of 180 requires the Blitz to get in close, exposing its moderate health of 750 to potential threats, so strategic positioning and timing are crucial to maximize its impact."
+        },
+        "Starlight": {
+            "code": "armmanni",
+            "Tech": "T2",
+            "Explanation": "The Starlight is a formidable T2 mobile tachyon accelerator vehicle, ideal for heavy assault roles with its impressive 2,500 burst damage from its BeamLaser. Its long weapon range of 950 allows it to engage targets from a safe distance, making it particularly effective against clustered enemy units due to its beam's piercing ability. Despite its high damage output and 2800 health, the Starlight's speed of 42 limits its mobility, necessitating strategic positioning to maximize its impact. Its high cost and slower speed mean it should be used carefully, ideally in combination with faster units to protect it from being overwhelmed by more agile enemies."
+        },
+        "Mauser": {
+            "code": "armmart",
+            "Tech": "T2",
+            "Explanation": "The Mauser serves as a T2 artillery unit, designed to outrange most defenses and mobile units with its impressive 820 weapon range. Its cannon delivers a solid DPS of 86, making it effective at softening enemy positions from a safe distance. With a relatively low cost for a T2 unit, it can be mass-produced to dominate the battlefield with long-range bombardment. However, its moderate speed and limited sight range make it vulnerable to flanking maneuvers and reliant on scouting support to reach its full potential."
+        },
+        "Turtle": {
+            "code": "armcroc",
+            "Tech": "T2",
+            "Explanation": "The Turtle is a formidable amphibious assault tank excelling in both land and water combat, making it an ideal choice for versatile operations. With its impressive health of 5000 and dual arsenal of a cannon and missile launcher, it can withstand and deliver significant damage, boasting a DPS of 176 and a weapon range of 765. Its speed of 54 is moderate, allowing it to keep pace with most allied units, though it may be outmaneuvered by faster enemies. The Turtle's high cost is justified by its robust durability and firepower, making it a strategic asset for breaking through enemy lines and controlling crucial water crossings."
+        },
+        "Shredder": {
+            "code": "armyork",
+            "Tech": "T2",
+            "Explanation": "Shredder is a Tier 2 mobile anti-air tank designed to dominate aerial threats with its rapid-fire flak cannon. Its impressive 775 range and 273 DPS make it an essential part of any defensive line against aircraft, capable of shredding through enemy air units before they can reach your forces. While it boasts a decent speed of 71 and a solid health pool of 2600, making it relatively durable and mobile, it should still be protected from concentrated ground attacks due to its specialized anti-air role. Deploy Shredder strategically behind frontline units to maximize its anti-air effectiveness without exposing it to unnecessary ground fire."
+        },
+        "Advanced Construction Vehicle": {
+            "code": "armacv",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Vehicle is a vital T2 unit tasked with expanding your base's infrastructure capabilities. With its ability to construct advanced Tech 2 structures, it plays a crucial role in developing a more robust and economically efficient base. While boasting significant health at 2050 HP, its lack of offensive capabilities and moderate speed of 53 make it vulnerable to enemy attacks if not adequately protected. To maximize its potential, pair it with defensive units to ensure it can safely contribute to your technological and economic advancements."
+        },
+        "Prophet": {
+            "code": "armseer",
+            "Tech": "T2",
+            "Explanation": "The Prophet is a Tier 2 mobile radar vehicle designed to provide essential intelligence on enemy movements with its extensive sight range of 900. While it lacks offensive capabilities, this unit excels in gathering information, making it invaluable for strategic planning and pre-emptive strikes. With a moderate speed of 57, it can reposition quickly to adapt to evolving battlefield conditions, but its lack of weaponry and modest health of 980 make it vulnerable to direct combat. Deploy the Prophet behind frontlines or with an escort to maximize its intelligence-gathering potential while minimizing risks."
+        },
+        "Umbra": {
+            "code": "armjam",
+            "Tech": "T2",
+            "Explanation": "The Umbra is a T2 mobile radar jamming vehicle, designed to cloak allied units within its jamming range from enemy minimaps. Its primary role is to provide stealth support, ideal for covert operations and surprise attacks, making it invaluable in maintaining the element of surprise in tactical maneuvers. While it boasts a decent speed of 33, allowing it to keep pace with most ground units, its lack of offensive capabilities and moderate health of 510 make it vulnerable if left unprotected. To maximize its effectiveness, pair the Umbra with a well-rounded force and avoid direct confrontations."
+        },
+        "Ambassador": {
+            "code": "armmerl",
+            "Tech": "T2",
+            "Explanation": "The Ambassador is a T2 long-range artillery unit equipped with a StarburstLauncher, making it ideal for indirect fire support over vast distances with its impressive 1300 weapon range. Its stealthy nature allows it to operate behind the front lines, targeting enemy installations and units from a safe distance. With a moderate speed of 33 and a decent health pool of 1220, it can reposition when necessary but should avoid direct combat due to its limited sight range of 247. However, its high cost and reliance on support units for protection make it vulnerable if isolated or if its location is detected by the enemy."
+        },
+        "Jaguar": {
+            "code": "armlatnk",
+            "Tech": "T2",
+            "Explanation": "The Jaguar is a versatile T2 fast raider tank, adept at both ground assaults and providing light anti-air support. With a respectable DPS of 185 and a weapon range of 600, it can effectively engage enemy units from a distance while its lightning cannon offers a shorter-range but powerful punch. Its speed of 90 allows it to swiftly maneuver on the battlefield, making it ideal for hit-and-run tactics and flanking maneuvers. However, with only 1060 health, it should avoid prolonged engagements with heavily armored opponents to mitigate its relatively lower durability."
+        },
+        "Bull": {
+            "code": "armbull",
+            "Tech": "T2",
+            "Explanation": "The Bull is a formidable T2 Heavy Assault Tank, boasting a robust 4650 health and armed with a powerful cannon delivering 245 DPS. Its considerable weapon range of 460 and sight range of 494 allow it to engage enemies effectively from a distance while enduring substantial damage due to its strong armor. Despite its impressive firepower and durability, the Bull's speed of 60 can be a drawback, making it less effective in rapid response scenarios or against highly mobile units. Ideal for breaking through fortified positions and holding ground, the Bull excels in situations where sustained firepower and resilience are crucial."
+        },
+        "Gremlin": {
+            "code": "armgremlin",
+            "Tech": "T2",
+            "Explanation": "The Gremlin is a T2 Stealth Tank designed for covert operations, armed with a light plasma cannon. Its strengths lie in its ability to remain undetected and execute surprise attacks, supported by a respectable DPS of 88 and a decent weapon range of 220. With a speed of 71, it can maneuver swiftly across the battlefield, making it ideal for flanking and hit-and-run tactics. However, its relatively moderate health of 1060 necessitates cautious engagement, as it may struggle against heavily fortified defenses or in prolonged direct firefights."
+        },
+        "Consul": {
+            "code": "armconsul",
+            "Tech": "T2",
+            "Explanation": "The Consul is a versatile T2 construction unit, adept at quickly providing buildpower across the battlefield. With a speed of 78, it is relatively fast for a construction unit, allowing it to maneuver efficiently to areas in need of development or repair. Its substantial health of 1080 ensures it can withstand some enemy fire while completing essential tasks. However, lacking offensive capabilities and weaponry, it must be protected by combat units to maximize its effectiveness in supporting your strategy."
+        },
+        "Thor": {
+            "code": "armthor",
+            "Tech": "T3",
+            "Explanation": "The Thor serves as an elite Heavy Assault Tank, boasting formidable firepower and resilience with its 56,000 health points and a diverse arsenal, including a Lightning Cannon and EMP capabilities. Its impressive DPS of 968 makes it a superior choice for breaking through enemy fortifications, while its EMP weapons effectively disable adversaries, providing strategic advantages in large-scale engagements. Although its speed is limited to 54, its substantial range of 1050 allows it to engage targets from a distance, minimizing its vulnerability. However, its high-tech status and likely substantial cost mean it should be deployed judiciously, typically in support of a well-coordinated assault force."
+        }
+    }
+}

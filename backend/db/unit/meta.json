@@ -1,0 +1,37 @@
+{
+  "description": "Armada faction unit database for game simulation",
+  "details": {
+    "air": {
+      "file": "unit/files/armada_units_air.json",
+      "description": "Aircraft units including fighters, bombers, transports, and seaplanes"
+    },
+    "bot": {
+      "file": "unit/files/armada_units_bot.json",
+      "description": "Ground-based bipedal units including infantry, assault bots, and construction bots"
+    },
+    "building": {
+      "file": "unit/files/armada_units_building.json",
+      "description": "Stationary structures for resource production, storage, and radar"
+    },
+    "defense": {
+      "file": "unit/files/armada_units_defense.json",
+      "description": "Defensive structures including turrets, walls, mines, and anti-air"
+    },
+    "factories": {
+      "file": "unit/files/armada_units_factories.json",
+      "description": "Production facilities for building units"
+    },
+    "hover": {
+      "file": "unit/files/armada_units_hover.json",
+      "description": "Hovercraft units that can traverse land and water"
+    },
+    "sea": {
+      "file": "unit/files/armada_units_sea.json",
+      "description": "Naval units including ships, submarines, and support vessels"
+    },
+    "vehicle": {
+      "file": "unit/files/armada_units_vehicle.json",
+      "description": "Ground vehicles including tanks, artillery, and support vehicles"
+    }
+  }
+}

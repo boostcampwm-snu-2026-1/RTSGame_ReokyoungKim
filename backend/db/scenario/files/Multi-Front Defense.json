@@ -1,0 +1,5 @@
+{
+  "specification": "Allied forces are positioned at the center of the map with buildings that must be defended. Enemies attack from four different directions simultaneously. Allied teams must protect buildings located at various positions on the map. Victory is achieved by surviving for a certain amount of time. Defeat occurs if even a single building is destroyed.",
+  "rule": ["rule/files/prioritize_target.json"],
+  "decision": ["GroupMovement"]
+}

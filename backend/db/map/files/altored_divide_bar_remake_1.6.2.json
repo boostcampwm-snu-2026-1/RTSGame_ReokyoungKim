@@ -1,0 +1,711 @@
+{ "Altored Divide Bar Remake 1.6.2": {
+        "size": [16, 16],
+        "description": "Large 8x8 land map with grassy highlands, sand lowlands, and mountain cliffs dividing the terrain"
+    },
+  "terrain_info": [ 
+  {
+    "sector_id": "A1",
+    "center": [
+      512,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 247,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "A2",
+    "center": [
+      1536,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 127,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "A3",
+    "center": [
+      2560,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 126,
+    "description": "Land, Flat Plains Rugged (Grassy)"
+  },
+  {
+    "sector_id": "A4",
+    "center": [
+      3584,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 185,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "A5",
+    "center": [
+      4608,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 170,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "A6",
+    "center": [
+      5632,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 185,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "A7",
+    "center": [
+      6656,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 211,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "A8",
+    "center": [
+      7680,
+      512
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 246,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "B1",
+    "center": [
+      512,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 80,
+    "description": "Land, Lowland Rugged (Sand)"
+  },
+  {
+    "sector_id": "B2",
+    "center": [
+      1536,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 70,
+    "description": "Land, Lowland Smooth (Sand)"
+  },
+  {
+    "sector_id": "B3",
+    "center": [
+      2560,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 92,
+    "description": "Land, Lowland Rugged (Grassy)"
+  },
+  {
+    "sector_id": "B4",
+    "center": [
+      3584,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 154,
+    "description": "Land, Flat Plains Rugged (Grassy)"
+  },
+  {
+    "sector_id": "B5",
+    "center": [
+      4608,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 189,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "B6",
+    "center": [
+      5632,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 207,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "B7",
+    "center": [
+      6656,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 196,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "B8",
+    "center": [
+      7680,
+      1536
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 167,
+    "description": "Land, Flat Plains Rugged (Grassy)"
+  },
+  {
+    "sector_id": "C1",
+    "center": [
+      512,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 125,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C2",
+    "center": [
+      1536,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 93,
+    "description": "Land, Lowland Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C3",
+    "center": [
+      2560,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 159,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C4",
+    "center": [
+      3584,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 167,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C5",
+    "center": [
+      4608,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 237,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C6",
+    "center": [
+      5632,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Mountain Cliff",
+    "avg_height": 327,
+    "description": "Land, High Ground Rugged Steep/Impassable (Mountain Cliff)"
+  },
+  {
+    "sector_id": "C7",
+    "center": [
+      6656,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 235,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "C8",
+    "center": [
+      7680,
+      2560
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 210,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D1",
+    "center": [
+      512,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 60,
+    "description": "Land, Lowland Rugged Steep/Impassable (Sand)"
+  },
+  {
+    "sector_id": "D2",
+    "center": [
+      1536,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 86,
+    "description": "Land, Lowland Rugged Steep/Impassable (Sand)"
+  },
+  {
+    "sector_id": "D3",
+    "center": [
+      2560,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 190,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D4",
+    "center": [
+      3584,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 183,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D5",
+    "center": [
+      4608,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 181,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D6",
+    "center": [
+      5632,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 207,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D7",
+    "center": [
+      6656,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 183,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "D8",
+    "center": [
+      7680,
+      3584
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 222,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E1",
+    "center": [
+      512,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 140,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Sand)"
+  },
+  {
+    "sector_id": "E2",
+    "center": [
+      1536,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Sand",
+    "avg_height": 65,
+    "description": "Land, Lowland Rugged Steep/Impassable (Sand)"
+  },
+  {
+    "sector_id": "E3",
+    "center": [
+      2560,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 192,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E4",
+    "center": [
+      3584,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 138,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E5",
+    "center": [
+      4608,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 206,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E6",
+    "center": [
+      5632,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 246,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E7",
+    "center": [
+      6656,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 176,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "E8",
+    "center": [
+      7680,
+      4608
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 151,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F1",
+    "center": [
+      512,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 139,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F2",
+    "center": [
+      1536,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 110,
+    "description": "Land, Lowland Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F3",
+    "center": [
+      2560,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 206,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F4",
+    "center": [
+      3584,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 230,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F5",
+    "center": [
+      4608,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 223,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F6",
+    "center": [
+      5632,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 237,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F7",
+    "center": [
+      6656,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 200,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "F8",
+    "center": [
+      7680,
+      5632
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 218,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "G1",
+    "center": [
+      512,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 88,
+    "description": "Land, Lowland Smooth (Grassy)"
+  },
+  {
+    "sector_id": "G2",
+    "center": [
+      1536,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 94,
+    "description": "Land, Lowland Smooth (Grassy)"
+  },
+  {
+    "sector_id": "G3",
+    "center": [
+      2560,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 150,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "G4",
+    "center": [
+      3584,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 184,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "G5",
+    "center": [
+      4608,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 197,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "G6",
+    "center": [
+      5632,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 167,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "G7",
+    "center": [
+      6656,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 165,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "G8",
+    "center": [
+      7680,
+      6656
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 169,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "H1",
+    "center": [
+      512,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 177,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "H2",
+    "center": [
+      1536,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 150,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "H3",
+    "center": [
+      2560,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 141,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "H4",
+    "center": [
+      3584,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 171,
+    "description": "Land, Flat Plains Rugged (Grassy)"
+  },
+  {
+    "sector_id": "H5",
+    "center": [
+      4608,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 196,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "H6",
+    "center": [
+      5632,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 182,
+    "description": "Land, Flat Plains Smooth (Grassy)"
+  },
+  {
+    "sector_id": "H7",
+    "center": [
+      6656,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 218,
+    "description": "Land, Flat Plains Rugged Steep/Impassable (Grassy)"
+  },
+  {
+    "sector_id": "H8",
+    "center": [
+      7680,
+      7680
+    ],
+    "surface": "Land",
+    "terrain": "Grassy",
+    "avg_height": 281,
+    "description": "Land, High Ground Rugged Steep/Impassable (Grassy)"
+  }
+]
+}

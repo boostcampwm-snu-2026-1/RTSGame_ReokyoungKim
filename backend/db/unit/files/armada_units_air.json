@@ -1,0 +1,119 @@
+{
+    "Air": {
+        "Tsunami": {
+            "code": "armsb",
+            "Tech": "T1",
+            "Explanation": "The Tsunami is a T1 seaplane bomber, adept at delivering heavy payloads with its five-bomb arsenal. With a DPS of 143 and an impressive weapon range of 1280, it excels in striking enemy positions from a distance while remaining relatively safe from anti-aircraft defenses. Its high speed of 267 allows it to quickly approach and retreat from targets, making it a versatile asset for hit-and-run tactics. However, with only 1170 health, it is vulnerable to concentrated anti-air fire, necessitating careful management to maximize its impact."
+        },
+        "Falcon": {
+            "code": "armfig",
+            "Tech": "T1",
+            "Explanation": "The Falcon serves as a T1 light air superiority fighter, excelling in engaging and eliminating enemy aircraft with its MissileLauncher. With a speed of 289, it can quickly intercept and pursue airborne targets, leveraging its 680 range missiles to strike from a safe distance. Its high DPS of 139 makes it formidable against weaker air units, but its relatively low health of 167 necessitates cautious maneuvering to avoid anti-air threats. While cost-effective and agile, it should be used primarily in air-to-air combat rather than direct ground engagements due to its limited durability."
+        },
+        "Puffin": {
+            "code": "armseap",
+            "Tech": "T1",
+            "Explanation": "The Puffin is a T1 seaplane gunship designed for aquatic engagements, equipped with a TorpedoLauncher that delivers a formidable 114 DPS with a range of 600. Its ability to drop homing torpedoes makes it particularly effective against naval units, providing a strategic advantage in controlling water-based territories. With a speed of 271, it can quickly reposition to exploit enemy weaknesses or retreat from overwhelming threats, although its moderate health of 1380 means it should avoid prolonged exposure to concentrated anti-air defenses. The Puffin's cost-efficiency and versatility in water assault scenarios make it an essential component in any balanced naval strategy."
+        },
+        "Osprey": {
+            "code": "armhvytrans",
+            "Tech": "T1",
+            "Explanation": "The Osprey is a T1 Heavy Air Transport unit, crucial for strategic mobility on the battlefield. With its ability to carry larger units, including Commanders, it excels at relocating key assets across the map rapidly, thanks to its impressive speed of 110. However, its lack of armament and direct combat capabilities makes it vulnerable to anti-air defenses and enemy fire, despite its decent health pool of 630. Utilize the Osprey primarily for behind-the-line operations and tactical repositioning, ensuring it travels with escort protection when necessary."
+        },
+        "Sabre": {
+            "code": "armsaber",
+            "Tech": "T1",
+            "Explanation": "The Sabre is a versatile T1 light seaplane gunship, equipped with dual energy blasters that deliver a solid DPS of 67.0. Its moderate weapon range of 425 and impressive sight range of 595 make it an excellent choice for reconnaissance and skirmishing against light to medium ground targets. With a speed of 157, the Sabre can quickly reposition or retreat, but its relatively low health of 1010 makes it vulnerable to concentrated anti-air defenses. Use the Sabre for hit-and-run tactics or to support ground forces, keeping it away from heavy anti-aircraft fire to maximize its effectiveness."
+        },
+        "Stork": {
+            "code": "armatlas",
+            "Tech": "T1",
+            "Explanation": "The Stork is a T1 airborne transport unit, ideal for quickly deploying troops across the battlefield with its impressive speed of 207. It excels in strategic maneuvers, allowing commanders to reposition units for surprise attacks or rapid reinforcements. Despite its utility, the Stork is vulnerable with only 265 health and no weapons, necessitating protection from anti-air units during operations. Its lack of offensive capabilities makes it a non-combatant, emphasizing its role in logistics and troop mobility."
+        },
+        "Blink": {
+            "code": "armpeep",
+            "Tech": "T1",
+            "Explanation": "The Blink serves as a T1 air scout, boasting impressive speed and an extensive sight range, making it an essential asset for reconnaissance missions. Its primary strength lies in its ability to quickly gather intelligence on enemy positions and movements due to its significant line of sight and rapid mobility. However, with no offensive capabilities and low health, it is vulnerable to anti-air defenses and enemy fire, necessitating careful maneuvering to avoid hostile encounters. Use the Blink to keep tabs on enemy expansions and troop concentrations, providing your forces with critical strategic information."
+        },
+        "Construction Seaplane": {
+            "code": "armcsa",
+            "Tech": "T1",
+            "Explanation": "The Construction Seaplane is a versatile T1 unit adept at establishing and expanding bases both on land and in water, making it an invaluable asset for players looking to control naval territories. With a respectable speed of 192, it can quickly traverse large distances, enabling rapid deployment and construction of essential structures. Although it boasts a moderate health pool of 405, it lacks any offensive capabilities, making it vulnerable to anti-air attacks and necessitating protection from combat units. Its ability to build both terrestrial and naval structures provides strategic flexibility, but its utility comes at the cost of prioritizing it in your early-game economy over more aggressive units."
+        },
+        "Cyclone": {
+            "code": "armsfig",
+            "Tech": "T1",
+            "Explanation": "The Cyclone is a T1 fighter seaplane specializing in air-to-air combat, making it an essential component for air superiority. With a DPS of 252.0 and a missile launcher that boasts a range of 710, it excels at intercepting enemy aircraft before they can pose a threat to ground or naval forces. Its high speed of 311 allows it to quickly patrol large areas, ensuring effective coverage and quick response to aerial threats. However, its relatively low health of 220 means it should avoid prolonged engagements and be supported by other units to maximize its effectiveness."
+        },
+        "Horizon": {
+            "code": "armsehak",
+            "Tech": "T1",
+            "Explanation": "The Horizon is a Tier 1 Reconnaissance Seaplane, primarily designed for gathering intelligence with its advanced radar and sonar capabilities. Its high speed of 338 allows it to swiftly scour large areas, making it invaluable for early-game scouting and detecting enemy movements both on the surface and underwater. Although it lacks any offensive weaponry and has a moderate health pool of 580, its extensive sight range of 1100 ensures it can remain at a safe distance while providing crucial information to allies. The Horizon's inability to engage in combat and its vulnerability to anti-air defenses necessitate careful management to fully leverage its surveillance strengths."
+        },
+        "Banshee": {
+            "code": "armkam",
+            "Tech": "T1",
+            "Explanation": "The Banshee is a nimble T1 light gunship specializing in quick, targeted strikes against lightly defended enemy infrastructure. With a speed of 185 and a sight range of 520, it excels at hit-and-run tactics, allowing it to scout and engage from a safe distance before enemies can retaliate effectively. Its cannon delivers a decent DPS of 39.0 over a range of 350, making it effective against isolated ground units and buildings. However, its relatively low health of 560 makes it vulnerable to concentrated anti-air defenses, necessitating careful maneuvering and retreat when faced with heavier opposition."
+        },
+        "Construction Aircraft": {
+            "code": "armca",
+            "Tech": "T1",
+            "Explanation": "The Construction Aircraft is a T1 unit designed for rapid expansion and versatile construction capabilities across any terrain. With its speed of 208, it excels in quickly reaching remote locations to establish new bases or support forward operations. Although it possesses no offensive capabilities and has relatively low health at 156, its ability to build a wide array of basic Tech 1 structures makes it indispensable for early-game development and map control. Its aerial nature allows it to bypass obstacles and enemy units on the ground, but players should be cautious of anti-air threats due to its lack of defense."
+        },
+        "Stormbringer": {
+            "code": "armthund",
+            "Tech": "T1",
+            "Explanation": "The Stormbringer serves as a T1 Light Bomber, excelling in targeting slow-moving units and static defenses. With a respectable DPS of 88.0 and a considerable weapon range of 1280, it delivers effective bombing runs, making it invaluable for disrupting enemy infrastructure and resource lines. Its speed of 255 allows for swift hit-and-run tactics, but its relatively low health of 670 necessitates careful management to avoid anti-air defenses. While cost-effective for early-game assaults, it should be deployed in groups to maximize impact and survivability."
+        },
+        "Abductor": {
+            "code": "armdfly",
+            "Tech": "T2",
+            "Explanation": "Abductor serves as a versatile T2 transport aircraft equipped with a potent EMP-BeamLaser, making it invaluable for disabling enemy units from a distance of 520 units. Its impressive speed of 225 allows it to quickly maneuver in and out of hostile territory, while the radar-stealth capability enhances its role in covert operations. With 1170 health, it can withstand moderate anti-air fire, although it lacks any direct damage output as its DPS is 0.0. This unit is ideal for disrupting enemy formations and safely extracting units, but its effectiveness is limited by its inability to engage in offensive combat directly."
+        },
+        "Advanced Construction Aircraft": {
+            "code": "armaca",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Aircraft serves as a versatile T2 builder, crucial for establishing advanced economic and defensive infrastructure. With a speed of 192, it is adept at quickly reaching remote and strategic locations, making it invaluable for rapid expansion or fortification of forward positions. Its lack of offensive capabilities and moderate health of 200 necessitate careful management to avoid enemy anti-air threats, but its ability to construct critical assets far outweighs these vulnerabilities. While it might be an investment due to its advanced tier, the strategic advantages it provides in terms of versatile construction options can turn the tide in prolonged engagements."
+        },
+        "Highwind": {
+            "code": "armhawk",
+            "Tech": "T2",
+            "Explanation": "The Highwind is a T2 Stealth Fighter excelling in air superiority with its impressive 536 DPS Missile Launcher and a remarkable weapon range of 740. Its speed of 359 allows it to quickly intercept and eliminate multiple or heavy air threats, making it a formidable presence in aerial combat. Despite its high offensive capabilities, the Highwind's relatively low health of 370 makes it vulnerable to concentrated anti-air attacks, necessitating strategic use of its stealth and speed for hit-and-run tactics. Due to its specialized role, deploying the Highwind is most effective when supported by other air units for comprehensive control of the skies."
+        },
+        "Hornet": {
+            "code": "armblade",
+            "Tech": "T2",
+            "Explanation": "The Hornet is a T2 gunship excelling in high-speed assaults with its impressive speed of 204, allowing it to rapidly engage and disengage from priority targets. Armed with a Missile Launcher, it delivers a potent DPS of 168.0 over a solid range of 420, making it effective against both ground forces and installations. Its substantial health of 3000 enables it to withstand moderate anti-aircraft fire, ensuring it can complete its assault missions with relative resilience. However, its effectiveness may be limited by its relatively high cost and the availability of heavy anti-air defenses, requiring strategic deployment to maximize its impact."
+        },
+        "Stiletto": {
+            "code": "armstil",
+            "Tech": "T2",
+            "Explanation": "Stiletto is a Tier 2 EMP bomber specialized in disabling enemy units with its paralyzing charges, making it an essential support unit for creating openings in enemy defenses. With a weapon range of 1280 and a speed of 300, it can swiftly deploy its EMP payload from a safe distance, rendering clusters of enemy units temporarily immobile and vulnerable to follow-up attacks. Despite its high speed and significant health pool of 1880, which allow it to survive some anti-air threats, Stiletto lacks offensive capabilities as it deals no direct damage. Its utility shines in coordinated assaults but requires protection from dedicated anti-air units due to its inability to defend itself."
+        },
+        "Cormorant": {
+            "code": "armlance",
+            "Tech": "T2",
+            "Explanation": "The Cormorant, a T2 torpedo bomber, excels in anti-naval operations with its TorpedoLauncher weapon capable of dealing a hefty 188 DPS over a 400-range. It's particularly effective against enemy ships and submarines, making it a valuable asset for controlling sea lanes and supporting amphibious assaults. With a speed of 285, it can swiftly respond to threats or reposition, though its moderate health of 1920 makes it vulnerable to concentrated anti-air attacks. While an excellent choice for undermining enemy naval forces, its reliance on a single weapon system means it requires protection from air superiority fighters to operate effectively."
+        },
+        "Blizzard": {
+            "code": "armpnix",
+            "Tech": "T2",
+            "Explanation": "Blizzard is a T2 bomber, specifically designed for heavy assault operations from the skies. With its formidable AircraftBomb, it delivers a massive DPS of 190, making it highly effective against clusters of units and structures, particularly when enemy anti-air defenses are sparse. Despite its slow speed of 258, its substantial health of 1130 allows it to withstand moderate anti-air fire, enabling it to complete bombing runs in moderately defended zones. However, its high-tech status and vulnerability to concentrated anti-aircraft fire necessitate careful planning and support from other air or ground units to maximize its destructive potential."
+        },
+        "Roughneck": {
+            "code": "armbrawl",
+            "Tech": "T2",
+            "Explanation": "The Roughneck is a versatile T2 gunship excelling in rapid assault and harassment roles. With a formidable DPS of 107.0 and a substantial health pool of 1780, it can effectively engage ground targets, making it ideal for disrupting enemy operations. Its speed of 161 allows for quick repositioning and hit-and-run tactics, while the 380 weapon range provides a solid strike distance. However, players should be cautious of its moderate cost and vulnerability to concentrated anti-air defenses, as its aerial nature can make it susceptible to focused fire."
+        },
+        "Liche": {
+            "code": "armliche",
+            "Tech": "T2",
+            "Explanation": "The Liche serves as a formidable T2 aerial assault unit, equipped with a powerful Missile Launcher that delivers a high DPS of 625, making it an exceptional choice for targeting fortified structures or high-value enemy units. Its impressive speed of 295 allows it to quickly enter combat zones and retreat when necessary, while its substantial health pool of 2300 HP provides resilience against anti-air defenses. However, its relatively short weapon range of 250 requires it to get closer to its targets, potentially exposing it to concentrated enemy fire. Use the Liche strategically to deliver swift, devastating strikes where enemy anti-air defenses are weakest, ensuring its survival and maximizing its destructive potential."
+        },
+        "Oracle": {
+            "code": "armawac",
+            "Tech": "T2",
+            "Explanation": "The Oracle serves as an advanced reconnaissance aircraft, essential for gathering intelligence across vast areas with its impressive sight range of 1275. Its primary strength lies in its ability to provide radar and sonar coverage, making it invaluable for detecting enemy movements and hidden units over land and sea. Although it has no offensive capabilities and a modest health pool of 890, its high speed of 317 allows it to swiftly navigate the battlefield, avoiding threats while supporting allied units. The Oracle's strategic use is in its ability to keep your forces informed, but it must be protected due to its lack of defenses and high-tech cost."
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+  "description": "Map database for game simulation with sector-based terrain information",
+  "details": {
+    "Altored Divide Bar Remake 1.6.2": {
+      "file": "map/files/altored_divide_bar_remake_1.6.2.json",
+      "description": "Large 8x8 land map with grassy highlands, sand lowlands, and mountain cliffs dividing the terrain"
+    },
+    "Avalanche 3.4": {
+      "file": "map/files/avalanche_3.4.json",
+      "description": "Winter naval map with snow/ice terrain, deep water, and coastal shores suitable for mixed land-sea combat"
+    },
+    "BarR 1.1": {
+      "file": "map/files/barr_1.1.json",
+      "description": "Desert map with rocky sand terrain, diagonal water channels, and elevated rocky outcrops"
+    },
+    "Coast To Coast BAR v1.0": {
+      "file": "map/files/coast_to_coast_bar_v1.0.json",
+      "description": "Naval-focused map with large deep water center and coastal shores on opposite sides"
+    },
+    "Crater Islands Remake v1.0.1": {
+      "file": "map/files/crater_islands_remake_v1.0.1.json",
+      "description": "Rugged island map with mixed shore/land terrain, steep impassable cliffs, and scattered highlands"
+    },
+    "Evad River Confluence v2": {
+      "file": "map/files/evad_river_confluence_v2.json",
+      "description": "Pure deep water naval map with smooth flat terrain, ideal for submarine and ship-only battles"
+    },
+    "Hooked 1.1.1": {
+      "file": "map/files/hooked_1.1.1.json",
+      "description": "Small deep water naval map with some elevated underwater ridges, designed for naval engagements"
+    }
+  }
+}

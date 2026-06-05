@@ -1,0 +1,106 @@
+{
+  "code": {
+    "name": "despawn_unit",
+    "path": "rule/codes/despawn_unit.lua",
+    "description": "Removes units when specified conditions (time or unit count) are met. Useful for phase transitions or objective-based mechanics.",
+    "config_format": {
+      "<team_id>": [
+        {
+          "condition": {
+            "operator": "<and|or>",
+            "checks": [
+              {
+                "type": "time",
+                "op": "<comparison_operator>",
+                "value": "<seconds>"
+              },
+              {
+                "type": "unit_count",
+                "teamID": "<check_team_id>",
+                "unitCode": "<unit_name|all>",
+                "op": "<comparison_operator>",
+                "value": "<count>"
+              }
+            ]
+          },
+          "despawn": [
+            {
+              "unitName": "<unit_code>",
+              "count": "<remove_count>"
+            }
+          ]
+        }
+      ]
+    },
+    "config_example": {
+      "1": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": 60
+              }
+            ]
+          },
+          "despawn": [
+            {
+              "unitName": "armwar",
+              "count": 5
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "verify_code": {
+    "path": "rule/verify_codes/despawn_unit.lua",
+    "description": "Verifies that units are correctly despawned at the specified time conditions.",
+    "config_format": {
+      "<team_id>": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": "<seconds>"
+              }
+            ]
+          },
+          "despawn": [
+            {
+              "unitName": "<unit_code>",
+              "count": "<remove_count>"
+            }
+          ]
+        }
+      ]
+    },
+    "config_example": {
+      "1": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": 5
+              }
+            ]
+          },
+          "despawn": [
+            {
+              "unitName": "armpw",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

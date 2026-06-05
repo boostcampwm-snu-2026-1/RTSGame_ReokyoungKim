@@ -1,0 +1,117 @@
+[
+    {
+        "game_mode": "Fixed-Fiedl Skirmish FFA",
+        "game_description": "A tactical free-for-all scenario using pre-deployed units, where you must secure victory against equal or smaller enemy forces by relying exclusively on squad grouping and combat task assignments.",
+        "assessing_ability": "Theory of Mind",
+        "decision": ["AssignGroupTasks"],
+        "gadget": []
+
+    },
+    {
+        "game_mode": "Fixed-Fiedl Skirmish Team",
+        "game_description": "A team-based tactical scenario using pre-deployed units, where you cooperate to defeat equal or smaller enemy forces by relying exclusively on squad grouping and combat task assignments.",
+        "assessing_ability": "Theory of Mind",
+        "decision": ["AssignGroupTasks"],
+        "gadget": []
+    },
+    {
+        "game_mode": "Time-Phased Demolition",
+        "game_description": "The game is structured into three two-minute rounds, totaling six minutes. In each round, three defense points appear at predefined locations. The allied team, consisting of fast and highly mobile units, must avoid enemy forces while destroying all three targets. Failure to eliminate all targets within the two-minute limit results in defeat. Upon success, all remaining enemies are cleared, and the next round begins with new defense point and increasingly stronger enemy units.",
+        "assessing_ability": "Spatial Reasoning",
+        "decision": ["AssignGroupTasks"],
+        "gadget": [
+            {
+                "name": "control_spawn",
+                "role": "Spawns units when triggers (Time or Unit Count) are met. Essential for 'Wave Defense', 'Reinforcements', or 'Boss Fights'.",
+                "config_fmt": {
+                    "<TeamID_String>": [
+                                    {
+                                        "condition": [
+                                            "and", 
+                                            { 
+                                                "time (OPTIONAL)": "<seconds>",
+                                                "<Check_TeamID> (OPTIONAL)": ["<UnitCode> == <Count>"] 
+                                            }
+                                        ],
+                                        "unit_placement": [
+                                            ["<UnitCode>", ["<X>", "<Z>"]],
+                                            ["<UnitCode>", ["<X>", "<Z>"]]
+                                        ]
+                                    }
+                                ]
+                }
+            },
+            {
+                "name": "control_despawn",
+                "role": "Removes specific units when triggers (Time or Unit Count) are met. Useful for 'Phase Transitions' or 'Objective-based mechanics' (e.g., killing a boss stops minion spawns).",
+                "config_fmt": {
+                    "<TeamID_String>": [
+                                    {
+                                        "condition": [
+                                            "and", 
+                                            { 
+                                                "time (OPTIONAL)": "<seconds>",
+                                                "<Check_TeamID>(OPTIONAL)": ["<UnitCode> == <Count>"] 
+                                            }
+                                        ],
+                                        "despawn_unit": {
+                                            "<UnitCode>": "<Count>"
+                                        }
+                                    }
+                                ]
+                }
+            }
+        ]    
+    },
+    {
+        "game_mode": "Multi-Front Defense",
+        "game_description": "The allied team must defend two defense points. Enemy forces composed of different unit types attack simultaneously from three distinct directions in order to destroy them. The allied side has forces of a comparable scale, and the loss of even a single defense point results in defeat.",
+        "assessing_ability": "Spatial Reasoning",
+        "decision": ["AssignGroupTasks"],
+        "gadget": [
+            {
+                "name": "prioritize_target",
+                "role": "Forces a team's units to ignore standard targeting and prioritize attacking specific high-value targets within range (500). Essential for 'Assassination' or 'Boss Focus' scenarios.",
+                "config_fmt": {
+                "<TeamID_String>": ["<Priority_Target_UnitCode_1>", "<Priority_Target_UnitCode_2>"]
+                }
+            }
+        ]
+    },
+    {
+        "game_mode": "Resource-Constrained Production",
+        "game_description": "A long-term planning challenge where the agent must optimize base layout and production ratios to manufacture a target unit under strict resource constraints in the limited time, while remaining prepared to defend against potential enemy Commander interference.",
+        "assessing_ability": "Long-Term Planning",
+        "decision": ["ConstructBuilding", "ProduceUnit", "AssignGroupTasks"],
+        "gadget": []
+    },
+    {
+        "game_mode": "Tower Defense",
+        "game_description": "Twenty minutes after the game begins, highly mobile enemy units will rush toward the allied forces at high speed. During the first 20 minutes, the allied side can prepare by constructing defensive bases and training soldiers to withstand the incoming assault. After the 20-minute mark, the team that successfully eliminates all enemy units will be declared the winner.",
+        "assessing_ability": "Long-Term Planning",
+        "decision": ["ConstructBuilding", "ProduceUnit", "AssignGroupTasks"],
+        "gadget": [
+            {
+                "name": "control_spawn",
+                "role": "Spawns units when triggers (Time or Unit Count) are met. Essential for 'Wave Defense', 'Reinforcements', or 'Boss Fights'.",
+                "config_fmt": {
+                    "<TeamID_String>": [
+                                    {
+                                        "condition": [
+                                            "and", 
+                                            { 
+                                                "time (OPTIONAL)": "<seconds>",
+                                                "<Check_TeamID> (OPTIONAL)": ["<UnitCode> == <Count>"] 
+                                            }
+                                        ],
+                                        "unit_placement": [
+                                            ["<UnitCode>", ["<X>", "<Z>"]],
+                                            ["<UnitCode>", ["<X>", "<Z>"]]
+                                        ]
+                                    }
+                                ]
+                }
+            }
+        ]
+    }
+]

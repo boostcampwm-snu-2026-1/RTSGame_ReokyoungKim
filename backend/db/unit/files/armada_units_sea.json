@@ -1,0 +1,104 @@
+{
+    "Sea": {
+        "Skater": {
+            "code": "armpt",
+            "Tech": "T1",
+            "Explanation": "The Skater is a T1 light scout and anti-air ship, designed for rapid reconnaissance and specialized air defense. With a speed of 93, it excels at quickly navigating coastal waters, making it ideal for scouting enemy positions or intercepting incoming air threats. Its BeamLaser and MissileLauncher provide a respectable DPS of 123, allowing it to effectively deter air units within its range of 760. However, with only 780 health, it lacks the durability for prolonged engagements, necessitating cautious positioning and support from other naval units."
+        },
+        "Grim Reaper": {
+            "code": "armrecl",
+            "Tech": "T1",
+            "Explanation": "The Grim Reaper is a T1 stealthy resurrection submarine designed for covert operations beneath the sea. With no direct offensive capabilities, its primary function is to resurrect sunken units, making it a strategic asset for reclaiming lost naval strength. Its modest speed and decent health allow it to maneuver effectively while avoiding detection, but it must be guarded against enemy submarines and anti-submarine warfare due to its vulnerability when exposed. This specialist unit excels in surprise recovery missions, but its lack of firepower necessitates support from more combative naval units to ensure its safety."
+        },
+        "Construction Ship": {
+            "code": "armcs",
+            "Tech": "T1",
+            "Explanation": "The Construction Ship is a T1 naval constructor, essential for expanding your maritime presence and establishing naval infrastructure. With a moderate speed of 65, it can efficiently traverse water bodies to build and repair structures, making it a crucial asset for maintaining a robust naval base. Although it lacks any offensive capabilities and has a limited sight range of 400, its high health of 1040 allows it to withstand some enemy fire while fulfilling its role. However, be cautious of its vulnerability in enemy waters due to its inability to defend itself."
+        },
+        "Banshee": {
+            "code": "armkam",
+            "Tech": "T1",
+            "Explanation": "The Banshee, a T1 Light Gunship, excels in executing rapid raids against unprotected targets due to its impressive speed of 185 and reasonable weapon range of 350. Armed with a cannon delivering 39 DPS, it is perfect for harassing enemy logistics and picking off isolated units. Its moderate health of 560 allows it to withstand minimal anti-air defenses, but it remains vulnerable to concentrated anti-aircraft fire and should avoid prolonged engagements. Though cost-efficient, the Banshee's effectiveness diminishes against fortified positions, highlighting its role in exploiting gaps in enemy defenses."
+        },
+        "Eel": {
+            "code": "armsub",
+            "Tech": "T1",
+            "Explanation": "The Eel is a T1 stealthy assault submarine, designed for underwater engagements with its powerful TorpedoLauncher. With a notable DPS of 86 and a respectable weapon range of 500, it excels in ambushing enemy naval units while remaining undetected. Its speed of 66 allows it to maneuver swiftly through the depths, making it ideal for hit-and-run tactics. However, its relatively low health of 840 necessitates strategic positioning to avoid prolonged confrontations or detection by enemy sonar-equipped units."
+        },
+        "Dolphin": {
+            "code": "armdecade",
+            "Tech": "T1",
+            "Explanation": "Dolphin is a T1 Light Assault Ship known for its speed and maneuverability, making it an excellent choice for quick raids on enemy coastlines or support in naval skirmishes. Armed with two cannons, it delivers a decent DPS of 135.0, allowing it to engage effectively against light naval units and unprotected structures within its 280 range. Its speed of 105 enables it to outmaneuver slower enemies and evade threats, though its relatively low health of 970 necessitates cautious engagement to avoid being overwhelmed by concentrated fire. While cost-effective, players should be mindful of its vulnerability to more fortified naval defenses or higher-tier ships."
+        },
+        "Corsair": {
+            "code": "armroy",
+            "Tech": "T1",
+            "Explanation": "The Corsair is a formidable T1 Naval Destroyer, boasting dual capabilities with both a Cannon and a Torpedo Launcher, making it versatile against surface and underwater threats. With a high DPS of 259 and a substantial health pool of 3700, it can endure prolonged engagements, effectively serving as a frontline assault ship. Its weapon range of 700 allows it to engage enemies from a safe distance, although its sight range is slightly shorter at 500, necessitating scouting support for optimal targeting. Despite its robust combat capabilities, its moderate speed of 67 may leave it vulnerable to faster units, and its significant cost necessitates careful deployment to maximize strategic value."
+        },
+        "Ellysaw": {
+            "code": "armpship",
+            "Tech": "T1",
+            "Explanation": "Ellysaw, a Tier 1 assault frigate, excels in providing formidable firepower with its dual cannons, delivering a solid DPS of 117.0. Its range of 470 makes it effective for mid-range engagements, allowing it to support coastal assaults and defend against enemy ships. With a sight range of 500 and a decent speed of 81, Ellysaw can effectively scout and engage enemy targets with agility. However, its moderate health of 2150 means it should avoid prolonged battles with heavier units, as it cannot withstand extended direct fire."
+        },
+        "Epoch": {
+            "code": "armepoch",
+            "Tech": "T2",
+            "Explanation": "The Epoch serves as a T2 naval flagship, boasting massive firepower with its 5 Cannons and 2 Missile Launchers, capable of delivering a staggering 1727 DPS. Its greatest strength lies in its impressive weapon range of 2450, allowing it to bombard enemies from a distance while staying relatively safe from return fire. With a robust health pool of 50,000, the Epoch can withstand substantial amounts of damage, making it a formidable presence on the battlefield. However, its slow speed of 54 may leave it vulnerable to faster, more agile units, making it crucial to provide it with adequate protection and support."
+        },
+        "Advanced Construction Sub": {
+            "code": "armacsub",
+            "Tech": "T2",
+            "Explanation": "The Advanced Construction Sub, a Tier 2 sea constructor, excels in building and repairing naval structures and units, making it an essential asset for maritime dominance. With a health of 1110, it can withstand moderate threats, providing durability while performing its construction duties. Its speed of 72 allows it to navigate waters efficiently, although its lack of weaponry and offensive capabilities necessitates protection from combat units. This unit is invaluable for expanding naval presence and maintaining infrastructure but requires careful positioning to avoid enemy fire."
+        },
+        "Longbow": {
+            "code": "armmship",
+            "Tech": "T2",
+            "Explanation": "The Longbow, a T2 missile cruiser, excels in long-range engagements with its impressive 1550 weapon range, allowing it to strike from afar before opponents can retaliate. Its dual armament of a Cannon and Missile Launcher provides versatility in combat, making it effective against both naval and coastal threats. Despite its robust health of 3350, its moderate speed of 63 requires strategic positioning to maximize its impact while avoiding faster enemy units. However, its high DPS of 177.0 makes it a formidable force in naval battles, though its relatively short sight range of 319 necessitates support from scouting units for optimal targeting."
+        },
+        "Paladin": {
+            "code": "armcrus",
+            "Tech": "T2",
+            "Explanation": "Paladin is a formidable T2 medium assault cruiser, adept at engaging both surface and submerged threats with its versatile TorpedoLauncher, BeamLaser, and Cannon arsenal. With a substantial health pool of 5600, it can absorb considerable damage while providing heavy fire support, boasting a significant DPS of 482.0. Its speed of 60 allows it to reposition effectively across the battlefield, though not as swiftly as lighter units, making it less effective in rapid strike maneuvers. While its robust offensive capabilities and moderate speed make it an excellent choice for sustained assaults, its medium range of 500 necessitates support from longer-range units to counter distant threats efficiently."
+        },
+        "Dreadnought": {
+            "code": "armbats",
+            "Tech": "T2",
+            "Explanation": "The Dreadnought serves as a formidable T2 Heavy Battleship, boasting an impressive 8900 HP and armed with dual cannons that deliver a substantial 600 DPS over an expansive range of 880. Its primary strength lies in its ability to engage and dominate naval battles from a distance, making it ideal for establishing naval supremacy and supporting coastal assaults. Despite its formidable firepower and durability, its moderate speed of 58 can leave it vulnerable to faster, more agile units if caught out of position. The Dreadnought's high cost and significant investment mean it should be deployed strategically, focusing on areas where its overwhelming firepower can turn the tide of battle."
+        },
+        "Barracuda": {
+            "code": "armsubk",
+            "Tech": "T2",
+            "Explanation": "The Barracuda, a T2 submarine killer, excels in underwater combat with its guided TorpedoLauncher, boasting a significant DPS of 175 and a range of 400. Its speed of 81 allows it to maneuver swiftly beneath the waves, making it effective in hunting down enemy submarines. With a health pool of 2350, the Barracuda can withstand moderate defensive pressure while delivering lethal strikes. However, its reliance on torpedoes limits its effectiveness against surface or aerial targets, making it essential to pair it with units capable of handling threats above water."
+        },
+        "Maelstrom": {
+            "code": "armlship",
+            "Tech": "T2",
+            "Explanation": "The Maelstrom serves as a versatile T2 Raider Ship that excels in disrupting enemy fleets with its dual weapon systems—Missile Launcher and Lightning Cannon—providing a formidable DPS of 319.0. With a weapon range of 710, it can engage targets from a safe distance, making it particularly effective against light naval units and aerial threats, thanks to its light anti-air capabilities. Its speed of 99 allows it to swiftly maneuver through battle, outpacing many heavier ships. However, with a moderate health of 2200, it needs to avoid prolonged engagements with more powerful adversaries to prevent being overwhelmed."
+        },
+        "Haven": {
+            "code": "armantiship",
+            "Tech": "T2",
+            "Explanation": "The Haven is a versatile T2 Support Ship, primarily tasked with providing strategic support in naval engagements through its intel, mobile energy generation, and anti-nuke capabilities. With a formidable DPS of 750.0 and an impressive weapon range of 72,000, it excels in long-range engagements, making it ideal for maintaining control over contested waters and defending against missile attacks. Its relatively high health of 5,000 allows it to withstand significant damage, although its modest speed of 63 can make it vulnerable to faster enemy units. However, the Haven's unique combination of roles makes it an invaluable asset in maintaining strategic advantage on the water, particularly when dealing with missile threats."
+        },
+        "Dragonslayer": {
+            "code": "armaas",
+            "Tech": "T2",
+            "Explanation": "Dragonslayer serves as a specialized anti-air ship, designed to protect naval and coastal areas from airborne threats. With its impressive DPS of 430, it effectively neutralizes enemy aircraft using its Cannon and MissileLauncher, offering a formidable weapon range of 840. While its speed of 63 allows for moderate mobility across the waters, its sight range of 475 requires support to detect distant threats. Despite its robust health of 3900, its focus on aerial combat leaves it vulnerable to surface attacks, necessitating complementary ground or naval units for comprehensive defense."
+        },
+        "Voyager": {
+            "code": "armmls",
+            "Tech": "T2",
+            "Explanation": "Voyager is a T2 naval engineer that excels in constructing and repairing naval structures and vessels, making it an essential unit for maintaining a strong maritime presence. With a robust health of 1460 and a decent speed of 66, it can navigate the waters efficiently to perform its engineering duties. Despite lacking offensive capabilities, its large sight range of 300 helps spot potential threats and opportunities in the vicinity. However, its inability to defend itself necessitates protection from other combat units, especially when operating in hostile territories."
+        },
+        "Serpent": {
+            "code": "armserp",
+            "Tech": "T2",
+            "Explanation": "The Serpent is a formidable T2 Battle Submarine, excelling in underwater combat with its dual guided torpedo launchers that deliver a substantial DPS of 206 over a significant range of 800. Its robust health of 3550 allows it to withstand considerable enemy fire, making it an excellent choice for dominating naval engagements. With a decent speed of 45, it can maneuver effectively in underwater skirmishes, although its relatively limited sight range of 550 necessitates support from other units for optimal target detection. The Serpent's high impact in naval warfare comes at a considerable resource cost, requiring strategic deployment to maximize its effectiveness in controlling sea lanes."
+        },
+        "Bermuda": {
+            "code": "armsjam",
+            "Tech": "T2",
+            "Explanation": "Bermuda is a T2 radar jammer ship designed for stealth operations in naval engagements. With a sight range of 390 and a speed of 45, it excels at providing cover for advancing fleets by disrupting enemy radar detection, making it a strategic asset in surprise attacks or evasive maneuvers. Its lack of offensive capabilities and moderate health of 1350 make it vulnerable if left unprotected, so it should be accompanied by combat ships to ensure its safety. Despite being cost-effective, Bermuda's primary role is support, requiring careful positioning and protection to maximize its utility on the battlefield."
+        }
+    }
+}

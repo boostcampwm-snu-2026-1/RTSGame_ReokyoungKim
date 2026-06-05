@@ -1,0 +1,69 @@
+{
+    "Factories": {
+        "Bot Lab": {
+            "code": "armlab",
+            "Tech": "T1",
+            "Explanation": "The Bot Lab is a vital production structure that serves as the backbone for assembling Tech 1 bot units, making it a cornerstone for early-game expansion and defense. With substantial health at 2900, it can withstand moderate harassment, allowing players time to reinforce their positions. However, its immobility and lack of weaponry necessitate strategic placement and protection from enemy raids. The Bot Lab's ability to produce a variety of units enables players to tailor their army composition to counter specific threats and seize control of key territories."
+        },
+        "Aircraft Plant": {
+            "code": "armap",
+            "Tech": "T1",
+            "Explanation": "The Aircraft Plant functions as a crucial production facility for Tech 1 aircraft, acting as the backbone of your aerial operations. With a substantial 2050 HP, it is relatively durable against early-game threats, ensuring continuity in aircraft production. While it possesses no offensive capabilities and must be defended by other units, its strategic role in pumping out versatile air units like scouts, fighters, and bombers cannot be overstated. Efficient placement and protection of this plant can provide the aerial superiority required to control the battlefield."
+        },
+        "Seaplane Platform": {
+            "code": "armplat",
+            "Tech": "T1",
+            "Explanation": "The Seaplane Platform is a crucial production structure designed for building Tech 1 seaplane units, serving as a strategic asset for players looking to exert influence over water-heavy maps. Its primary strength lies in its ability to produce versatile seaplane units that can provide reconnaissance, combat support, or harassment across vast oceanic expanses. While the platform itself is defenseless with a health pool of 2000 and a sight range of 169, its placement on water enables the deployment of seaplanes that can bypass terrain obstacles. However, its immobility and lack of inherent defenses make it vulnerable to enemy naval and aerial attacks, necessitating protection from other military assets."
+        },
+        "Shipyard": {
+            "code": "armsy",
+            "Tech": "T1",
+            "Explanation": "The Shipyard serves as a crucial naval production facility, specializing in the construction of Tech 1 watercraft units, essential for establishing and expanding naval dominance. Its robust health of 4100 makes it reasonably resilient to light attacks, providing a stable foothold in naval warfare. However, being stationary and with no direct offensive capabilities, it requires protection from enemy assaults, especially since it can only be constructed on water. Due to its immobility and lack of weaponry, positioning the Shipyard strategically and ensuring its defense with other naval or coastal units is vital for maintaining a steady production line and securing maritime control."
+        },
+        "Hovercraft Platform": {
+            "code": "armhp",
+            "Tech": "T1",
+            "Explanation": "The Hovercraft Platform serves as a vital production facility for Tech 1 hovercraft units, making it an essential asset for players seeking versatility in both land and water-based operations. With its substantial health pool of 3350, it can withstand moderate attacks, providing a reliable base to churn out units. However, its lack of offensive capabilities and mobility means it should be strategically placed and well-defended to maintain production efficiency. Its ability to produce hovercraft units allows players to adapt quickly to changing battlefield dynamics, offering a tactical edge in mixed terrain engagements."
+        },
+        "Amphibious Complex": {
+            "code": "armamsub",
+            "Tech": "T1",
+            "Explanation": "The Amphibious Complex is a T1 factory designed for producing versatile amphibious units, essential for maintaining control over both land and aquatic environments. With a robust health pool of 2650, this structure can withstand moderate attacks, making it a reliable asset in contested waters. Although it has no offensive capabilities or movement, its strategic placement underwater shields it from many surface threats. However, its immobile nature and lack of direct firepower mean it must be protected by other units to ensure continued production capabilities."
+        },
+        "Vehicle Plant": {
+            "code": "armvp",
+            "Tech": "T1",
+            "Explanation": "The Vehicle Plant is a fundamental production facility designed to construct Tech 1 vehicle units, serving as the backbone for any early-game ground assault or defense strategy. With substantial health of 3000, it can withstand moderate attacks, ensuring continuous vehicle production unless faced with a concentrated offensive. Although it has no offensive capabilities or mobility, its strategic value lies in its ability to rapidly produce a variety of vehicles, allowing players to adapt to changing battlefield conditions. However, its immobility and dependence on land placement mean it requires protection and strategic positioning within your base."
+        },
+        "Naval Hovercraft Platform": {
+            "code": "armfhp",
+            "Tech": "T1",
+            "Explanation": "The Naval Hovercraft Platform is a versatile production facility designed to manufacture Tech 1 hovercraft units, making it an essential component for establishing a strong naval presence. With a significant health pool of 3350, it can withstand moderate attacks, allowing it to persist in contested waters while churning out units. Although it has no offensive capabilities or movement speed, its strategic placement on water enables the deployment of adaptable hovercraft that can traverse both land and sea. Optimal positioning and protection of the platform are crucial, as its immobility makes it vulnerable to concentrated enemy fire."
+        },
+        "Advanced Shipyard": {
+            "code": "armasy",
+            "Tech": "T2",
+            "Explanation": "The Advanced Shipyard is a crucial T2 naval factory that specializes in the production of advanced naval units, making it an essential component for any player looking to dominate the seas. With a robust health of 6000, it can withstand significant enemy fire, allowing for continued production even under pressure. However, its lack of offensive capabilities and zero speed necessitates strategic placement and adequate defense to protect it from enemy assaults. Due to its construction only on water, securing a well-defended aquatic location is vital to maximizing its potential."
+        },
+        "Advanced Vehicle Plant": {
+            "code": "armavp",
+            "Tech": "T2",
+            "Explanation": "The Advanced Vehicle Plant serves as a crucial production facility for Tech 2 vehicles, allowing players to significantly bolster their army's capabilities on land. With a robust health of 4750, this plant can withstand moderate enemy assaults, giving players time to mount a defense or counterattack. Although it lacks offensive capabilities and mobility, its strength lies in enabling the deployment of high-impact, versatile tech units that can turn the tide of battle. However, its stationary nature and potentially high resource investment make it a priority target for opponents aiming to cripple production."
+        },
+        "Advanced Aircraft Plant": {
+            "code": "armaap",
+            "Tech": "T2",
+            "Explanation": "The Advanced Aircraft Plant is a crucial Tech 2 structure that enables the production of advanced aerial units, significantly enhancing your air superiority capabilities. With a robust health pool of 3750, it can withstand moderate enemy attacks, providing enough time for a response or repair. However, it must be strategically placed and well-defended, as it has no offensive capabilities and is immobile. Its primary strength lies in unlocking a range of powerful aircraft options that can dominate the battlefield from above, making it an indispensable asset in any advanced technology strategy."
+        },
+        "Advanced Bot Lab": {
+            "code": "armalab",
+            "Tech": "T2",
+            "Explanation": "The Advanced Bot Lab serves as a critical production facility for Tech 2 bot units, playing a pivotal role in mid-game strategy. With a substantial health pool of 4250, it can withstand moderate enemy harassment, allowing players to maintain a steady flow of advanced bots. Its immobility and lack of offensive capabilities necessitate strategic placement and protection, as its destruction can significantly hinder unit production. Being a land-only structure, it's essential to secure its location from both ground and air threats to ensure uninterrupted operations."
+        },
+        "Experimental Gantry": {
+            "code": "armshltxuw",
+            "Tech": "T3",
+            "Explanation": "The Experimental Gantry is a strategic production facility designed for constructing advanced T3 units, making it a cornerstone for late-game dominance. With a formidable health pool of 16,000, it can endure significant enemy attacks, allowing you to sustain unit production even under pressure. However, its lack of mobility and weaponry means it requires a robust defense to protect against direct assaults. Investing in this high-cost structure can be a game-changer, enabling the deployment of powerful experimental units that can turn the tide of battle."
+        }
+    }
+}

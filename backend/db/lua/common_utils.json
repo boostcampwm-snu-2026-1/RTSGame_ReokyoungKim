@@ -1,0 +1,81 @@
+{
+  "source": "https://springrts.com/wiki/Lua_CMDs",
+  "description": "Spring RTS Common Utility API - logging, debugging, and general-purpose functions available in both synced and unsynced code.",
+  "categories": {
+    "Logging & Debug": {
+      "description": "Functions for printing messages to the engine log. These are available in ALL contexts (synced, unsynced, widgets, gadgets).",
+      "functions": [
+        {
+          "name": "Spring.Echo",
+          "signature": "Spring.Echo(string msg1 [, string msg2, ...])",
+          "description": "Prints a message to the infolog and stdout. Accepts multiple arguments which are concatenated. This is the most common logging function in Spring gadgets."
+        },
+        {
+          "name": "Spring.Log",
+          "signature": "Spring.Log(string section, number logLevel, string msg1 [, string msg2, ...])",
+          "description": "Logs a message under a named section with a log level. logLevel constants: LOG.DEBUG, LOG.INFO, LOG.WARNING, LOG.ERROR, LOG.FATAL."
+        }
+      ]
+    },
+    "Game Frame & Time": {
+      "description": "Functions to query current game frame and time.",
+      "functions": [
+        {
+          "name": "Spring.GetGameFrame",
+          "signature": "Spring.GetGameFrame()",
+          "description": "Returns the current game frame number (number). 30 frames = 1 second at normal speed."
+        },
+        {
+          "name": "Spring.GetGameSeconds",
+          "signature": "Spring.GetGameSeconds()",
+          "description": "Returns the current game time in seconds (number)."
+        }
+      ]
+    },
+    "Team & Player Info": {
+      "description": "Functions to query team and player metadata.",
+      "functions": [
+        {
+          "name": "Spring.GetTeamList",
+          "signature": "Spring.GetTeamList([number allyTeamID])",
+          "description": "Returns a table of teamIDs. If allyTeamID is given, returns only teams in that alliance."
+        },
+        {
+          "name": "Spring.GetGaiaTeamID",
+          "signature": "Spring.GetGaiaTeamID()",
+          "description": "Returns the teamID of the Gaia (neutral) team."
+        },
+        {
+          "name": "Spring.GetAllyTeamList",
+          "signature": "Spring.GetAllyTeamList()",
+          "description": "Returns a table of all allyTeamIDs."
+        }
+      ]
+    },
+    "UnitDef Lookup": {
+      "description": "Global tables for looking up unit and feature definitions (not Spring.* functions but essential globals).",
+      "functions": [
+        {
+          "name": "UnitDefs",
+          "signature": "UnitDefs[unitDefID]",
+          "description": "Global table mapping unitDefID -> UnitDef table. UnitDef contains fields like: name, humanName, metalCost, energyCost, maxHealth, speed, extractsMetal, energyMake, etc."
+        },
+        {
+          "name": "UnitDefNames",
+          "signature": "UnitDefNames[string unitName]",
+          "description": "Global table mapping unit name string (e.g. 'armcom') -> UnitDef table. Useful for looking up unitDefID by name."
+        },
+        {
+          "name": "FeatureDefs",
+          "signature": "FeatureDefs[featureDefID]",
+          "description": "Global table mapping featureDefID -> FeatureDef table. FeatureDef contains fields like: name, metal, energy, reclaimable, destructable."
+        },
+        {
+          "name": "FeatureDefNames",
+          "signature": "FeatureDefNames[string featureName]",
+          "description": "Global table mapping feature name string -> FeatureDef table."
+        }
+      ]
+    }
+  }
+}

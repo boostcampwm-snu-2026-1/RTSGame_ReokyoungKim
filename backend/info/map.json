@@ -1,0 +1,74 @@
+{
+    "Hooked 1.1.1": {
+        "size": [
+            6,
+            4
+        ],
+        "terrain_types": {
+            "0": "Ground"
+        },
+        "description": "A very small and fast-paced map suitable for intense close-quarters 1v1 skirmishes."
+    },
+    "BarR 1.1": {
+        "size": [
+            8,
+            8
+        ],
+        "terrain_types": {
+            "50": "Rocky Sand",
+            "128": "Crumbled Rock",
+            "255": "Hard Rock Cliff"
+        },
+        "description": "A compact rocky wasteland featuring rugged cliffs and sandy paths that create tactical choke points."
+    },
+    "Avalanche 3.4": {
+        "size": [
+            8,
+            8
+        ],
+        "terrain_types": {
+            "0": "Snow",
+            "75": "Ice",
+            "150": "Rocky",
+            "255": "Cliffs"
+        },
+        "description": "A cold winter map with snowy plains and icy cliffs, offering a distinct visual style and terrain barriers."
+    },
+    "Coast To Coast BAR v1.0": {
+        "size": [
+            12,
+            8
+        ],
+        "terrain_types": {
+            "0": "Default",
+            "255": "Cliffs"
+        },
+        "description": "A wide battlefield likely featuring coastal lanes and cliffs, balancing land combat with potential naval support."
+    },
+    "Crater Islands Remake v1.0.1": {
+        "size": [
+            12,
+            10
+        ],
+        "terrain_types": {
+            "0": "Ground",
+            "100": "Grass",
+            "255": "Cliffs"
+        },
+        "description": "A map featuring a chain of grassy islands and varied elevations, emphasizing naval control and amphibious assaults."
+    },
+    "Altored Divide Bar Remake 1.6.2": {
+        "size": [
+            16,
+            16
+        ],
+        "terrain_types": {
+            "0": "Planetoid",
+            "50": "Grassy",
+            "100": "Sand",
+            "150": "Rocky",
+            "200": "Mountain Cliff"
+        },
+        "description": "A large-scale macro map divided by mountainous terrain, offering diverse biomes from grassy plains to rocky cliffs."
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "specification": "A free-for-all battle with 4 teams, each team has approximately 20 pre-deployed units. Victory is achieved by eliminating all enemy units from the other three teams. Defeat occurs when all allied units are destroyed.",
+  "rule": [],
+  "decision": ["GroupMovement"]
+}

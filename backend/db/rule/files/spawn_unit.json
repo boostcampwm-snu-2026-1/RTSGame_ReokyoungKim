@@ -1,0 +1,115 @@
+{
+  "code": {
+    "name": "spawn_unit",
+    "path": "rule/codes/spawn_unit.lua",
+    "description": "Spawns units when specified conditions (time or unit count) are met. Useful for wave defense, reinforcements, or boss fights.",
+    "config_format": {
+      "<team_id>": [
+        {
+          "condition": {
+            "operator": "<and|or>",
+            "checks": [
+              {
+                "type": "time",
+                "op": "<comparison_operator>",
+                "value": "<seconds>"
+              },
+              {
+                "type": "unit_count",
+                "teamID": "<check_team_id>",
+                "unitCode": "<unit_name|all>",
+                "op": "<comparison_operator>",
+                "value": "<count>"
+              }
+            ]
+          },
+          "units": [
+            {
+              "unitName": "<unit_code>",
+              "x": "<spawn_x>",
+              "z": "<spawn_z>"
+            }
+          ]
+        }
+      ]
+    },
+    "config_example": {
+      "1": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": 60
+              }
+            ]
+          },
+          "units": [
+            {
+              "unitName": "armwar",
+              "x": 1000,
+              "z": 500
+            },
+            {
+              "unitName": "armwar",
+              "x": 1050,
+              "z": 500
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "verify_code": {
+    "path": "rule/verify_codes/spawn_unit.lua",
+    "description": "Verifies that units spawn correctly at the specified time conditions.",
+    "config_format": {
+      "<team_id>": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": "<seconds>"
+              }
+            ]
+          },
+          "units": [
+            {
+              "unitName": "<unit_code>",
+              "x": "<spawn_x>",
+              "z": "<spawn_z>"
+            }
+          ]
+        }
+      ]
+    },
+    "config_example": {
+      "1": [
+        {
+          "condition": {
+            "operator": "and",
+            "checks": [
+              {
+                "type": "time",
+                "op": ">=",
+                "value": 5
+              }
+            ]
+          },
+          "units": [
+            {
+              "unitName": "armpw",
+              "x": 1000,
+              "z": 500
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

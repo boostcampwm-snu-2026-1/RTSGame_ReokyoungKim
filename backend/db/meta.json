@@ -1,0 +1,33 @@
+{
+  "description": "Database for game simulation containing maps, scenarios, and units",
+  "folders": {
+    "map": {
+      "path": "map/",
+      "description": "Map database with sector-based terrain information for various battlefield environments"
+    },
+    "scenario": {
+      "path": "scenario/",
+      "description": "Scenario database with game modes designed to assess different AI capabilities (Theory of Mind, Spatial Reasoning, Long-Term Planning)"
+    },
+    "unit": {
+      "path": "unit/",
+      "description": "Armada faction unit database containing air, bot, building, defense, factories, hover, sea, and vehicle units"
+    },
+    "rule": {
+      "path": "rule/",
+      "description": "Contains rule codes for game customization (e.g., spawn units, restrict targets, auto-construct buildings) and verification codes to validate that each rule works correctly"
+    },
+    "decision": {
+      "path": "decision/",
+      "description": "Decision types that define available actions for AI agents in different scenarios"
+    },
+    "verify": {
+      "path": "verify/",
+      "description": "Verification gadgets for testing game setup and unit behavior"
+    },
+    "rubric": {
+      "path": "rubric/",
+      "description": "Rubric database containing evaluation criteria for different stages of game generation"
+    }
+  }
+}

@@ -1,0 +1,701 @@
+{
+  "source": "https://springrts.com/wiki/Lua_SyncedCtrl",
+  "description": "Spring RTS Synced Control API - functions that modify game state. Must be called from synced code only (inside gadgetHandler:IsSyncedCode()).",
+  "categories": {
+    "Game End": {
+      "description": "Functions to end the game or eliminate teams.",
+      "functions": [
+        {
+          "name": "Spring.KillTeam",
+          "signature": "Spring.KillTeam(number teamID)",
+          "description": "Declares a team dead; prevents further orders."
+        },
+        {
+          "name": "Spring.GameOver",
+          "signature": "Spring.GameOver(number allyTeamID1, number allyTeamID2, ...)",
+          "description": "Declares game over with winning ally teams."
+        }
+      ]
+    },
+    "RulesParams": {
+      "description": "Set custom key-value parameters on units, features, teams, or globally. Useful for communicating state between gadgets or to widgets.",
+      "functions": [
+        {
+          "name": "Spring.SetGameRulesParam",
+          "signature": "Spring.SetGameRulesParam(string paramName, number|string paramValue [, table losAccess])",
+          "description": "Sets a global game rule parameter."
+        },
+        {
+          "name": "Spring.SetTeamRulesParam",
+          "signature": "Spring.SetTeamRulesParam(number teamID, string paramName, number|string paramValue [, table losAccess])",
+          "description": "Sets a team rule parameter."
+        },
+        {
+          "name": "Spring.SetUnitRulesParam",
+          "signature": "Spring.SetUnitRulesParam(number unitID, string paramName, number|string paramValue [, table losAccess])",
+          "description": "Sets a unit rule parameter with optional access control."
+        },
+        {
+          "name": "Spring.SetFeatureRulesParam",
+          "signature": "Spring.SetFeatureRulesParam(number featureID, string paramName, number|string paramValue [, table losAccess])",
+          "description": "Sets a feature rule parameter."
+        }
+      ]
+    },
+    "Resources": {
+      "description": "Functions to modify team resource levels (metal, energy, storage, sharing).",
+      "functions": [
+        {
+          "name": "Spring.AddTeamResource",
+          "signature": "Spring.AddTeamResource(number teamID, string \"metal\"|\"energy\", number amount)",
+          "description": "Adds resources to a team."
+        },
+        {
+          "name": "Spring.UseTeamResource",
+          "signature": "Spring.UseTeamResource(number teamID, string \"metal\"|\"energy\", number amount)",
+          "description": "Consumes/spends team resources. Returns true if the team had enough."
+        },
+        {
+          "name": "Spring.SetTeamResource",
+          "signature": "Spring.SetTeamResource(number teamID, string res, number amount)",
+          "description": "Sets resource amount directly. res can be: \"metal\", \"energy\", \"ms\" (metal storage), \"es\" (energy storage)."
+        },
+        {
+          "name": "Spring.SetTeamShareLevel",
+          "signature": "Spring.SetTeamShareLevel(number teamID, string \"metal\"|\"energy\", number amount)",
+          "description": "Changes the resource sharing threshold for a team."
+        },
+        {
+          "name": "Spring.ShareTeamResource",
+          "signature": "Spring.ShareTeamResource(number teamID_src, number teamID_recv, string \"metal\"|\"energy\", number amount)",
+          "description": "Transfers resources from one team to another."
+        }
+      ]
+    },
+    "Teams": {
+      "description": "Functions to modify team/alliance relationships.",
+      "functions": [
+        {
+          "name": "Spring.SetAlly",
+          "signature": "Spring.SetAlly(number firstAllyTeamID, number secondAllyTeamID, bool ally)",
+          "description": "Changes alliance between two ally teams."
+        },
+        {
+          "name": "Spring.AssignPlayerToTeam",
+          "signature": "Spring.AssignPlayerToTeam(number playerID, number teamID)",
+          "description": "Assigns a player to a team."
+        },
+        {
+          "name": "Spring.SetGlobalLos",
+          "signature": "Spring.SetGlobalLos(number allyTeamID, bool globallos)",
+          "description": "Grants or revokes global line of sight for an allyTeam."
+        }
+      ]
+    },
+    "Unit Creation & Destruction": {
+      "description": "Functions to create, destroy, and transfer units.",
+      "functions": [
+        {
+          "name": "Spring.CreateUnit",
+          "signature": "Spring.CreateUnit(string defName|number unitDefID, number x, number y, number z, string facing|number facing, number teamID [, bool build [, bool flattenGround [, number builderID]]])",
+          "description": "Creates a unit at the specified location. facing: 'n','s','e','w' or 0-3."
+        },
+        {
+          "name": "Spring.DestroyUnit",
+          "signature": "Spring.DestroyUnit(number unitID [, bool selfd [, bool reclaimed [, number attackerID]]])",
+          "description": "Destroys a unit. selfd=true simulates self-destruct, reclaimed=true simulates reclaim. attackerID credits the kill."
+        },
+        {
+          "name": "Spring.TransferUnit",
+          "signature": "Spring.TransferUnit(number unitID, number newTeamID [, bool given])",
+          "description": "Transfers unit ownership. given=true means voluntary transfer, false means captured."
+        }
+      ]
+    },
+    "Unit Health & Damage": {
+      "description": "Functions to modify unit health, apply damage, and control armor.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitHealth",
+          "signature": "Spring.SetUnitHealth(number unitID, number health|table {health, capture, paralyze, build})",
+          "description": "Sets unit health values. Can pass a single number or a table with named fields."
+        },
+        {
+          "name": "Spring.SetUnitMaxHealth",
+          "signature": "Spring.SetUnitMaxHealth(number unitID, number maxHealth)",
+          "description": "Sets the maximum health of a unit."
+        },
+        {
+          "name": "Spring.AddUnitDamage",
+          "signature": "Spring.AddUnitDamage(number unitID, number damage [, number paralyzer [, number attackerID [, number weaponDefID [, number projectileID]]]])",
+          "description": "Applies damage to a unit. Optional paralyzer flag and attacker attribution."
+        },
+        {
+          "name": "Spring.SetUnitArmored",
+          "signature": "Spring.SetUnitArmored(number unitID, bool armored [, number armorMultiple])",
+          "description": "Sets whether a unit is in armored state and the damage multiplier."
+        }
+      ]
+    },
+    "Unit Costs & Experience": {
+      "description": "Functions to modify unit costs and experience.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitCosts",
+          "signature": "Spring.SetUnitCosts(number unitID, table {buildTime, metalCost, energyCost})",
+          "description": "Modifies the resource costs of a unit."
+        },
+        {
+          "name": "Spring.SetUnitExperience",
+          "signature": "Spring.SetUnitExperience(number unitID, number experience)",
+          "description": "Sets the experience level of a unit."
+        }
+      ]
+    },
+    "Unit Resourcing": {
+      "description": "Functions to modify per-unit resource generation and consumption. Key for economy gadgets.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitResourcing",
+          "signature": "Spring.SetUnitResourcing(number unitID, string res, number amount) or Spring.SetUnitResourcing(number unitID, table {res = amount, ...})",
+          "description": "Sets unit resource generation/consumption. res keys: 'umm' (use metal make), 'ume' (use metal extraction), 'uem' (use energy make), 'cmm' (current metal make), 'cme' (current metal extraction), 'cem' (current energy make), etc."
+        },
+        {
+          "name": "Spring.SetUnitMetalExtraction",
+          "signature": "Spring.SetUnitMetalExtraction(number unitID, number depth [, number range])",
+          "description": "Sets the metal extraction rate and range for a metal extractor unit."
+        },
+        {
+          "name": "Spring.AddUnitResource",
+          "signature": "Spring.AddUnitResource(number unitID, string \"m\"|\"e\", number amount)",
+          "description": "Adds resource to unit (m=metal, e=energy)."
+        },
+        {
+          "name": "Spring.UseUnitResource",
+          "signature": "Spring.UseUnitResource(number unitID, string \"m\"|\"e\", number amount)",
+          "description": "Consumes unit resources."
+        },
+        {
+          "name": "Spring.SetUnitHarvestStorage",
+          "signature": "Spring.SetUnitHarvestStorage(number unitID, number metal)",
+          "description": "Sets the harvest storage capacity of a unit."
+        }
+      ]
+    },
+    "Unit Movement & Position": {
+      "description": "Functions to control unit position, velocity, rotation, and movement.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitPosition",
+          "signature": "Spring.SetUnitPosition(number unitID, number x, number z [, bool alwaysAboveSea])",
+          "description": "Sets unit horizontal position (y is determined by ground height)."
+        },
+        {
+          "name": "Spring.SetUnitVelocity",
+          "signature": "Spring.SetUnitVelocity(number unitID, number velX, number velY, number velZ)",
+          "description": "Sets unit velocity vector."
+        },
+        {
+          "name": "Spring.SetUnitRotation",
+          "signature": "Spring.SetUnitRotation(number unitID, number yaw, number pitch, number roll)",
+          "description": "Sets unit rotation angles."
+        },
+        {
+          "name": "Spring.SetUnitDirection",
+          "signature": "Spring.SetUnitDirection(number unitID, number x, number y, number z)",
+          "description": "Sets unit facing direction vector."
+        },
+        {
+          "name": "Spring.AddUnitImpulse",
+          "signature": "Spring.AddUnitImpulse(number unitID, number x, number y, number z [, number decayRate])",
+          "description": "Applies impulse force to a unit."
+        },
+        {
+          "name": "Spring.SetUnitPhysics",
+          "signature": "Spring.SetUnitPhysics(number unitID, number posX, number posY, number posZ, number velX, number velY, number velZ, number rotX, number rotY, number rotZ, number dragX, number dragY, number dragZ)",
+          "description": "Sets complete unit physics state in one call."
+        },
+        {
+          "name": "Spring.SetUnitMoveGoal",
+          "signature": "Spring.SetUnitMoveGoal(number unitID, number goalX, number goalY, number goalZ [, number goalRadius [, number moveSpeed [, bool moveRaw]]])",
+          "description": "Sets the movement destination for a unit."
+        },
+        {
+          "name": "Spring.SetUnitLandGoal",
+          "signature": "Spring.SetUnitLandGoal(number unitID, number goalX, number goalY, number goalZ [, number goalRadius])",
+          "description": "Sets landing destination for air units."
+        },
+        {
+          "name": "Spring.ClearUnitGoal",
+          "signature": "Spring.ClearUnitGoal(number unitID)",
+          "description": "Clears the unit's current movement/action goal."
+        }
+      ]
+    },
+    "Unit Properties": {
+      "description": "Functions to modify misc unit properties (mass, range, blocking, tooltip, etc).",
+      "functions": [
+        {
+          "name": "Spring.SetUnitMaxRange",
+          "signature": "Spring.SetUnitMaxRange(number unitID, number maxRange)",
+          "description": "Sets the maximum weapon/attack range of a unit."
+        },
+        {
+          "name": "Spring.SetUnitMass",
+          "signature": "Spring.SetUnitMass(number unitID, number mass)",
+          "description": "Sets the mass of a unit."
+        },
+        {
+          "name": "Spring.SetUnitBlocking",
+          "signature": "Spring.SetUnitBlocking(number unitID, bool isblocking, bool isSolidObjectCollidable, bool isProjectileCollidable, bool isRaySegmentCollidable, bool crushable, bool blockEnemyPushing, bool blockHeightChanges)",
+          "description": "Configures unit collision/blocking properties."
+        },
+        {
+          "name": "Spring.SetUnitTooltip",
+          "signature": "Spring.SetUnitTooltip(number unitID, string tooltip)",
+          "description": "Sets the tooltip text for a unit."
+        },
+        {
+          "name": "Spring.SetUnitBuildSpeed",
+          "signature": "Spring.SetUnitBuildSpeed(number builderID, number buildSpeed [, number repairSpeed [, number reclaimSpeed [, number resurrectSpeed [, number captureSpeed [, number terraformSpeed]]]]])",
+          "description": "Sets the build/repair/reclaim speeds for a builder unit."
+        },
+        {
+          "name": "Spring.SetUnitNeutral",
+          "signature": "Spring.SetUnitNeutral(number unitID, bool neutral)",
+          "description": "Sets whether a unit is neutral. (removed in v83.0)"
+        },
+        {
+          "name": "Spring.SetUnitCrashing",
+          "signature": "Spring.SetUnitCrashing(number unitID, bool crashing)",
+          "description": "Sets whether a unit is in crashing state."
+        },
+        {
+          "name": "Spring.SetUnitStockpile",
+          "signature": "Spring.SetUnitStockpile(number unitID [, number stockpile [, number buildPercent]])",
+          "description": "Sets the stockpile count and build progress for a unit."
+        }
+      ]
+    },
+    "Unit LOS & Stealth": {
+      "description": "Functions to control unit visibility, cloaking, and sensor radius.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitCloak",
+          "signature": "Spring.SetUnitCloak(number unitID, bool cloaked|number scriptCloak [, bool decloakAbs|number decloakDistance])",
+          "description": "Controls unit cloaking state."
+        },
+        {
+          "name": "Spring.SetUnitStealth",
+          "signature": "Spring.SetUnitStealth(number unitID, bool stealth)",
+          "description": "Sets unit radar stealth status."
+        },
+        {
+          "name": "Spring.SetUnitSonarStealth",
+          "signature": "Spring.SetUnitSonarStealth(number unitID, bool sonarStealth)",
+          "description": "Sets unit sonar stealth mode."
+        },
+        {
+          "name": "Spring.SetUnitAlwaysVisible",
+          "signature": "Spring.SetUnitAlwaysVisible(number unitID, bool alwaysVisible)",
+          "description": "Makes unit always visible regardless of LOS."
+        },
+        {
+          "name": "Spring.SetUnitSensorRadius",
+          "signature": "Spring.SetUnitSensorRadius(number unitID, string type, number radius)",
+          "description": "Sets sensor detection radius. type: 'los','airLos','radar','sonar','seismic','radarJammer','sonarJammer'."
+        },
+        {
+          "name": "Spring.SetUnitLosState",
+          "signature": "Spring.SetUnitLosState(number unitID, number allyTeam, number los|table losTypes)",
+          "description": "Sets unit LOS state for a specific allyTeam."
+        }
+      ]
+    },
+    "Unit Weapons": {
+      "description": "Functions to control unit weapon state and targeting.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitTarget",
+          "signature": "Spring.SetUnitTarget(number unitID, number enemyUnitID|nil [, bool dgun [, bool userTarget [, number weaponNum]]]) or Spring.SetUnitTarget(number unitID, number x, number y, number z [, bool dgun [, bool userTarget [, number weaponNum]]])",
+          "description": "Defines the attack target for a unit. Pass nil to clear."
+        },
+        {
+          "name": "Spring.SetUnitWeaponState",
+          "signature": "Spring.SetUnitWeaponState(number unitID, number weaponNum, table states) or Spring.SetUnitWeaponState(number unitID, number weaponNum, string key, number value)",
+          "description": "Sets weapon state properties (e.g., reload time, range, projectile speed)."
+        },
+        {
+          "name": "Spring.SetUnitWeaponDamages",
+          "signature": "Spring.SetUnitWeaponDamages(number unitID, number weaponNum|string, table damages) or Spring.SetUnitWeaponDamages(number unitID, number weaponNum|string, string key, number value)",
+          "description": "Modifies weapon damage properties."
+        },
+        {
+          "name": "Spring.SetUnitShieldState",
+          "signature": "Spring.SetUnitShieldState(number unitID [, number weaponID [, bool enabled [, number power]]])",
+          "description": "Controls unit shield state (enable/disable, set power)."
+        },
+        {
+          "name": "Spring.UnitWeaponFire",
+          "signature": "Spring.UnitWeaponFire(number unitID, number weaponID)",
+          "description": "Forces a unit to fire a specific weapon."
+        },
+        {
+          "name": "Spring.UnitWeaponHoldFire",
+          "signature": "Spring.UnitWeaponHoldFire(number unitID, number weaponID)",
+          "description": "Forces a unit weapon to hold fire."
+        }
+      ]
+    },
+    "Unit Transport": {
+      "description": "Functions for transport/passenger mechanics.",
+      "functions": [
+        {
+          "name": "Spring.UnitAttach",
+          "signature": "Spring.UnitAttach(number transporterID, number passengerID, number pieceNum)",
+          "description": "Attaches a passenger unit to a transporter at a specific piece."
+        },
+        {
+          "name": "Spring.UnitDetach",
+          "signature": "Spring.UnitDetach(number passengerID)",
+          "description": "Detaches a unit from its transport."
+        },
+        {
+          "name": "Spring.UnitDetachFromAir",
+          "signature": "Spring.UnitDetachFromAir(number passengerID)",
+          "description": "Detaches a unit from air transport (drops it)."
+        },
+        {
+          "name": "Spring.SetUnitLoadingTransport",
+          "signature": "Spring.SetUnitLoadingTransport(number passengerID, number transportID)",
+          "description": "Disables collisions between units during transport loading approach."
+        }
+      ]
+    },
+    "Unit Collision Volumes": {
+      "description": "Functions to modify unit and piece collision volumes.",
+      "functions": [
+        {
+          "name": "Spring.SetUnitCollisionVolumeData",
+          "signature": "Spring.SetUnitCollisionVolumeData(number unitID, number scaleX, number scaleY, number scaleZ, number offsetX, number offsetY, number offsetZ, number vType, number tType, number Axis)",
+          "description": "Configures unit collision volume shape and offset."
+        },
+        {
+          "name": "Spring.SetUnitPieceCollisionVolumeData",
+          "signature": "Spring.SetUnitPieceCollisionVolumeData(number unitID, number pieceIndex, bool enable, number scaleX, number scaleY, number scaleZ, number offsetX, number offsetY, number offsetZ [, number volumeType [, number primaryAxis]])",
+          "description": "Configures collision volume for a specific unit piece."
+        },
+        {
+          "name": "Spring.SetUnitMidAndAimPos",
+          "signature": "Spring.SetUnitMidAndAimPos(number unitID, number mpX, number mpY, number mpZ, number apX, number apY, number apZ [, bool relative])",
+          "description": "Sets unit center and aim positions."
+        },
+        {
+          "name": "Spring.SetUnitRadiusAndHeight",
+          "signature": "Spring.SetUnitRadiusAndHeight(number unitID, number radius, number height)",
+          "description": "Sets unit collision radius and height."
+        }
+      ]
+    },
+    "Unit Movement Types": {
+      "description": "Functions to control movement type parameters for different unit locomotion types.",
+      "functions": [
+        {
+          "name": "Spring.SetGroundMoveTypeData",
+          "signature": "Spring.SetGroundMoveTypeData(number unitID, table properties)",
+          "description": "Controls ground unit movement properties (maxSpeed, turnRate, accRate, etc)."
+        },
+        {
+          "name": "Spring.SetAirMoveTypeData",
+          "signature": "Spring.SetAirMoveTypeData(number unitID, table properties)",
+          "description": "Controls air unit (airplane) movement properties."
+        },
+        {
+          "name": "Spring.SetGunshipMoveTypeData",
+          "signature": "Spring.SetGunshipMoveTypeData(number unitID, table properties)",
+          "description": "Controls gunship/helicopter movement properties."
+        }
+      ]
+    },
+    "Feature Creation & Destruction": {
+      "description": "Functions to create, destroy, and modify map features (wrecks, props, trees, etc).",
+      "functions": [
+        {
+          "name": "Spring.CreateFeature",
+          "signature": "Spring.CreateFeature(string defName|number featureDefID, number x, number y, number z [, number heading [, number AllyTeamID [, number featureID]]])",
+          "description": "Creates a feature (wreck, prop, etc) at the specified location."
+        },
+        {
+          "name": "Spring.DestroyFeature",
+          "signature": "Spring.DestroyFeature(number featureID)",
+          "description": "Destroys/removes a feature from the map."
+        },
+        {
+          "name": "Spring.TransferFeature",
+          "signature": "Spring.TransferFeature(number featureID, number teamID)",
+          "description": "Transfers feature ownership to a team."
+        },
+        {
+          "name": "Spring.SetFeatureHealth",
+          "signature": "Spring.SetFeatureHealth(number featureID, number health)",
+          "description": "Sets feature health."
+        },
+        {
+          "name": "Spring.SetFeatureResources",
+          "signature": "Spring.SetFeatureResources(number featureID, number metal, number energy [, number reclaimTime [, number reclaimLeft [, ...]]])",
+          "description": "Sets the reclaimable resource values of a feature."
+        },
+        {
+          "name": "Spring.SetFeatureReclaim",
+          "signature": "Spring.SetFeatureReclaim(number featureID, number reclaimLeft)",
+          "description": "Sets remaining reclaim progress (0.0 to 1.0)."
+        },
+        {
+          "name": "Spring.SetFeatureResurrect",
+          "signature": "Spring.SetFeatureResurrect(number featureID, number unitDefID|string unitDefName [, number facing [, number progress]])",
+          "description": "Configures what unit a feature resurrects into."
+        },
+        {
+          "name": "Spring.SetFeaturePosition",
+          "signature": "Spring.SetFeaturePosition(number featureID, number x, number y, number z [, bool snapToGround])",
+          "description": "Sets feature position."
+        },
+        {
+          "name": "Spring.SetFeatureAlwaysVisible",
+          "signature": "Spring.SetFeatureAlwaysVisible(number featureID, bool enable)",
+          "description": "Makes feature always visible on the map."
+        },
+        {
+          "name": "Spring.SetFeatureBlocking",
+          "signature": "Spring.SetFeatureBlocking(number featureID, bool isBlocking, bool isSolidObjectCollidable, bool isProjectileCollidable, bool isRaySegmentCollidable, bool crushable, bool blockEnemyPushing, bool blockHeightChanges)",
+          "description": "Configures feature collision/blocking properties."
+        },
+        {
+          "name": "Spring.SetFeatureMoveCtrl",
+          "signature": "Spring.SetFeatureMoveCtrl(number featureID [, bool enable [, ...]])",
+          "description": "Enables/disables Lua-controlled feature movement physics."
+        }
+      ]
+    },
+    "Give Orders": {
+      "description": "Functions to issue commands to units.",
+      "functions": [
+        {
+          "name": "Spring.GiveOrderToUnit",
+          "signature": "Spring.GiveOrderToUnit(number unitID, number cmdID, params = table, options = table)",
+          "description": "Issues a single command to a single unit. cmdID: CMD.MOVE, CMD.ATTACK, CMD.GUARD, etc."
+        },
+        {
+          "name": "Spring.GiveOrderToUnitArray",
+          "signature": "Spring.GiveOrderToUnitArray(unitArray = table, number cmdID, params = table, options = table)",
+          "description": "Issues a single command to an array of units."
+        },
+        {
+          "name": "Spring.GiveOrderArrayToUnitArray",
+          "signature": "Spring.GiveOrderArrayToUnitArray(unitArray = table, orderArray = table)",
+          "description": "Issues multiple commands to an array of units."
+        },
+        {
+          "name": "Spring.GiveOrderToUnitMap",
+          "signature": "Spring.GiveOrderToUnitMap(unitMap = table, number cmdID, params = table, options = table)",
+          "description": "Issues a single command to units from a map table."
+        },
+        {
+          "name": "Spring.GiveOrderArrayToUnitMap",
+          "signature": "Spring.GiveOrderArrayToUnitMap(unitMap = table, orderArray = table)",
+          "description": "Issues multiple commands to units from a map table."
+        }
+      ]
+    },
+    "Command Descriptions": {
+      "description": "Functions to modify the command list available to units.",
+      "functions": [
+        {
+          "name": "Spring.EditUnitCmdDesc",
+          "signature": "Spring.EditUnitCmdDesc(number unitID, number cmdDescID, table cmdArray)",
+          "description": "Modifies an existing unit command description."
+        },
+        {
+          "name": "Spring.InsertUnitCmdDesc",
+          "signature": "Spring.InsertUnitCmdDesc(number unitID [, number cmdDescID], table cmdArray)",
+          "description": "Adds a new command to a unit's command list."
+        },
+        {
+          "name": "Spring.RemoveUnitCmdDesc",
+          "signature": "Spring.RemoveUnitCmdDesc(number unitID [, number cmdDescID])",
+          "description": "Removes a command from a unit's command list."
+        }
+      ]
+    },
+    "Explosions & Effects": {
+      "description": "Functions to spawn explosions and visual effects.",
+      "functions": [
+        {
+          "name": "Spring.SpawnExplosion",
+          "signature": "Spring.SpawnExplosion(number posX, number posY, number posZ, number dirX, number dirY, number dirZ, table explosionParams)",
+          "description": "Creates an explosion at position with direction and parameters."
+        },
+        {
+          "name": "Spring.SpawnCEG",
+          "signature": "Spring.SpawnCEG(string cegname, number posX, number posY, number posZ, number dirX, number dirY, number dirZ, number radius, number damage)",
+          "description": "Spawns a custom explosion graphics effect."
+        },
+        {
+          "name": "Spring.SpawnSFX",
+          "signature": "Spring.SpawnSFX(number unitID, number sfxID, number posX, number posY, number posZ, number dirX, number dirY, number dirZ, number radius, number damage [, bool absolute])",
+          "description": "Spawns special visual effects relative to a unit."
+        }
+      ]
+    },
+    "Projectiles": {
+      "description": "Functions to create and control projectiles.",
+      "functions": [
+        {
+          "name": "Spring.SpawnProjectile",
+          "signature": "Spring.SpawnProjectile(number weaponDefID, table projectileParams)",
+          "description": "Creates a projectile with specified weapon definition and parameters."
+        },
+        {
+          "name": "Spring.DeleteProjectile",
+          "signature": "Spring.DeleteProjectile(number projectileID)",
+          "description": "Removes a projectile without triggering explosion."
+        },
+        {
+          "name": "Spring.SetProjectileTarget",
+          "signature": "Spring.SetProjectileTarget(number projectileID, [number targetID, number targetType]|[number posX, number posY, number posZ])",
+          "description": "Sets projectile target (unit/feature ID with type, or position)."
+        },
+        {
+          "name": "Spring.SetProjectileMoveControl",
+          "signature": "Spring.SetProjectileMoveControl(number projectileID, bool enable)",
+          "description": "Enables Lua-controlled physics for a projectile."
+        },
+        {
+          "name": "Spring.SetProjectilePosition",
+          "signature": "Spring.SetProjectilePosition(number projectileID [, number posX [, number posY [, number posZ]]])",
+          "description": "Sets projectile position."
+        },
+        {
+          "name": "Spring.SetProjectileVelocity",
+          "signature": "Spring.SetProjectileVelocity(number projectileID [, number velX [, number velY [, number velZ]]])",
+          "description": "Sets projectile velocity."
+        },
+        {
+          "name": "Spring.SetProjectileCollision",
+          "signature": "Spring.SetProjectileCollision(number projectileID)",
+          "description": "Triggers projectile collision (detonation)."
+        },
+        {
+          "name": "Spring.SetProjectileGravity",
+          "signature": "Spring.SetProjectileGravity(number projectileID [, number grav])",
+          "description": "Sets projectile gravity override."
+        },
+        {
+          "name": "Spring.SetProjectileAlwaysVisible",
+          "signature": "Spring.SetProjectileAlwaysVisible(number projectileID, bool alwaysVisible)",
+          "description": "Makes projectile always visible."
+        },
+        {
+          "name": "Spring.SetProjectileDamages",
+          "signature": "Spring.SetProjectileDamages(number projectileID, number weaponNum, table damages|string key, number value)",
+          "description": "Modifies projectile damage properties."
+        }
+      ]
+    },
+    "Terrain & Ground": {
+      "description": "Functions to modify terrain heightmap, metal map, grass, and terrain types.",
+      "functions": [
+        {
+          "name": "Spring.SetHeightMapFunc",
+          "signature": "Spring.SetHeightMapFunc(lua_function [, arg1 [, arg2 [, ...]]])",
+          "description": "Batches heightmap modifications. Inside the callback, use Spring.SetHeightMap/AddHeightMap."
+        },
+        {
+          "name": "Spring.SetHeightMap",
+          "signature": "Spring.SetHeightMap(number x, number z, number height [, number terraform])",
+          "description": "Sets terrain height at (x,z). Only valid inside SetHeightMapFunc callback."
+        },
+        {
+          "name": "Spring.LevelHeightMap",
+          "signature": "Spring.LevelHeightMap(number x1, number z1 [, number x2, number z2], number height)",
+          "description": "Levels terrain in a rectangular area to specified height."
+        },
+        {
+          "name": "Spring.AdjustHeightMap",
+          "signature": "Spring.AdjustHeightMap(number x1, number z1 [, number x2, number z2], number height)",
+          "description": "Raises/lowers terrain in area by height amount."
+        },
+        {
+          "name": "Spring.SetMetalAmount",
+          "signature": "Spring.SetMetalAmount(number x, number z, number metalAmount)",
+          "description": "Sets the metal resource density at a map location."
+        },
+        {
+          "name": "Spring.SetMapSquareTerrainType",
+          "signature": "Spring.SetMapSquareTerrainType(number x, number z, number newType)",
+          "description": "Changes the terrain type of a map square (affects movement speed)."
+        },
+        {
+          "name": "Spring.SetSquareBuildingMask",
+          "signature": "Spring.SetSquareBuildingMask(number x, number z, number mask)",
+          "description": "Sets building restriction mask for a map square."
+        },
+        {
+          "name": "Spring.AddGrass",
+          "signature": "Spring.AddGrass(number x, number z)",
+          "description": "Adds grass at the specified location."
+        },
+        {
+          "name": "Spring.RemoveGrass",
+          "signature": "Spring.RemoveGrass(number x, number z)",
+          "description": "Removes grass at the specified location."
+        }
+      ]
+    },
+    "Misc": {
+      "description": "Other synced control functions.",
+      "functions": [
+        {
+          "name": "Spring.SetNoPause",
+          "signature": "Spring.SetNoPause(bool noPause)",
+          "description": "Toggles whether the game can be paused."
+        },
+        {
+          "name": "Spring.SetUnitToFeature",
+          "signature": "Spring.SetUnitToFeature(bool tofeature)",
+          "description": "Toggles whether units leave wreckage (features) when destroyed."
+        },
+        {
+          "name": "Spring.SetExperienceGrade",
+          "signature": "Spring.SetExperienceGrade(number expGrade [, number ExpPowerScale [, number ExpHealthScale [, number ExpReloadScale]]])",
+          "description": "Configures experience level scaling thresholds."
+        }
+      ]
+    },
+    "COB Interop": {
+      "description": "Functions for interacting with COB (unit animation) scripts.",
+      "functions": [
+        {
+          "name": "Spring.CallCOBScript",
+          "signature": "Spring.CallCOBScript(number unitID, number funcID|string funcName, number retArgs, COBArg1, COBArg2, ...)",
+          "description": "Calls a COB script function on a unit."
+        },
+        {
+          "name": "Spring.GetCOBScriptID",
+          "signature": "Spring.GetCOBScriptID(number unitID, string funcName)",
+          "description": "Retrieves the COB function identifier by name."
+        },
+        {
+          "name": "Spring.GetUnitCOBValue",
+          "signature": "Spring.GetUnitCOBValue(number unitID [, bool splitData], number COBValue [, number param1 [, ...]])",
+          "description": "Reads a COB value from a unit."
+        },
+        {
+          "name": "Spring.SetUnitCOBValue",
+          "signature": "Spring.SetUnitCOBValue(number unitID, number COBValue, number param1 [, number param2])",
+          "description": "Sets a COB value on a unit."
+        }
+      ]
+    }
+  }
+}

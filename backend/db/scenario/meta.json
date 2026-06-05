@@ -1,0 +1,25 @@
+{
+  "description": "Scenario database for game simulation with various game modes and mechanics",
+  "details": {
+    "Fixed-Field Skirmish FFA": {
+      "file": "scenario/files/Fixed-Field Skirmish FFA.json",
+      "description": "Free-for-all battle with pre-deployed units, every player fights individually until only one survives"
+    },
+    "Fixed-Field Skirmish Team": {
+      "file": "scenario/files/Fixed-Field Skirmish Team.json",
+      "description": "Team battle with pre-deployed units, multiple teams with allied players cooperate to annihilate enemy teams"
+    },
+    "Multi-Front Defense": {
+      "file": "scenario/files/Multi-Front Defense.json",
+      "description": "Defend buildings at the center of the map from enemies attacking from all directions for a certain period of time"
+    },
+    "Siege Planning": {
+      "file": "scenario/files/Siege Planning.json",
+      "description": "Destroy target buildings by breaking through enemy defenses within the time limit"
+    },
+    "Time-Phased Production": {
+      "file": "scenario/files/Time-Phased Production.json",
+      "description": "Construct a target building within the time limit while defending against enemies with limited resources"
+    }
+  }
+}

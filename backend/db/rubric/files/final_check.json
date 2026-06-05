@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "project": "BAR_Minigame_Generator",
+    "version": "1.1",
+    "description": "Visual and Runtime evaluation criteria based on game screenshots and execution logs. Adapted for static image constraints.",
+    "categories": [
+      "Visual Coherence",
+      "Runtime Stability",
+      "Gameplay Pacing",
+      "UI & Feedback"
+    ]
+  },
+  "rubrics": [
+    {
+      "category": "Visual Coherence",
+      "criterion": "Thematic Consistency",
+      "description": "Verify that the units, terrain, and effects shown in the screenshot match the 'Game Mode' theme. FAIL if a 'Desert Warfare' mode shows lush forest units or mismatched assets."
+    },
+    {
+      "category": "Visual Coherence",
+      "criterion": "Entity Overlap & Collision",
+      "description": "Verify that units and buildings are not overlapping/clipping AND that initial placement/spawn locations are valid for movement on the current terrain. FAIL if any placed unit is immobile due to terrain passability/slope/water depth mismatch (i.e., becomes stuck immediately after spawn) or if entities are visibly overlapping/clipping into each other."
+    },
+    {
+      "category": "Runtime Stability",
+      "criterion": "Performance Bottleneck",
+      "description": "Analyze if the screenshot shows excessive frame-rate drop indicators or 'unit stuttering' (visual ghosting). FAIL if the unit density is too high for the engine to render smoothly."
+    },
+    {
+      "category": "Gameplay Pacing",
+      "criterion": "Gadget Behavior Verification",
+      "description": "Assess if custom gadget mechanics are functioning based on contextual clues, noting that static screenshots may miss split-second dynamic actions (e.g., exact moments of explosions or spawns). Look for secondary evidence like damaged health bars, wreckage, or presence of spawned units. FAIL only if there is explicit visual or log evidence directly contradicting the gadget logic (e.g., visible error logs, or a 'no towers' rule broken by a player building towers)."
+    },
+    {
+      "category": "Gameplay Pacing",
+      "criterion": "Game Description Alignment",
+      "description": "Verify general consistency between the visible game state and the game mode description. Do not demand absolute visual proof of pacing or flow over time (like 'waves of enemies' or 'long-term starvation'), as screenshots only capture a single moment. FAIL only if the visual evidence blatantly contradicts the core premise (e.g., resource UI showing infinite metal in a 'scarce resources' mode, or a massive army in a 'lone wolf' mode)."
+    }
+  ]
+}

@@ -1,0 +1,733 @@
+{
+  "source": "https://springrts.com/wiki/Lua:Callins",
+  "description": "Spring RTS Lua Callins - callback functions that the engine invokes on gadgets/widgets. Synced callins run in authoritative game logic; unsynced callins run in UI/rendering contexts.",
+  "categories": {
+    "Common Callins": {
+      "description": "Callins available in all contexts (both synced and unsynced).",
+      "functions": [
+        {
+          "name": "Initialize",
+          "signature": "addon.Initialize()",
+          "description": "Triggered when the addon loads or reloads.",
+          "context": "both"
+        },
+        {
+          "name": "Shutdown",
+          "signature": "addon.Shutdown()",
+          "description": "Triggered during addon or game termination.",
+          "context": "both"
+        }
+      ]
+    },
+    "Game State Callins": {
+      "description": "Callins related to game state changes, available in both synced and unsynced.",
+      "functions": [
+        {
+          "name": "GameID",
+          "signature": "addon.GameID(gameID)",
+          "description": "Delivers the gameID once (hex-encoded in 101.0+).",
+          "context": "both"
+        },
+        {
+          "name": "GamePaused",
+          "signature": "addon.GamePaused()",
+          "description": "Game is paused.",
+          "context": "both"
+        },
+        {
+          "name": "GameUnpaused",
+          "signature": "addon.GameUnpaused()",
+          "description": "Game resumes from pause.",
+          "context": "both"
+        },
+        {
+          "name": "GameOver",
+          "signature": "addon.GameOver(winningAllyTeams)",
+          "description": "Game concludes; table contains winning allyTeams (empty if undecided). This is a CALLIN that receives game over events, NOT a function to end the game.",
+          "context": "both"
+        },
+        {
+          "name": "GameFrame",
+          "signature": "addon.GameFrame(frame)",
+          "description": "Called every simulation frame (30/sec). Frame numbering starts at 0 in 101.0+ (previously 1).",
+          "context": "both"
+        },
+        {
+          "name": "GamePreload",
+          "signature": "addon.GamePreload()",
+          "description": "Executes before frame 0. Not called when loading saves (104.0+).",
+          "context": "both"
+        },
+        {
+          "name": "GameStart",
+          "signature": "addon.GameStart()",
+          "description": "Game begins. Not called when loading saves (104.0+).",
+          "context": "both"
+        }
+      ]
+    },
+    "Unit Lifecycle Callins": {
+      "description": "Callins for unit creation, destruction, and state changes.",
+      "functions": [
+        {
+          "name": "UnitCreated",
+          "signature": "addon.UnitCreated(unitID, unitDefID, unitTeam, builderID)",
+          "description": "Unit instantiation occurs.",
+          "context": "both"
+        },
+        {
+          "name": "UnitFinished",
+          "signature": "addon.UnitFinished(unitID, unitDefID, unitTeam)",
+          "description": "Unit construction completes.",
+          "context": "both"
+        },
+        {
+          "name": "UnitFromFactory",
+          "signature": "addon.UnitFromFactory(unitID, unitDefID, unitTeam, factID, factDefID, userOrders)",
+          "description": "Factory produces unit.",
+          "context": "both"
+        },
+        {
+          "name": "UnitDestroyed",
+          "signature": "addon.UnitDestroyed(unitID, unitDefID, unitTeam, attackerID, attackerDefID, attackerTeam)",
+          "description": "Unit is destroyed.",
+          "context": "both"
+        },
+        {
+          "name": "RenderUnitDestroyed",
+          "signature": "addon.RenderUnitDestroyed(unitID, unitDefID, unitTeam)",
+          "description": "Called just before unit becomes invalid after death animation completes (101.0+).",
+          "context": "both"
+        },
+        {
+          "name": "UnitDamaged",
+          "signature": "addon.UnitDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)",
+          "description": "Triggered after damage application (post-UnitPreDamaged). This is a notification callin, it cannot modify damage.",
+          "context": "both"
+        },
+        {
+          "name": "UnitStunned",
+          "signature": "addon.UnitStunned(unitID, unitDefID, unitTeam, stunned)",
+          "description": "Unit stun status changes (99.0+).",
+          "context": "both"
+        },
+        {
+          "name": "UnitCloaked",
+          "signature": "addon.UnitCloaked(unitID, unitDefID, unitTeam)",
+          "description": "Unit activates cloaking.",
+          "context": "both"
+        },
+        {
+          "name": "UnitDecloaked",
+          "signature": "addon.UnitDecloaked(unitID, unitDefID, unitTeam)",
+          "description": "Unit deactivates cloaking.",
+          "context": "both"
+        },
+        {
+          "name": "UnitIdle",
+          "signature": "addon.UnitIdle(unitID, unitDefID, unitTeam)",
+          "description": "Unit command queue empties.",
+          "context": "both"
+        },
+        {
+          "name": "UnitExperience",
+          "signature": "addon.UnitExperience(unitID, unitDefID, unitTeam, experience, oldExperience)",
+          "description": "Unit gains experience (when increment >= minimum set via Spring.SetExperienceGrade).",
+          "context": "both"
+        }
+      ]
+    },
+    "Unit Command Callins": {
+      "description": "Callins for unit commands and orders.",
+      "functions": [
+        {
+          "name": "UnitCommand",
+          "signature": "addon.UnitCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOpts, cmdTag)",
+          "description": "Called after unit accepts command (post-AllowCommand).",
+          "context": "both"
+        },
+        {
+          "name": "UnitCmdDone",
+          "signature": "addon.UnitCmdDone(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOpts, cmdTag)",
+          "description": "Unit completes a command.",
+          "context": "both"
+        }
+      ]
+    },
+    "Unit Transport Callins": {
+      "description": "Callins for unit loading/unloading from transports.",
+      "functions": [
+        {
+          "name": "UnitLoaded",
+          "signature": "addon.UnitLoaded(unitID, unitDefID, unitTeam, transportID, transportTeam)",
+          "description": "Unit is loaded into transport.",
+          "context": "both"
+        },
+        {
+          "name": "UnitUnloaded",
+          "signature": "addon.UnitUnloaded(unitID, unitDefID, unitTeam, transportID, transportTeam)",
+          "description": "Unit is unloaded from transport.",
+          "context": "both"
+        }
+      ]
+    },
+    "Unit Visibility Callins": {
+      "description": "Callins for unit visibility changes (LOS, radar).",
+      "functions": [
+        {
+          "name": "UnitEnteredLos",
+          "signature": "addon.UnitEnteredLos(unitID, unitTeam, allyTeam, unitDefID)",
+          "description": "Unit enters LOS; allyTeam parameter identifies observer.",
+          "context": "both"
+        },
+        {
+          "name": "UnitLeftLos",
+          "signature": "addon.UnitLeftLos(unitID, unitTeam, allyTeam, unitDefID)",
+          "description": "Unit departs LOS. For widgets, called before departure, allowing position retrieval.",
+          "context": "both"
+        },
+        {
+          "name": "UnitEnteredRadar",
+          "signature": "addon.UnitEnteredRadar(unitID, unitTeam, allyTeam, unitDefID)",
+          "description": "Unit enters radar coverage (also called when unit enters LOS).",
+          "context": "both"
+        },
+        {
+          "name": "UnitLeftRadar",
+          "signature": "addon.UnitLeftRadar(unitID, unitTeam, allyTeam, unitDefID)",
+          "description": "Unit leaves radar. For widgets, called after departure; position unavailable.",
+          "context": "both"
+        },
+        {
+          "name": "UnitSeismicPing",
+          "signature": "addon.UnitSeismicPing(x, y, z, strength, allyTeam, unitID, unitDefID)",
+          "description": "Unit emits seismic signature (see unitDef: seismicSignature).",
+          "context": "both"
+        }
+      ]
+    },
+    "Unit Transfer Callins": {
+      "description": "Callins for unit ownership changes between teams.",
+      "functions": [
+        {
+          "name": "UnitGiven",
+          "signature": "addon.UnitGiven(unitID, unitDefID, newTeam, oldTeam)",
+          "description": "Unit transferred between teams (called after UnitTaken); unit now belongs to newTeam.",
+          "context": "both"
+        },
+        {
+          "name": "UnitTaken",
+          "signature": "addon.UnitTaken(unitID, unitDefID, oldTeam, newTeam)",
+          "description": "Unit transferred between teams (called before UnitGiven); unit still assigned to oldTeam.",
+          "context": "both"
+        },
+        {
+          "name": "UnitReverseBuilt",
+          "signature": "addon.UnitReverseBuilt(unitID, unitDefID, unitTeam)",
+          "description": "Unit reverts to nanoframe (incomplete state).",
+          "context": "both"
+        }
+      ]
+    },
+    "Weapon Callins": {
+      "description": "Callins for weapon and stockpile events.",
+      "functions": [
+        {
+          "name": "StockpileChanged",
+          "signature": "addon.StockpileChanged(unitID, unitDefID, unitTeam, weaponNum, oldCount, newCount)",
+          "description": "Stockpile weapon count increases/decreases.",
+          "context": "both"
+        }
+      ]
+    },
+    "Feature Callins": {
+      "description": "Callins for feature (wreckage, resource) events.",
+      "functions": [
+        {
+          "name": "FeatureCreated",
+          "signature": "addon.FeatureCreated(featureID, allyTeamID)",
+          "description": "Feature instantiation occurs.",
+          "context": "both"
+        },
+        {
+          "name": "FeatureDamaged",
+          "signature": "addon.FeatureDamaged(featureID, featureDefID, featureTeam, damage, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam)",
+          "description": "Feature receives damage.",
+          "context": "both"
+        },
+        {
+          "name": "FeatureDestroyed",
+          "signature": "addon.FeatureDestroyed(featureID, allyTeamID)",
+          "description": "Feature is destroyed.",
+          "context": "both"
+        }
+      ]
+    },
+    "Projectile Callins": {
+      "description": "Callins for projectile events. Only fires for weaponDefIDs registered via Script.SetWatchWeapon.",
+      "functions": [
+        {
+          "name": "ProjectileCreated",
+          "signature": "addon.ProjectileCreated(proID, proOwnerID, weaponDefID)",
+          "description": "Called when projectile instantiates. Only fires for registered weapons.",
+          "context": "both"
+        },
+        {
+          "name": "ProjectileDestroyed",
+          "signature": "addon.ProjectileDestroyed(proID)",
+          "description": "Projectile is destroyed. Only fires for registered weapons.",
+          "context": "both"
+        }
+      ]
+    },
+    "Synced-Only Callins": {
+      "description": "Callins that only run in synced (authoritative game logic) context. These can modify game state.",
+      "functions": [
+        {
+          "name": "AllowCommand",
+          "signature": "addon.AllowCommand(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOptions, cmdTag, synced) -> bool allow",
+          "description": "Executed when command is issued, before queue modification. Return false to prevent queueing.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "CommandFallback",
+          "signature": "addon.CommandFallback(unitID, unitDefID, unitTeam, cmdID, cmdParams, cmdOptions, cmdTag) -> bool used, bool finished",
+          "description": "Invoked when unit encounters unknown commands. First return indicates handler consumed command; second indicates completion (true = remove, false = retry).",
+          "context": "synced",
+          "returns": "bool used, bool finished"
+        },
+        {
+          "name": "AllowUnitCreation",
+          "signature": "addon.AllowUnitCreation(unitDefID, builderID, builderTeam, x, y, z, facing) -> bool allow",
+          "description": "Executed before unit instantiation. Return false to prevent creation.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowUnitTransfer",
+          "signature": "addon.AllowUnitTransfer(unitID, unitDefID, oldTeam, newTeam, capture) -> bool allow",
+          "description": "Executed before team reassignment. Return false to prevent transfer.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowFeatureCreation",
+          "signature": "addon.AllowFeatureCreation(featureDefID, teamID, x, y, z) -> bool allow",
+          "description": "Executed before feature instantiation. Return false to prevent creation.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowUnitBuildStep",
+          "signature": "addon.AllowUnitBuildStep(builderID, builderTeam, unitID, unitDefID, part) -> bool allow",
+          "description": "Called before unit build percentage progresses. Return false to prevent progress.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowFeatureBuildStep",
+          "signature": "addon.AllowFeatureBuildStep(builderID, builderTeam, featureID, featureDefID, part) -> bool allow",
+          "description": "Called before feature build percentage changes. Applies to construction, reclamation, resurrection, and refilling. Negative part values indicate reclamation.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowResourceLevel",
+          "signature": "addon.AllowResourceLevel(teamID, res, level) -> bool allow",
+          "description": "Controls team resource-sharing level changes.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowResourceTransfer",
+          "signature": "addon.AllowResourceTransfer(oldTeamID, newTeamID, res, amount) -> bool allow",
+          "description": "Executed before inter-team resource transfer.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "TeamChanged",
+          "signature": "addon.TeamChanged(teamID)",
+          "description": "Team status changes.",
+          "context": "synced"
+        },
+        {
+          "name": "TeamDied",
+          "signature": "addon.TeamDied(teamID)",
+          "description": "Team is eliminated (see Spring.KillTeam).",
+          "context": "synced"
+        },
+        {
+          "name": "AllowStartPosition",
+          "signature": "addon.AllowStartPosition(playerID, teamID, readyState, clampedX, clampedY, clampedZ, rawX, rawY, rawZ) -> bool allow",
+          "description": "Validates start position. readyState: 0=position selected, 1=ready clicked, 2=ready forced/auto, 3=load failed.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowDirectUnitControl",
+          "signature": "addon.AllowDirectUnitControl(unitID, unitDefID, unitTeam, playerID) -> bool allow",
+          "description": "Determines FPS-view controllability.",
+          "context": "synced",
+          "returns": "bool allow"
+        },
+        {
+          "name": "AllowWeaponTargetCheck",
+          "signature": "addon.AllowWeaponTargetCheck(attackerID, attackerWeaponNum, attackerWeaponDefID) -> bool allowCheck, bool ignoreCheck",
+          "description": "Controls auto-targeting capability.",
+          "context": "synced",
+          "returns": "bool allowCheck, bool ignoreCheck"
+        },
+        {
+          "name": "AllowWeaponTarget",
+          "signature": "addon.AllowWeaponTarget(attackerID, targetID, attackerWeaponNum, attackerWeaponDefID, defPriority) -> bool allowed, number newPriority",
+          "description": "Regulates specific targeting decisions; second return modifies priority (lower=targeted first).",
+          "context": "synced",
+          "returns": "bool allowed, number newPriority"
+        },
+        {
+          "name": "AllowWeaponInterceptTarget",
+          "signature": "addon.AllowWeaponInterceptTarget(interceptorUnitID, interceptorWeaponID, targetProjectileID) -> bool allowed",
+          "description": "Controls interceptor targeting (registered weapons only).",
+          "context": "synced",
+          "returns": "bool allowed"
+        },
+        {
+          "name": "AllowBuilderHoldFire",
+          "signature": "addon.AllowBuilderHoldFire(unitID, unitDefID, action) -> bool actionAllowed",
+          "description": "Controls construction unit actions. action: -1=Build, CMD.REPAIR, CMD.RECLAIM, CMD.RESTORE, CMD.RESURRECT, CMD.CAPTURE.",
+          "context": "synced",
+          "returns": "bool actionAllowed"
+        },
+        {
+          "name": "UnitPreDamaged",
+          "signature": "addon.UnitPreDamaged(unitID, unitDefID, unitTeam, damage, paralyzer, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam) -> number newDamage, number impulseMult",
+          "description": "Called BEFORE damage application; enables damage/impulse modification. Return newDamage to modify damage dealt, impulseMult to scale knockback. This is the ONLY callin that can modify damage before it is applied.",
+          "context": "synced",
+          "returns": "number newDamage, number impulseMult"
+        },
+        {
+          "name": "ShieldPreDamaged",
+          "signature": "addon.ShieldPreDamaged(proID, shieldCarrier, boolBounceProjectile, beamEmitterWeaponNum, beamEmitterUnitID, startX, startY, startZ, hitX, hitY, hitZ) -> bool handleCollision",
+          "description": "Called before shield-projectile collision logic. Return true to handle collision manually.",
+          "context": "synced",
+          "returns": "bool handleCollision"
+        },
+        {
+          "name": "FeaturePreDamaged",
+          "signature": "addon.FeaturePreDamaged(featureID, featureDefID, featureTeam, damage, weaponDefID, projectileID, attackerID, attackerDefID, attackerTeam) -> number newDamage, number impulseMult",
+          "description": "Called before feature damage application; enables damage/impulse modification.",
+          "context": "synced",
+          "returns": "number newDamage, number impulseMult"
+        },
+        {
+          "name": "Explosion",
+          "signature": "addon.Explosion(weaponDefID, px, py, pz, AttackerID, ProjectileID) -> bool noGfx",
+          "description": "Called when explosion occurs; return true to suppress engine graphical effects.",
+          "context": "synced",
+          "returns": "bool noGfx"
+        },
+        {
+          "name": "UnitUnitCollision",
+          "signature": "addon.UnitUnitCollision(colliderID, collideeID)",
+          "description": "Units collide (both must be registered via Script.SetWatchUnit).",
+          "context": "synced"
+        },
+        {
+          "name": "UnitFeatureCollision",
+          "signature": "addon.UnitFeatureCollision(colliderID, collideeID)",
+          "description": "Unit collides with feature (unit and feature must be registered).",
+          "context": "synced"
+        },
+        {
+          "name": "TerraformComplete",
+          "signature": "addon.TerraformComplete(unitID, unitDefID, unitTeam, buildUnitID, buildUnitDefID, buildUnitTeam) -> bool stop",
+          "description": "Pre-building terrain leveling completes; return true to terminate current build order.",
+          "context": "synced",
+          "returns": "bool stop"
+        },
+        {
+          "name": "MoveCtrlNotify",
+          "signature": "addon.MoveCtrlNotify(unitID, unitDefID, unitTeam, data) -> bool moveCtrlComplete",
+          "description": "Requires both Spring.MoveCtrl.SetCollideStop and Spring.MoveCtrl.SetTrackGround enabled. Return false for continued script control, true to restore engine control.",
+          "context": "synced",
+          "returns": "bool moveCtrlComplete"
+        },
+        {
+          "name": "RecvLuaMsg",
+          "signature": "addon.RecvLuaMsg(msg, playerID)",
+          "description": "Receives messages from unsynced via Spring.SendLuaRulesMsg or Spring.SendLuaUIMsg.",
+          "context": "synced"
+        },
+        {
+          "name": "Load",
+          "signature": "addon.Load(zip)",
+          "description": "Called after GamePreload, before GameStart for loading saved games.",
+          "context": "synced"
+        }
+      ]
+    },
+    "Chat and Message Callins": {
+      "description": "Callins for chat and UI commands.",
+      "functions": [
+        {
+          "name": "GotChatMsg",
+          "signature": "addon.GotChatMsg(msg, player)",
+          "description": "Called when UI commands are issued (e.g., /foo or /luarules foo).",
+          "context": "both"
+        }
+      ]
+    },
+    "Player Callins": {
+      "description": "Callins for player events (unsynced only).",
+      "functions": [
+        {
+          "name": "PlayerChanged",
+          "signature": "addon.PlayerChanged(playerID)",
+          "description": "Triggered when player status changes (e.g., spectator transition).",
+          "context": "unsynced"
+        },
+        {
+          "name": "PlayerAdded",
+          "signature": "addon.PlayerAdded(playerID)",
+          "description": "New player joins.",
+          "context": "unsynced"
+        },
+        {
+          "name": "PlayerRemoved",
+          "signature": "addon.PlayerRemoved(playerID, reason)",
+          "description": "Player leaves or is removed.",
+          "context": "unsynced"
+        }
+      ]
+    },
+    "Drawing Callins": {
+      "description": "Callins for rendering and drawing (unsynced only).",
+      "functions": [
+        {
+          "name": "ViewResize",
+          "signature": "addon.ViewResize(viewSizeX, viewSizeY)",
+          "description": "Fired when viewport dimensions change.",
+          "context": "unsynced"
+        },
+        {
+          "name": "Update",
+          "signature": "addon.Update(dt)",
+          "description": "Invoked every rendered frame; parameter is elapsed time in seconds.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawGenesis",
+          "signature": "addon.DrawGenesis()",
+          "description": "Updates textures and shaders; does not render to screen.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawWorldPreUnit",
+          "signature": "addon.DrawWorldPreUnit()",
+          "description": "Executes before engine renders units, features, and water.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawWorld",
+          "signature": "addon.DrawWorld()",
+          "description": "Executes after command queues and map elements are drawn.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawWorldShadow",
+          "signature": "addon.DrawWorldShadow()",
+          "description": "Shadow rendering pass.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawScreen",
+          "signature": "addon.DrawScreen(vsx, vsy)",
+          "description": "Screen-space drawing (vsx, vsy are screen coordinates).",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawScreenEffects",
+          "signature": "addon.DrawScreenEffects(vsx, vsy)",
+          "description": "Screen-space effects rendering.",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawInMinimap",
+          "signature": "addon.DrawInMinimap(sx, sy)",
+          "description": "Renders within minimap bounds (sx, sy relative to minimap position/scale).",
+          "context": "unsynced"
+        },
+        {
+          "name": "DrawUnit",
+          "signature": "addon.DrawUnit(unitID, drawMode) -> bool suppressEngineDraw",
+          "description": "Custom unit rendering. Return true to suppress engine rendering. drawMode: 0=notDrawing, 1=normalDraw, 2=shadowDraw, 3=reflectionDraw, 4=refractionDraw, 5=gameDeferredDraw.",
+          "context": "unsynced",
+          "returns": "bool suppressEngineDraw"
+        },
+        {
+          "name": "DrawFeature",
+          "signature": "addon.DrawFeature(featureID, drawMode) -> bool suppressEngineDraw",
+          "description": "Custom feature rendering. Return true to suppress engine rendering.",
+          "context": "unsynced",
+          "returns": "bool suppressEngineDraw"
+        },
+        {
+          "name": "DrawProjectile",
+          "signature": "addon.DrawProjectile(projectileID, drawMode) -> bool suppressEngineDraw",
+          "description": "Custom projectile rendering. Return true to suppress engine rendering.",
+          "context": "unsynced",
+          "returns": "bool suppressEngineDraw"
+        }
+      ]
+    },
+    "Input Handling Callins": {
+      "description": "Callins for mouse and keyboard input (unsynced only).",
+      "functions": [
+        {
+          "name": "IsAbove",
+          "signature": "addon.IsAbove(x, y) -> bool isAbove",
+          "description": "Determines if coordinates fall within the addon's interactive region. Must return true to enable Mouse* events.",
+          "context": "unsynced",
+          "returns": "bool isAbove"
+        },
+        {
+          "name": "KeyPress",
+          "signature": "addon.KeyPress(key, mods, isRepeat) -> bool becomeOwner",
+          "description": "Called repeatedly while a key is depressed. mods table contains alt, ctrl, meta, shift booleans. Return true to prevent other handlers.",
+          "context": "unsynced",
+          "returns": "bool becomeOwner"
+        },
+        {
+          "name": "KeyRelease",
+          "signature": "addon.KeyRelease(key) -> bool",
+          "description": "Triggered when a key is released.",
+          "context": "unsynced",
+          "returns": "bool"
+        },
+        {
+          "name": "TextInput",
+          "signature": "addon.TextInput(utf8char)",
+          "description": "Fires when keyboard input generates text (version 97.0+).",
+          "context": "unsynced"
+        },
+        {
+          "name": "MousePress",
+          "signature": "addon.MousePress(x, y, button) -> bool becomeMouseOwner",
+          "description": "Triggered on mouse button press. Supports up to 7 buttons. Must return true to enable MouseRelease.",
+          "context": "unsynced",
+          "returns": "bool becomeMouseOwner"
+        },
+        {
+          "name": "MouseRelease",
+          "signature": "addon.MouseRelease(x, y, button) -> bool becomeMouseOwner",
+          "description": "Triggered on mouse button release.",
+          "context": "unsynced",
+          "returns": "bool becomeMouseOwner"
+        },
+        {
+          "name": "MouseWheel",
+          "signature": "addon.MouseWheel(up, value)",
+          "description": "Fired when scrolling occurs; up indicates direction, value indicates magnitude.",
+          "context": "unsynced"
+        },
+        {
+          "name": "MouseMove",
+          "signature": "addon.MouseMove(x, y, dx, dy, button)",
+          "description": "Called when the cursor moves. dx and dy represent displacement.",
+          "context": "unsynced"
+        }
+      ]
+    },
+    "UI Command Callins": {
+      "description": "Callins for UI command handling (unsynced only).",
+      "functions": [
+        {
+          "name": "DefaultCommand",
+          "signature": "addon.DefaultCommand(type, id) -> number cmdID",
+          "description": "Establishes the default action for selected objects. type is 'unit' or 'feature'.",
+          "context": "unsynced",
+          "returns": "number cmdID"
+        },
+        {
+          "name": "CommandNotify",
+          "signature": "addon.CommandNotify(cmdID, cmdParams, cmdOptions) -> bool removeCmd",
+          "description": "Invoked when commands are issued. Returning true removes the command before transmission.",
+          "context": "unsynced",
+          "returns": "bool removeCmd"
+        },
+        {
+          "name": "CommandsChanged",
+          "signature": "addon.CommandsChanged()",
+          "description": "Fires when available command descriptions change.",
+          "context": "unsynced"
+        },
+        {
+          "name": "WorldTooltip",
+          "signature": "addon.WorldTooltip(ttType, data1, data2, data3) -> string newTooltip",
+          "description": "Generates tooltips for objects. ttType values: 'unit' (unitID), 'feature' (featureID), 'ground' (x, y, z), 'selection'.",
+          "context": "unsynced",
+          "returns": "string newTooltip"
+        },
+        {
+          "name": "GetTooltip",
+          "signature": "addon.GetTooltip(x, y) -> string tooltip",
+          "description": "Called when IsAbove returns true.",
+          "context": "unsynced",
+          "returns": "string tooltip"
+        }
+      ]
+    },
+    "Synced-Unsynced Communication": {
+      "description": "Callins for communication between synced and unsynced contexts.",
+      "functions": [
+        {
+          "name": "RecvFromSynced",
+          "signature": "addon.RecvFromSynced(...)",
+          "description": "Receives messages from synced via SendToUnsynced.",
+          "context": "unsynced"
+        },
+        {
+          "name": "Save",
+          "signature": "addon.Save(zip)",
+          "description": "Invoked on '/save' or '/savegame' command; receives userdatum representing savegame zip.",
+          "context": "unsynced"
+        }
+      ]
+    },
+    "Special Damage WeaponDefIDs": {
+      "description": "Special weaponDefID values used in damage callins to indicate non-weapon damage sources.",
+      "constants": [
+        {
+          "value": -1,
+          "description": "Debris collision (default for Spring.AddUnitDamage)"
+        },
+        {
+          "value": -2,
+          "description": "Ground collision"
+        },
+        {
+          "value": -3,
+          "description": "Object collision"
+        },
+        {
+          "value": -4,
+          "description": "Fire damage"
+        },
+        {
+          "value": -5,
+          "description": "Water damage"
+        },
+        {
+          "value": -6,
+          "description": "Kill damage"
+        },
+        {
+          "value": -7,
+          "description": "Crush damage"
+        }
+      ]
+    }
+  }
+}

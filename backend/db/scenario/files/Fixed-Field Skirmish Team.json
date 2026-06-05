@@ -1,0 +1,5 @@
+{
+  "specification": "A 2 vs 2 team battle with 4 teams total, each team has approximately 20 pre-deployed units. Allied teams face enemy teams diagonally across the battlefield. Victory is achieved if your allied team survives and defeats both enemy teams, even if your own units are destroyed. Defeat occurs when all units from both your team and your allied team are destroyed.",
+  "rule": [],
+  "decision": ["GroupMovement"]
+}

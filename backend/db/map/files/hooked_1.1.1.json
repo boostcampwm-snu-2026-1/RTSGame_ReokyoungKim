@@ -1,0 +1,714 @@
+{"Hooked 1.1.1": {
+        "size": [
+            6,
+            4
+        ],
+        "description": "A very small and fast-paced map suitable for intense close-quarters 1v1 skirmishes."
+    },
+"terrain_info":[
+  {
+    "sector_id": "A1",
+    "center": [
+      192,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -37,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "A2",
+    "center": [
+      576,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -34,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "A3",
+    "center": [
+      960,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -29,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "A4",
+    "center": [
+      1344,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -23,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "A5",
+    "center": [
+      1728,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -17,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "A6",
+    "center": [
+      2112,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -13,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "A7",
+    "center": [
+      2496,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -10,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "A8",
+    "center": [
+      2880,
+      128
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -36,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "B1",
+    "center": [
+      192,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -37,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "B2",
+    "center": [
+      576,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -32,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "B3",
+    "center": [
+      960,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -34,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "B4",
+    "center": [
+      1344,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -33,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "B5",
+    "center": [
+      1728,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "B6",
+    "center": [
+      2112,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -18,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "B7",
+    "center": [
+      2496,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -11,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "B8",
+    "center": [
+      2880,
+      384
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -36,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C1",
+    "center": [
+      192,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -38,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C2",
+    "center": [
+      576,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -36,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C3",
+    "center": [
+      960,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -38,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C4",
+    "center": [
+      1344,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -39,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C5",
+    "center": [
+      1728,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -39,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C6",
+    "center": [
+      2112,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -37,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "C7",
+    "center": [
+      2496,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -11,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "C8",
+    "center": [
+      2880,
+      640
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "D1",
+    "center": [
+      192,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -33,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "D2",
+    "center": [
+      576,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -11,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "D3",
+    "center": [
+      960,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "D4",
+    "center": [
+      1344,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "D5",
+    "center": [
+      1728,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "D6",
+    "center": [
+      2112,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "D7",
+    "center": [
+      2496,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -10,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "D8",
+    "center": [
+      2880,
+      896
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -30,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "E1",
+    "center": [
+      192,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -27,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "E2",
+    "center": [
+      576,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -10,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "E3",
+    "center": [
+      960,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -35,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "E4",
+    "center": [
+      1344,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "E5",
+    "center": [
+      1728,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "E6",
+    "center": [
+      2112,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -32,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "E7",
+    "center": [
+      2496,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -13,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "E8",
+    "center": [
+      2880,
+      1152
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -33,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "F1",
+    "center": [
+      192,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "F2",
+    "center": [
+      576,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -11,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "F3",
+    "center": [
+      960,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -35,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "F4",
+    "center": [
+      1344,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "F5",
+    "center": [
+      1728,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -40,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "F6",
+    "center": [
+      2112,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -39,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "F7",
+    "center": [
+      2496,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -37,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "F8",
+    "center": [
+      2880,
+      1408
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -38,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "G1",
+    "center": [
+      192,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -36,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "G2",
+    "center": [
+      576,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -10,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "G3",
+    "center": [
+      960,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -18,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "G4",
+    "center": [
+      1344,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -30,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "G5",
+    "center": [
+      1728,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -35,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "G6",
+    "center": [
+      2112,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -33,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "G7",
+    "center": [
+      2496,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -33,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "G8",
+    "center": [
+      2880,
+      1664
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -35,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "H1",
+    "center": [
+      192,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -39,
+    "description": "Deep Water, Lowland Smooth (Ground)"
+  },
+  {
+    "sector_id": "H2",
+    "center": [
+      576,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -12,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "H3",
+    "center": [
+      960,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -13,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "H4",
+    "center": [
+      1344,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -17,
+    "description": "Deep Water, High Ground Smooth (Ground)"
+  },
+  {
+    "sector_id": "H5",
+    "center": [
+      1728,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -22,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "H6",
+    "center": [
+      2112,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -27,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "H7",
+    "center": [
+      2496,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -31,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  },
+  {
+    "sector_id": "H8",
+    "center": [
+      2880,
+      1920
+    ],
+    "surface": "Deep Water",
+    "terrain": "Ground",
+    "avg_height": -35,
+    "description": "Deep Water, Flat Plains Smooth (Ground)"
+  }
+]
+}

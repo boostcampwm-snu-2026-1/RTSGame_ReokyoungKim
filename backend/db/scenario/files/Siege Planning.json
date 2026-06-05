@@ -1,0 +1,5 @@
+{
+    "specification": "The enemy’s Metal Storage that allied forces must destroy is inside a strong base, and there are 20 minutes to finish the mission. Enemy units also spawn each round, and allied forces must break through their defenses to win. Victory is achieved by destroying the Metal Storage within 20 minutes. Defeat occurs if all allied units are killed.",
+    "rule": [],
+    "decision": ["ConstructionWithPos", "ProductionWithFactory", "GroupMovement"]
+}
