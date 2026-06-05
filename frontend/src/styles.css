@@ -88,11 +88,23 @@ body {
   margin-top: 18px; padding: 14px 16px;
   background: #3b1414; border: 1px solid #7f1d1d; color: #fecaca;
   border-radius: 10px;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
 }
+.error .retry {
+  background: #7f1d1d; border-color: #b91c1c; color: #fee2e2; white-space: nowrap;
+}
+.error .retry:hover { background: #991b1b; }
 .loading {
   margin-top: 18px; padding: 14px 16px; color: var(--muted);
   background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  display: flex; align-items: center; gap: 10px;
 }
+.spinner {
+  width: 16px; height: 16px; border-radius: 50%;
+  border: 2px solid var(--border); border-top-color: var(--accent);
+  display: inline-block; animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* result */
 .result { margin-top: 24px; display: flex; flex-direction: column; gap: 20px; }
