@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getCatalog, generate } from './api'
+import { getCatalog, generate, launch } from './api'
 import PromptInput from './components/PromptInput'
 import ConfigSummary from './components/ConfigSummary'
 import MiniMap from './components/MiniMap'
@@ -25,6 +25,8 @@ export default function App() {
   const [error, setError] = useState(null)
   const [result, setResult] = useState(null)
   const [lastQuery, setLastQuery] = useState('')
+  const [launching, setLaunching] = useState(false)
+  const [launchMsg, setLaunchMsg] = useState(null)
 
   useEffect(() => {
     getCatalog()
@@ -32,11 +34,31 @@ export default function App() {
       .catch((e) => console.warn('catalog load failed', e))
   }, [])
 
+  async function handleLaunch() {
+    if (!config) return
+    setLaunching(true)
+    setLaunchMsg(null)
+    try {
+      const res = await launch(config)
+      if (res.launched) {
+        const g = res.gadgets?.length ? ` · 룰: ${res.gadgets.join(', ')}` : ''
+        setLaunchMsg({ ok: true, text: `BAR 실행 요청됨 (맵: ${res.map}${g}). 게임 창이 곧 뜹니다.` })
+      } else {
+        setLaunchMsg({ ok: false, text: `실행 실패: ${res.error || '알 수 없는 오류'}` })
+      }
+    } catch (e) {
+      setLaunchMsg({ ok: false, text: `백엔드에 연결하지 못했어요 (${e.message}).` })
+    } finally {
+      setLaunching(false)
+    }
+  }
+
   async function handleGenerate(query) {
     setLastQuery(query)
     setLoading(true)
     setError(null)
     setResult(null)
+    setLaunchMsg(null)
     try {
       const res = await generate(query)
       if (res.error || !res.config) {
@@ -95,6 +117,19 @@ export default function App() {
             <ConfigSummary config={config} scenario={result.scenario} />
             <MiniMap config={config} mapMeta={mapMeta} />
           </div>
+
+          <div className="launch-bar">
+            <button className="btn primary" onClick={handleLaunch} disabled={launching}>
+              {launching ? '⏳ 실행 중…' : '🎮 BAR에서 실행'}
+            </button>
+            <span className="muted">실제 Beyond All Reason 엔진으로 이 시나리오를 띄웁니다.</span>
+            {launchMsg && (
+              <span className={launchMsg.ok ? 'launch-ok' : 'launch-err'}>
+                {launchMsg.ok ? '✅ ' : '⚠️ '}{launchMsg.text}
+              </span>
+            )}
+          </div>
+
           <SimPlayback config={config} mapMeta={mapMeta} />
           <JsonView config={config} scenario={result.scenario} />
         </div>
