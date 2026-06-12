@@ -26,3 +26,8 @@ dist/
 
 # backend runtime logs
 backend/log/
+
+# Bundled BAR launcher reference project — NOT part of this repo.
+# Contains a real API key (.env), a venv, game data and demos. The /launch
+# endpoint uses it locally if present and degrades gracefully if absent.
+minigame_generator_v4/

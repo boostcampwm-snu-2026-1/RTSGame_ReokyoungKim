@@ -166,6 +166,15 @@ body {
 .btn:hover { border-color: var(--accent); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn.primary:hover { background: var(--accent-hover); }
+.btn:disabled { opacity: 0.6; cursor: default; }
+.launch-bar {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px;
+  margin: 16px 0; padding: 14px 16px;
+  background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px;
+}
+.launch-bar .muted { color: var(--muted); font-size: 13px; }
+.launch-ok { color: #22c55e; font-size: 13px; }
+.launch-err { color: #ef4444; font-size: 13px; }
 .json-pre {
   margin: 14px 0 0; max-height: 420px; overflow: auto;
   background: #0a0f1d; border: 1px solid var(--border); border-radius: 10px;
