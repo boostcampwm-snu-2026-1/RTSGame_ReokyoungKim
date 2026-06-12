@@ -1,5 +1,7 @@
-// All calls go through the Vite proxy (/api -> http://localhost:8000).
-const BASE = '/api'
+// In dev, calls go through the Vite proxy (/api -> http://localhost:8000).
+// In production set VITE_API_BASE to the deployed backend origin
+// (e.g. https://rtsgame-backend.onrender.com) at build time.
+const BASE = import.meta.env.VITE_API_BASE ?? '/api'
 
 export async function getCatalog() {
   const res = await fetch(`${BASE}/catalog`)
