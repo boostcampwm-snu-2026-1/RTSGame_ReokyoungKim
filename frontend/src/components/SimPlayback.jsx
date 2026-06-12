@@ -1,71 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  TILE, SIM_FPS,
+  statFor, worldSize, findSpawner, victoryTime, makeUnit, buildUnits,
+} from '../lib/simModel'
 
-const TILE = 512
-const SIM_FPS = 30 // BAR runs the sim at ~30 frames/sec
 const MAX = 360
 const TEAM_COLORS = { 1: '#3b82f6', 2: '#ef4444' }
-
-// crude structure/mobile classifier from unit code suffixes
-const STRUCTURE_HINTS = ['lab', 'solar', 'mex', 'rad', 'llt', 'hlt', 'nano', 'fus', 'estor', 'mstor', 'wind', 'tide', 'geo', 'com']
-const isStructure = (code = '') => STRUCTURE_HINTS.some((h) => code.toLowerCase().includes(h))
-
-// ---- read world size (tiles*512) or infer from unit coords ----
-function worldSize(config, mapMeta) {
-  if (mapMeta?.size) return [mapMeta.size[0] * TILE, mapMeta.size[1] * TILE]
-  let mx = 0, my = 0
-  for (const units of Object.values(config.unit_placement || {})) {
-    if (!Array.isArray(units)) continue
-    for (const u of units) {
-      const p = u?.[1]
-      if (Array.isArray(p)) { mx = Math.max(mx, p[0]); my = Math.max(my, p[1]) }
-    }
-  }
-  return [Math.max(mx * 1.1, TILE), Math.max(my * 1.1, TILE)]
-}
-
-// ---- detect a wave spawner gadget in customize ----
-function findSpawner(customize = {}) {
-  for (const cfg of Object.values(customize)) {
-    if (cfg && typeof cfg === 'object' &&
-        ('waveIntervalFrames' in cfg || ('unitName' in cfg && 'startCount' in cfg))) {
-      return cfg
-    }
-  }
-  return null
-}
-
-// ---- parse victory time (seconds) from end_condition ----
-function victoryTime(end = {}) {
-  const vc = end.victory_condition
-  if (!Array.isArray(vc)) return null
-  const mapping = vc[1]
-  if (mapping && mapping.time) {
-    const expr = Array.isArray(mapping.time) ? mapping.time[0] : mapping.time
-    const m = String(expr).match(/(\d+)/)
-    if (m) return parseInt(m[1], 10)
-  }
-  return null
-}
-
-function buildUnits(config) {
-  const out = []
-  for (const [team, units] of Object.entries(config.unit_placement || {})) {
-    if (!Array.isArray(units)) continue
-    for (const u of units) {
-      const code = u?.[0]
-      const p = u?.[1]
-      if (!Array.isArray(p)) continue
-      const struct = isStructure(code)
-      out.push({
-        team, code,
-        x: p[0], y: p[1],
-        hp: struct ? 240 : 100,
-        struct,
-      })
-    }
-  }
-  return out
-}
 
 export default function SimPlayback({ config, mapMeta }) {
   const canvasRef = useRef(null)
@@ -116,10 +56,11 @@ export default function SimPlayback({ config, mapMeta }) {
       const first = (spawner.firstWaveFrame ?? spawner.waveIntervalFrames ?? 1800) / SIM_FPS
       const maxWaves = spawner.maxWaves ?? 999
       const team = String(spawner.spawnTeamID ?? 2)
+      const code = spawner.unitName || 'enemy'
       const due = s.t >= first ? Math.floor((s.t - first) / interval) + 1 : 0
       while (s.wavesSpawned < due && s.wavesSpawned < maxWaves) {
         const count = (spawner.startCount ?? 4) + (spawner.addPerWave ?? 2) * s.wavesSpawned
-        // spawn from a random-ish edge (deterministic by wave index)
+        // spawn from a deterministic edge (by wave index)
         const edge = s.wavesSpawned % 4
         for (let i = 0; i < count; i++) {
           const jitter = (i - count / 2) * 60
@@ -128,19 +69,16 @@ export default function SimPlayback({ config, mapMeta }) {
           else if (edge === 1) { x = worldW; y = worldH / 2 + jitter }
           else if (edge === 2) { x = worldW / 2 + jitter; y = 0 }
           else { x = worldW / 2 + jitter; y = worldH }
-          s.units.push({ team, code: spawner.unitName || 'enemy', x, y, hp: 100, struct: false })
+          s.units.push(makeUnit(team, code, x, y))
         }
         s.wavesSpawned++
       }
     }
 
-    const moveSpeed = Math.max(worldW, worldH) / 45 // cross map in ~45s
-    const attackRange = TILE * 0.7
-    const dps = 35
-
-    // movement + combat
+    // movement + combat — each unit uses its own real speed / range / dps
     for (const u of s.units) {
-      // nearest enemy
+      u.firing = false
+      // nearest living enemy
       let tgt = null, best = Infinity
       for (const e of s.units) {
         if (e.team === u.team || e.hp <= 0) continue
@@ -150,10 +88,11 @@ export default function SimPlayback({ config, mapMeta }) {
       const aim = tgt || { x: center[0], y: center[1] }
       const dx = aim.x - u.x, dy = aim.y - u.y
       const dist = Math.hypot(dx, dy) || 1
-      if (tgt && dist <= attackRange) {
-        tgt.hp -= dps * dt // in range: attack
-      } else if (!u.struct) {
-        const v = moveSpeed * dt
+      if (tgt && u.dps > 0 && dist <= u.range) {
+        tgt.hp -= u.dps * dt // in range and armed: attack
+        u.firing = true
+      } else if (!u.struct && u.speed > 0) {
+        const v = u.speed * dt
         u.x += (dx / dist) * Math.min(v, dist)
         u.y += (dy / dist) * Math.min(v, dist)
       }
@@ -180,14 +119,46 @@ export default function SimPlayback({ config, mapMeta }) {
     const tp = TILE * scale
     for (let x = 0; x <= cw; x += tp) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, ch); ctx.stroke() }
     for (let y = 0; y <= ch; y += tp) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(cw, y); ctx.stroke() }
+
+    // attack lines (drawn under the unit dots)
+    ctx.lineWidth = 1
     for (const u of s.units) {
+      if (!u.firing) continue
+      // re-find target purely for the visual line
+      let tgt = null, best = Infinity
+      for (const e of s.units) {
+        if (e.team === u.team || e.hp <= 0) continue
+        const d = (e.x - u.x) ** 2 + (e.y - u.y) ** 2
+        if (d < best) { best = d; tgt = e }
+      }
+      if (!tgt) continue
+      ctx.strokeStyle = u.team === '1' ? 'rgba(59,130,246,0.35)' : 'rgba(239,68,68,0.35)'
+      ctx.beginPath()
+      ctx.moveTo(u.x * scale, u.y * scale)
+      ctx.lineTo(tgt.x * scale, tgt.y * scale)
+      ctx.stroke()
+    }
+
+    for (const u of s.units) {
+      const px = u.x * scale, py = u.y * scale
+      // radius scales with HP: bigger, tankier units read as bigger dots
+      const base = u.struct ? 4 : 2.6
+      const r = base + Math.min(3, Math.log10(Math.max(u.maxHp, 1)) - 2)
       ctx.fillStyle = TEAM_COLORS[u.team] || '#a3a3a3'
-      ctx.globalAlpha = u.struct ? 1 : 0.8
-      const r = u.struct ? 4.5 : 3
+      ctx.globalAlpha = u.struct ? 1 : 0.85
       if (u.struct) {
-        ctx.fillRect(u.x * scale - r, u.y * scale - r, r * 2, r * 2)
+        ctx.fillRect(px - r, py - r, r * 2, r * 2)
       } else {
-        ctx.beginPath(); ctx.arc(u.x * scale, u.y * scale, r, 0, Math.PI * 2); ctx.fill()
+        ctx.beginPath(); ctx.arc(px, py, r, 0, Math.PI * 2); ctx.fill()
+      }
+      // damaged-unit health bar
+      ctx.globalAlpha = 1
+      if (u.hp < u.maxHp) {
+        const w = Math.max(6, r * 2.4), frac = Math.max(0, u.hp / u.maxHp)
+        ctx.fillStyle = 'rgba(15,23,42,0.8)'
+        ctx.fillRect(px - w / 2, py - r - 4, w, 2)
+        ctx.fillStyle = frac > 0.5 ? '#22c55e' : frac > 0.25 ? '#eab308' : '#ef4444'
+        ctx.fillRect(px - w / 2, py - r - 4, w * frac, 2)
       }
     }
     ctx.globalAlpha = 1
@@ -239,7 +210,10 @@ export default function SimPlayback({ config, mapMeta }) {
         <span>⏱ {mm}:{ss}{winTime ? ` / ${Math.floor(winTime / 60)}:${String(winTime % 60).padStart(2, '0')}` : ''}</span>
         <span style={{ color: TEAM_COLORS[1] }}>팀1 {hud.a}</span>
         <span style={{ color: TEAM_COLORS[2] }}>팀2 {hud.b}</span>
-        {spawner && <span className="muted">웨이브 {spawner.unitName}</span>}
+        {spawner && <span className="muted">웨이브 {statFor(spawner.unitName || '').name}</span>}
+      </div>
+      <div className="muted" style={{ fontSize: '0.75rem', marginTop: 4 }}>
+        실제 유닛 스탯(HP·DPS·사거리·속도) 기반 근사 시뮬레이션 — BAR 엔진 결과가 아닙니다.
       </div>
 
       {hud.status && (
