@@ -6,11 +6,16 @@
 const BASE = (import.meta.env.VITE_API_BASE ?? '/api').replace(/\/+$/, '')
 
 // /launch opens the real game on the machine running the backend, so it must
-// hit a backend with BAR installed. Defaults to the same backend as everything
-// else (local single-process). On a cloud deploy set
-// VITE_LAUNCH_BASE=http://localhost:8000 to route launch to the user's own
-// local backend while generation stays on the cloud.
-const LAUNCH_BASE = (import.meta.env.VITE_LAUNCH_BASE ?? BASE).replace(/\/+$/, '')
+// hit a backend with BAR installed. When the app is served from a REMOTE host
+// (e.g. the Vercel deploy) we auto-route launch to the user's own local backend
+// at http://localhost:8000; when served from localhost we stay same-origin.
+// VITE_LAUNCH_BASE overrides this if set.
+const _servedRemotely =
+  typeof window !== 'undefined' &&
+  !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(window.location.hostname)
+const LAUNCH_BASE = (
+  import.meta.env.VITE_LAUNCH_BASE ?? (_servedRemotely ? 'http://localhost:8000' : BASE)
+).replace(/\/+$/, '')
 
 export async function getCatalog() {
   const res = await fetch(`${BASE}/catalog`)
