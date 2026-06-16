@@ -55,6 +55,18 @@ app.add_middleware(
 )
 
 
+# A deployed HTTPS page (e.g. the Vercel site) calling this local backend at
+# http://localhost:8000 triggers Chrome's Private Network Access check, which
+# needs this header on the preflight response. Added after CORS so it wraps the
+# CORS preflight reply. Harmless on the cloud backend (header just unused).
+@app.middleware("http")
+async def allow_private_network(request, call_next):
+    response = await call_next(request)
+    if request.headers.get("access-control-request-private-network"):
+        response.headers["Access-Control-Allow-Private-Network"] = "true"
+    return response
+
+
 class GenerateRequest(BaseModel):
     query: str
     seed: int | None = None

@@ -47,7 +47,12 @@ export default function App() {
         setLaunchMsg({ ok: false, text: `실행 실패: ${res.error || '알 수 없는 오류'}` })
       }
     } catch (e) {
-      setLaunchMsg({ ok: false, text: `백엔드에 연결하지 못했어요 (${e.message}).` })
+      // Most common cause on the deployed site: launch is routed to the user's
+      // local backend, which isn't running.
+      setLaunchMsg({
+        ok: false,
+        text: `로컬 백엔드에 연결하지 못했어요. 내 PC에서 start_local.bat을 실행해 켜두세요. (${e.message})`,
+      })
     } finally {
       setLaunching(false)
     }

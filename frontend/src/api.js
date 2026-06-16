@@ -5,6 +5,13 @@
 // double slash ("//generate") that the backend 404s on.
 const BASE = (import.meta.env.VITE_API_BASE ?? '/api').replace(/\/+$/, '')
 
+// /launch opens the real game on the machine running the backend, so it must
+// hit a backend with BAR installed. Defaults to the same backend as everything
+// else (local single-process). On a cloud deploy set
+// VITE_LAUNCH_BASE=http://localhost:8000 to route launch to the user's own
+// local backend while generation stays on the cloud.
+const LAUNCH_BASE = (import.meta.env.VITE_LAUNCH_BASE ?? BASE).replace(/\/+$/, '')
+
 export async function getCatalog() {
   const res = await fetch(`${BASE}/catalog`)
   if (!res.ok) throw new Error(`catalog failed: ${res.status}`)
@@ -23,7 +30,7 @@ export async function generate(query, seed) {
 
 // Launch the generated config in the actual BAR client (via the v4 simulator).
 export async function launch(config, mode = 'gadget') {
-  const res = await fetch(`${BASE}/launch`, {
+  const res = await fetch(`${LAUNCH_BASE}/launch`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ config, mode }),
